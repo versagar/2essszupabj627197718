@@ -6,8 +6,7 @@ function openNav() {
     function closeNav() {document.getElementById("mySidenav").style.width="0";
     }
     
-    function hideMblock() {
-      var iframe = document.getElementById("rFrame");
-      var elmnt = iframe.contentWindow.document.getElementsById("mBlock");
-      elmnt.style.display = "none";
+    function openOv() {document.getElementById("myOv").style.width="20vw";
+    }
+    function closeOv() {document.getElementById("myOv").style.width="0";
     }
