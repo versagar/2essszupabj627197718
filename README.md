@@ -1,3 +1,0 @@
-
-**#Physer#**
-##The Wise Craze##
