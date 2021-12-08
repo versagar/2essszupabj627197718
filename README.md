@@ -1,2 +1,2 @@
-# Phycom7
-Open phycom7.html
+#Physer
+The Wise Craze
