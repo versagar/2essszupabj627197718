@@ -1,2 +1,2 @@
-# Physer
-Open physer.live
+# Phycom7
+Open phycom7.html
