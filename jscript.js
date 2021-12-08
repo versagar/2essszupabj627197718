@@ -15,7 +15,7 @@ function openNav() {
     function closeOv() {
       document.getElementById("myOv").style.width = "0";
       document.getElementById("myFeed").style.width="100vw";
-      document.getElementById("openOv").style.width="80px";
+      document.getElementById("openOv").style.width="100px";
       document.getElementById("openOv").style.padding="10px"
       
     }
