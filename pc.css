@@ -194,7 +194,7 @@ box-shadow: 2px 2px 2px #555555;
 
 .myOv {
   width: 20%;
-  min-height: 450px;
+  min-height: 455px;
   float: left;
   transition: o.3s;
   overflow-x: hidden;
