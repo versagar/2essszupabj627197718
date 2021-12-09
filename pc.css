@@ -199,6 +199,7 @@ box-shadow: 2px 2px 2px #555555;
   transition: o.3s;
   overflow-x: hidden;
   background-color: #6C2E00;
+  margin: 0;
 }
 .ov{
   font-size: 20px;
