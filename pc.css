@@ -1,0 +1,267 @@
+1*{box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+	width: 1vw;
+}
+html::-webkit-scrollbar-thumb {
+	background-color: #c1c000;
+}
+html::-webkit-scrollbar-track {
+	background-color: #632000;
+}
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+header {
+background-color: #6C2E00;
+width: 99vw;
+height: max-content;
+border-bottom: 2px solid black;
+overflow: hidden;
+padding-bottom: 2px;
+}
+.htitle {
+  margin-top: 2px;
+  margin-left: 5px;
+  float: left;
+  width: 20vw;
+  height: 90px;
+  text-align: center;
+  box-shadow: 3px 3px 4px white;
+  border: 1px solid black;
+}
+.htitle:hover {
+  box-shadow: none;
+  margin-top: 2.5px;
+  margin-left: 6px;
+  border: 2px solid black;
+}
+.h1 {
+  font-size: 45px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 4px 4px 2px black;
+}
+.h3{
+  font-size: 15px;
+  color: #D9D8AB00;
+  text-shadow: 2px 2px 1px white;
+}
+
+.logo {
+	float: left;
+	width: 90px;
+	height: 90px;
+	margin: 2px;
+}
+
+.menu {
+  float: left;
+  font-size:50px;
+  height: 70px;
+  align-content: center;
+  border: 1px solid #111;
+  margin: 2px;
+  margin-left: 10px;
+  padding: 9px;
+  box-shadow: 3px 3px 3px black;
+  text-shadow: 2px 2px 2px black;
+}
+.menu:hover {
+  box-shadow: none;
+  border: 2px solid #111;
+}
+.mblock{
+  margin-top: 35px;
+  margin-right: 4vw;
+  display: block;
+  background-color: white;
+  position: relative;
+}
+
+.mblock a {
+  margin-right: 1vw;
+  float: right;
+  background-color: #C1C6AF;
+  text-decoration: none;
+  width: 3vw;
+  border: 1px solid black;
+  text-align: center;
+  padding: 1px;
+  box-shadow: 2px 2px 2px black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #6C2E00;
+  
+}
+.mblock a:hover {
+  box-shadow: 0px 0px 0px black;
+  margin-top: 1px;
+}
+
+.sidenav{ height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x:hidden ;
+      transition: 0.5s;
+    }
+.closebtn{
+      font-size: 90px;
+      text-decoration: none;
+      float: right;
+      color: #fff;
+      background-color: #111;
+      display: block;
+    }
+    
+.ml{
+padding:15px;
+text-decoration:none;
+      width: 100%;
+      font-size: 25px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+}
+      
+.ml:hover {
+        color:#818181;
+}
+
+
+    
+.myFeed {
+  width: 79vw;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.phead {
+  font-size: 20px;
+  display: block;
+  color: white;
+  background-color: #111;
+  text-align: center;
+  box-shadow: 0px 3px 0px #C1C6AF;
+  overflow: hidden;
+}
+
+
+.feed {
+  margin-top: 3px;
+  background-color: lightgrey;
+  padding: 20px;
+  min-height: 464px;
+  border: 2px solid #6C2E00;
+    }
+#info {
+  width: 75vw;
+  float: right;
+  display: block;
+}    
+    
+.openOv {
+  text-decoration: none;
+  padding: 0;
+  float: left;
+  display: block;
+  width: 0;
+  font-size: 100%;
+  margin-right: 10px;
+  color: white;
+  text-shadow: 2px 2px 2px #6C2E00;
+  overflow: hidden;
+}
+
+.openOv:hover{
+  box-shadow: -2px -2px 1px black;
+  margin-top: 2px;
+  margin-right: 12px;
+}   
+   
+
+.myOv {
+  width: 20vw;
+  min-height: 450px;
+  float: left;
+  transition: o.3s;
+  background-color: #6C2E00;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.ov{
+  font-size: 20px;
+  color: white; 
+  background-color:#111; 
+  text-align:center;
+  box-shadow: 0px 3px 0px #C1C6AF;
+  overflow: hidden;
+}
+.rFrame {
+  width: 20vw ;
+  height: 160px;
+  border: 2px solid #6C2E00;
+  margin-top: 3px;
+  display: block;
+  
+}
+.arframe{
+  font-size: 120%;
+  overflow: hidden;
+  
+  
+}
+.arframe a {
+  width: 80%;
+  height: 20px;
+  text-decoration: none;
+  background-color: #C1C6AF;
+  padding: 10px;
+  color: white;
+  float: right;
+  
+  margin-bottom: 3px;
+  box-shadow: -4px 0px 3px black;
+  text-shadow: 1px 1px 1px black;
+}
+
+.arframe a:hover {
+  box-shadow: 1px 0px 3px black;
+}
+
+.foot {
+  float: left;
+  background-color: black;
+  width: 100%;
+  min-height: 150px;
+}
+.footlink {
+  margin: 10px auto;
+  width: max-content;
+  height: 50px;
+   
+}
+.footlink a{ 
+display: block;
+text-decoration: none;
+float: right;
+color: white;
+background-color: #555555;
+padding: 5px;
+margin: 5px;
+border: 1px solid white;
+text-shadow: 2px 2px 2px black;
+box-shadow: 3px 3px 1px #555555;
+}
+.footlink a:hover{
+box-shadow: 0px 0px 0px;
+margin: 7px 5px 5px 7px;
+}

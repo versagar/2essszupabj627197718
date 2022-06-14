@@ -1,0 +1,77 @@
+@media only screen and (max-width:445px){
+  
+ 
+  .menu {
+    float: right;
+    padding: 0.5px;
+    height: 67px;
+  }
+    
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+  .htitle {
+    float: none;
+    width: 20vw;
+    margin: 2px auto;
+    height: 70px;
+    font-size: relative;
+  }
+.htitle:hover {
+    margin: 2.5px auto;
+}
+  .mblock {
+    width: max-content;
+    margin: 20px auto;
+  }
+  .mblock a {
+    width: 10vw;
+    margin-top: 0;
+
+  }
+}
+
+
+/* for keypad phones of width less than 240 px.
+*/
+@media only screen and (max-width: 240px) {
+  header {
+    height: max-content;
+  }
+  .logo {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+  }
+  .mblock {
+    padding: 0;
+    margin: 20px auto;
+    
+  }
+
+  
+  .menu {
+    height: 40px;
+    width: 10px;
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+
+  }
+  .h1 {
+    font-size: 20px;
+  }
+  .htitle {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 128px) {
+  .menu {
+    height: 10px;
+    width: 40px;
+  }
+}
