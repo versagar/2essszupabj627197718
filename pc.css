@@ -139,7 +139,7 @@ text-decoration:none;
     
 .myFeed {
   width: 79vw;
-  float: right;
+  float: left;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -175,7 +175,7 @@ text-decoration:none;
   float: left;
   display: block;
   width: 0;
-  font-size: 100%;
+  text-align: center;
   margin-right: 10px;
   color: white;
   text-shadow: 2px 2px 2px #6C2E00;
@@ -243,10 +243,10 @@ text-decoration:none;
   min-height: 150px;
 }
 .footlink {
+  display: block;
   margin: 10px auto;
-  width: max-content;
-  height: 50px;
-   
+  float: none;
+  width: fit-content;
 }
 .footlink a{ 
 display: block;

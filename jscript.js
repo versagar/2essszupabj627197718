@@ -15,8 +15,8 @@ function openOv() {
     }
 function closeOv() {
       document.getElementById("myOv").style.width = "0";
-      document.getElementById("myFeed").style.width="100vw";
-      document.getElementById("openOv").style.width="6vw";
+      document.getElementById("myFeed").style.width="99vw";
+      document.getElementById("openOv").style.width="auto";
       document.getElementById("openOv").style.padding="10px";
       document.getElementById("info").style.width="85vw";
  
