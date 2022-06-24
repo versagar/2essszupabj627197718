@@ -4,7 +4,6 @@ header { width: 100vw;
 }
 .menu {
   padding: 5px;
-  height: 80px;
   margin-left: 0;
 }
 .logo {
@@ -22,6 +21,8 @@ header { width: 100vw;
 .myOv { width: 0;
 }
 .myFeed { width: 100vw;
+}
+.foot { width: 100vw;
 }
           
 }
