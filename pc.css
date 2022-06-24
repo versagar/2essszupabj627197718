@@ -233,6 +233,7 @@ header {
 }
 
 .arframe a:hover {
+  width: 81%;
   box-shadow: 1px 0px 3px black;
 }
 
