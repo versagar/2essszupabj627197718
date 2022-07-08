@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(235, 215, 130);
+}
+h1 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    background-color: coral;
+    box-shadow: 3px 3px 3px black;
+}
+#firstPart {
+    float: left;
+    width: 25vw;
+    margin: 2vw;
+}
+#firstNum {
+    text-align: center;
+    font-size: 50px;
+}
+#btnFirst {
+    font-size: 2vw;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 3px 3px 3px black;
+}
+
+#btnFirst:active {
+    box-shadow: none;
+}
+
+#secondPart {
+   
+    float: left;
+    width: 25vw;
+    margin: 2vw;
+}
+#secondNum {
+    text-align: center;
+    font-size: 50px;
+}
+#btnSecond {
+    font-size: 2vw;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 3px 3px 3px black;
+}
+#btnSecond:active {
+    box-shadow: none;
+}
+#sumPart {
+    float: right;
+    width: 35vw;
+    margin-top: 2vw;
+    margin-right: 2vw;
+}
+#sumNum {
+    text-align: center;
+    font-size: 50px;
+}
+#btnSum {
+    font-size: 2vw;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 3px 3px 3px black;
+}
+#btnSum:active {
+    box-shadow: none;
+}
+
+#vcountOne, #vcountTwo, #vSum {
+    text-align: center;
+    font-size: 3vw;
+}
+
+
+@media only screen and (max-width: 620px) {
+  #btnFirst, #btnSecond, #btnSum {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+}
