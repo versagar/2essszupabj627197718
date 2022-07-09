@@ -62,7 +62,7 @@ outline: none;
 #btnSecond, #dBtnsecond {
     font-size: 2vw;
     display: block;
-    margin: 10px auto;
+    margin: 5px auto;
     box-shadow: 3px 3px 3px black;
 }
 #btnSecond:active, #dBtnsecond:active {
@@ -103,7 +103,6 @@ outline: none;
 
 @media only screen and (max-width: 620px) {
   #btnFirst, #btnSecond, #btnSum {
-    margin-top: 150px;
     margin-bottom: 150px;
   }
 }
