@@ -20,14 +20,14 @@ h1 {
     text-align: center;
     font-size: 50px;
 }
-#btnFirst {
+#btnFirst, #dBtnfirst {
     font-size: 2vw;
     display: block;
     margin: 10px auto;
     box-shadow: 3px 3px 3px black;
 }
 
-#btnFirst:active {
+#btnFirst:active, #dBtnfirst:active {
     box-shadow: none;
 }
 
@@ -41,13 +41,13 @@ h1 {
     text-align: center;
     font-size: 50px;
 }
-#btnSecond {
+#btnSecond, #dBtnsecond {
     font-size: 2vw;
     display: block;
     margin: 10px auto;
     box-shadow: 3px 3px 3px black;
 }
-#btnSecond:active {
+#btnSecond:active, #dBtnsecond:active {
     box-shadow: none;
 }
 #sumPart {

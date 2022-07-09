@@ -10,9 +10,23 @@ function incrfirst(){
     document.getElementById('vcountOne').innerHTML= vcounterOne;
 }
 
+function decrfirst(){
+    countOne= countOne- 1;
+    vcounterOne= vcounterOne.replace('🍎','');
+    document.getElementById('firstNum').innerHTML= countOne;
+    document.getElementById('vcountOne').innerHTML= vcounterOne;
+}
+
 function incrsecond(){
     countTwo= countTwo+ 1;
     vcounterTwo= vcounterTwo+ String('🍓');
+    document.getElementById('secondNum').innerHTML= countTwo;
+    document.getElementById('vcountTwo').innerHTML= vcounterTwo;
+}
+
+function decrsecond(){
+    countTwo= countTwo- 1;
+    vcounterTwo= vcounterTwo.replace('🍓','');
     document.getElementById('secondNum').innerHTML= countTwo;
     document.getElementById('vcountTwo').innerHTML= vcounterTwo;
 }
