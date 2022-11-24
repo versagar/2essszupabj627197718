@@ -160,6 +160,7 @@ header {
   margin-top: 3px;
   background-color: lightgrey;
   padding: 20px;
+  height: auto;
   min-height: 520px;
   border: 2px solid #6C2E00;
 }
@@ -192,6 +193,7 @@ header {
 .myOv {
   width: 20vw;
   min-height: 450px;
+  height: auto;
   float: left;
   transition: o.3s;
   background-color: #6C2E00;
