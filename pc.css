@@ -163,12 +163,21 @@ header {
   height: auto;
   min-height: 520px;
   border: 2px solid #6C2E00;
+  overflow: hidden;
 }
 #info {
   width: 75vw;
   float: right;
   display: block;
-}    
+}  
+
+#wpimg {
+  margin: 10px auto;
+  height: auto;
+  width: 30%;
+  display: block;
+
+}
     
 .openOv {
   text-decoration: none;
@@ -192,8 +201,6 @@ header {
 
 .myOv {
   width: 20vw;
-  min-height: 450px;
-  height: auto;
   float: left;
   transition: o.3s;
   background-color: #6C2E00;
@@ -219,16 +226,19 @@ header {
 }
 .arframe{
   font-size: 120%;
-  overflow: hidden;
+  padding-top: 20px;
+  margin-bottom: 0;
+  display: block;
+  height: auto;
 }
 .arframe a {
   width: 80%;
+  max-height: 50px;
   text-decoration: none;
   background-color: #C1C6AF;
   padding: 10px;
   color: white;
   float: right;
-  
   margin-bottom: 3px;
   box-shadow: -4px 0px 3px black;
   text-shadow: 1px 1px 1px black;
