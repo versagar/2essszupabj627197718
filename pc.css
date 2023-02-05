@@ -135,12 +135,22 @@ header {
   color:#818181;
 }
 
-
+.wbody {
+  display: block;
+  width: 100vw;
+  height: fit-content;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #6C2E00;
+}
     
 .myFeed {
   width: 79vw;
   float: left;
   overflow: hidden;
+  display: block;
+  height: auto;
   padding: 0;
   margin: 0;
 }
@@ -203,10 +213,11 @@ header {
   width: 20vw;
   float: left;
   transition: o.3s;
-  background-color: #6C2E00;
-  overflow: hidden;
+  min-height: fit-content;
+  display: block;
   margin: 0;
-  padding: 0;
+  overflow: hidden;
+  
 }
 .ov{
   font-size: 20px;
@@ -227,13 +238,13 @@ header {
 .arframe{
   font-size: 120%;
   padding-top: 20px;
-  margin-bottom: 0;
-  display: block;
+  overflow: hidden;
   height: auto;
 }
 .arframe a {
   width: 80%;
   max-height: 50px;
+  height: auto;
   text-decoration: none;
   background-color: #C1C6AF;
   padding: 10px;
@@ -242,6 +253,7 @@ header {
   margin-bottom: 3px;
   box-shadow: -4px 0px 3px black;
   text-shadow: 1px 1px 1px black;
+  display: block;
 }
 
 .arframe a:active {
