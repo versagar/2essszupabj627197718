@@ -137,7 +137,7 @@ header {
 
 .wbody {
   display: block;
-  width: 100vw;
+  width: 99vw;
   height: fit-content;
   overflow: hidden;
   margin: 0;
@@ -213,7 +213,6 @@ header {
   width: 20vw;
   float: left;
   transition: o.3s;
-  min-height: fit-content;
   display: block;
   margin: 0;
   overflow: hidden;
