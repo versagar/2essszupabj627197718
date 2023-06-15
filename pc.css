@@ -17,7 +17,7 @@ body {
 header {
   background-color: #6C2E00;
   width: 99vw;
-  height: 10vw;
+  height: 8vw;
   border-bottom: 0.1vw solid #c1c6af;
   overflow: hidden;
   padding-top: 0.5vw;
@@ -147,7 +147,7 @@ header {
     
 .myFeed {
   width: 79vw;
-  float: left;
+  float: right;
   overflow: hidden;
   display: block;
   height: auto;
@@ -156,7 +156,7 @@ header {
 }
 
 .phead {
-  font-size: 20px;
+  font-size: 2vw;
   display: block;
   color: white;
   background-color: #111;
@@ -211,39 +211,39 @@ header {
 
 .myOv {
   width: 20vw;
+  height: calc(100% - 10vw);
   float: left;
   transition: o.3s;
   display: block;
   margin: 0;
   overflow: hidden;
+  position: absolute;
   
 }
 .ov{
-  font-size: 20px;
+  font-size: 2vw;
   color: white; 
   background-color:#111; 
   text-align:center;
-  box-shadow: 0px 3px 0px #C1C6AF;
+  box-shadow: 0 0.2vw 0.2vw #C1C6AF;
   display: block;
   overflow: hidden;
 }
 .rFrame {
   width: 20vw ;
-  height: 160px;
-  border: 2px solid #6C2E00;
-  margin-top: 3px;
+  height: 15vw;
+  border: 0.2vw solid #6C2E00;
+  margin-top: 0.5vw;
   overflow: hidden;
 }
 .arframe{
-  font-size: 120%;
-  padding-top: 20px;
+  font-size: 1.5vw;
+  padding-top: 1vw;
   overflow: hidden;
   height: auto;
 }
 .arframe a {
   width: 80%;
-  max-height: 50px;
-  height: auto;
   text-decoration: none;
   background-color: #C1C6AF;
   padding: 10px;
