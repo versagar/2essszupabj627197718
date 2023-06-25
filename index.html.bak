@@ -8,6 +8,7 @@
   <meta name="description" content="Education Startup website">
   <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
   <meta name="viewport" content="width=device-width" ,initial-scale=1.0 />
+  <meta name="viewport" content="height=device-height", initial-scale=1.0 />
   <title>Physer: The Wise Craze</title>
   <link rel="icon" href="icon.png" type="icon/logo" media="all" />
   <link rel="stylesheet" href="pc.css" type="text/css" media="all" />
@@ -39,14 +40,14 @@
   </a>
   
     <div class="mblock">
-      <a href="ophysics.html">E</a>
-      <a href="cphysics.html">D</a>
-      <a href="iphysics.html">I</a>
-      <a href="gphysics.html">G</a>
-      <a href="rphysics.html">R</a>
       <a href="aphysics.html">A</a>
+	  <a href="cphysics.html">D</a>
+	  <a href="ophysics.html">E</a>
       <a href="vphysics.html">V</a>
-      </div>
+	  <a href="gphysics.html">G</a>
+	  <a href="iphysics.html">I</a>
+	  <a href="rphysics.html">R</a>
+    </div>
     
     </header>
   <div id="mySidenav" class="sidenav" >
