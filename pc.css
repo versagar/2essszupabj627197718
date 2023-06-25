@@ -19,6 +19,7 @@ body {
     display: block;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 header {
@@ -158,14 +159,16 @@ header {
 
 .myFeed {
     width: 80vw;
+    height: 100%;
     float: right;
     display: block;
     padding: 0;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .phead {
+    width: 100%;
     font-size: 1.5vw;
     display: block;
     color: white;
@@ -177,11 +180,11 @@ header {
 .feed {
     display: block;
     float: right;
-    width: 79vw;
+    width: 100%;
     height: 100%;
     margin-top: 0.5vw;
     background-color: lightgrey;
-    padding: 0.1vw;
+    padding: 0.5vw;
     overflow: scroll;
 }
 
@@ -220,12 +223,15 @@ header {
 
 .myOv {
     width: 20vw;
+    height: 100%;
     float: left;
     transition: 0.3s;
     display: block;
     margin: 0;
+    padding-right: 0.5vw;
     overflow: hidden;
     position: absolute;
+    background-color: #6c2e00;
 }
 
 .ov {
@@ -239,7 +245,7 @@ header {
 }
 
 .rFrame {
-    width: 20vw ;
+    width: 100% ;
     height: 15vw;
     border: 0.2vw solid #6C2E00;
     margin-top: 0.5vw;
@@ -255,24 +261,25 @@ header {
 .arframe a {
     font-size: 1vw;
     width: 80%;
+   /* height: calc(12.5% - 4vw); */
+    height: 1.5vw;
     padding: 0.25vw;
     text-decoration: none;
     background-color: #C1C6AF;
     color: white;
     float: right;
     margin-bottom: 0.4vw;
-    box-shadow: -4px 0px 3px black;
-    text-shadow: 1px 1px 1px black;
+    box-shadow: -0.3vw 0vw 0.1vw black;
+    text-shadow: 0.1vw 0.1vw 0.1vw black;
     display: block;
 }
 
 .arframe a:active {
     width: 79.5%;
-    box-shadow: 1px 0px 3px black;
+    box-shadow: 0.1vw 0vw 0.1vw black;
 }
 
 .foot {
-    float: left;
     background-color: black;
     width: 100vw;
     min-height: 8vw;
@@ -282,7 +289,7 @@ header {
 
 .footlink {
     display: block;
-    margin: 10px auto;
+    margin: 1vw auto;
     float: none;
     width: fit-content;
 }
@@ -293,20 +300,20 @@ header {
     float: right;
     color: white;
     background-color: #555555;
-    margin: 1px;
-    padding: 5px;
-    border: 1px solid white;
-    text-shadow: 2px 2px 2px black;
-    box-shadow: 3px 3px 1px #555555;
+    margin: 0.1vw;
+    padding: 0.2vw;
+    border: 0.1vw solid white;
+    text-shadow: 0.1vw 0.1vw 0.1vw black;
+    box-shadow: 0.2vw 0.2vw 0.1vw #555555;
 }
 
 .footlink a:active {
-    box-shadow: 0px 0px 0px;
-    margin: 3px 1px 1px 3px;
+    box-shadow: none;
+    margin: 0.2vw 0.1vw 0.1vw 0.2vw;
 }
 
 @media only screen and (max-width: 861px) {
     .feed {
-        min-height: 542px;
+       
     }
 }
