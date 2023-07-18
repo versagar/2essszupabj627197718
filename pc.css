@@ -23,10 +23,16 @@ body {
     overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
+    display: flex;
+    align-items: center;
     background-color: #6C2E00;
     width: 100vw;
-    height: 8vw;
+    height: 12vh;
     border-bottom: 0.1vw solid #c1c6af;
     overflow: hidden;
     padding-top: 0.5vw;
@@ -34,15 +40,18 @@ header {
 }
 
 .htitle {
-    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20vw;
     height: 7vw;
     text-align: center;
     box-shadow: 0.1vw 0.1vw 0.2vw white;
     border: 0.2vw solid #8c3f06;
+    
 }
 
-.htitle:active {
+.htitle:hover {
     box-shadow: none;
     border: none;
     margin-top: 0.1vw;
@@ -50,6 +59,7 @@ header {
 }
 
 .h1 {
+    text-decoration: none;
     font-size: 3.5vw;
     font-weight: bold;
     color: white;
@@ -58,6 +68,7 @@ header {
 }
 
 .h3 {
+    text-decoration: none;
     font-weight: bold;
     font-size: 1.5vw;
     color: #D9D8AB00;
@@ -87,21 +98,19 @@ header {
 }
 
 .mblock {
-    margin-right: 4vw;
-    display: block;
-    background-color: white;
-    position: relative;
+    display: flex;
+    justify-content: stretch;
+    margin-left: auto;
+    flex-direction: row-reverse;
 }
 
 .mblock a {
-    margin-right: 1vw;
-    float: right;
-    background-color: #C1C6AF;
-    text-decoration: none;
     width: 3vw;
+    margin-right: 1vw;
     border: 0.1vw solid black;
+    background-color: #c1c6af;
+    text-decoration: none;
     text-align: center;
-    padding: 0.1vw;
     box-shadow: 0.1vw 0.1vw 0.1vw black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #6C2E00;
@@ -162,6 +171,7 @@ header {
 .myOv {
     width: 20vw;
     height: 100%;
+    display: block;
     float: left;
     transition: 0.3s;
     display: block;
@@ -183,7 +193,7 @@ header {
 }
 
 .rFrame {
-    width: 100%;
+    width: 100% ;
     height: 30%;
     border: 0.2vw solid #6C2E00;
     margin-top: 0.5vw;
@@ -192,24 +202,35 @@ header {
 
 .arframe {
     padding-top: 0.5vw;
-    height: auto;
-}
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-flow: column;
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: flex-end;
 
+    
+}
 .arframe a {
-    font-size: 2vh;
-    padding-left: 1vw;
+    font-stretch: condensed;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: medium;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
     width: 80%;
-    height: 5%;
-    text-decoration: none;
+    height: auto;
+    padding: 0.25vh;
     background-color: #C1C6AF;
     color: white;
     float: right;
     margin-bottom: 0.4vw;
     box-shadow: -0.3vw 0vw 0.1vw black;
-    text-shadow: -0.1vw 0.1vw 0.1vw black;
-    display: block;
+    text-shadow: 0.1vw 0.1vw 0.1vw black;
 }
-
 .arframe a:active {
     width: 80%;
     margin-right: 0.5%;
@@ -252,7 +273,6 @@ header {
     height: 100vh;
     float: right;
     display: block;
-    padding: 3vw;
 }
 
 #wpimg {
