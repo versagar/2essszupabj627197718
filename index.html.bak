@@ -48,9 +48,8 @@
 	  <a href="iphysics.html">I</a>
 	  <a href="rphysics.html">R</a>
     </div>
-    
-    </header>
-  <div id="mySidenav" class="sidenav" >
+
+	   <div id="mySidenav" class="sidenav" >
     <a class="closebtn" href="javascript:void(0)" onclick="closeNav()" > &times;</a>
      
     <a class="ml" href="vphysics.html">Visual</a>
@@ -61,6 +60,9 @@
     <a class="ml" href="cphysics.html">Doubts</a>
     <a class="ml" href="ophysics.html">Events</a>
   </div>
+    
+    </header>
+ 
   <div class="wbody">
   <div class="myOv" id="myOv">
   <div class="ov">
@@ -124,7 +126,9 @@
   </div>
   </div>
   </div>
-  <div class="foot">
+  
+  <footer>
+	<div class="foot">
     <div class="footlink">
   
     <a href="contact.html">Contact</a>
@@ -132,6 +136,7 @@
     <a href="children-addition.html">Children</a>
     </div>
   </div>
+  </footer>
   <script src="jscript.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
