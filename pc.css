@@ -160,7 +160,7 @@ header {
 .wbody {
     display: block;
     width: 100vw;
-    height: calc(100vh - 16vw);
+    height: 80vh;
     margin: 0;
     padding: 0;
     background-color: #6C2E00;
@@ -302,12 +302,14 @@ header {
 }
 
 
-.footer {
+footer {
     background-color: black;
     width: 100vw;
-	height: 8vh;
+    min-height: 12vh;
 	display: block;
-}
+    position: absolute;
+    bottom: 0;
+}   
 
 .footlink {
     display: block;
