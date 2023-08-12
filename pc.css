@@ -302,12 +302,11 @@ header {
 }
 
 
-footer {
+.footer {
     background-color: black;
     width: 100vw;
-    min-height: 8vw;
-    display: block;
-    position: absolute;
+	height: 8vh;
+	display: block;
 }
 
 .footlink {
