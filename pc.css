@@ -102,20 +102,20 @@ header {
 
 .mblock {
     display: flex;
-    justify-content: stretch;
     margin-left: auto;
     flex-direction: row-reverse;
 }
 
 .mblock a {
     font-size: 3vmin;
-    width: 3.5vmin;
-    height: 3.5vmin;
+    width: 5vmin;
+    height: 5vmin;
     margin-right: 1vmin;
     border: 0.1vmin solid black;
     background-color: #c1c6af;
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
     box-shadow: 0.1vmin 0.1vmin 0.1vmin black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #6C2E00;

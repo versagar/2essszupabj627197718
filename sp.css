@@ -1,28 +1,5 @@
 @media only screen and (max-width: 625px){
-  
-header { width: 100vw;
-}
-.menu {
-  padding: 5px;
-  margin-left: 0;
-}
-.logo {
-  margin-right: 0;
-}
-.h1 {
-  font-size: 30px;
-}
-.h3 {
-  font-size: 8px;
-}
-.mblock {
-  margin-right: 1.5vw;
-}
-.myOv { width: 0;
-}
-.myFeed { width: 100vw;
-}
-.foot { width: 100vw;
-}
-          
+ 
+  }
+    
 }
