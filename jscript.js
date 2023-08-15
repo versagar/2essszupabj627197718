@@ -14,4 +14,19 @@ function openOv() {
 function closeOv() {
       document.getElementById("myOv").style.width = "0"; 
       document.getElementById("myFeed").style.width="100vw";
-      document.getElementById("openOv").style.display="inline";}
+      document.getElementById("openOv").style.display="inline";
+    }
+    var a = 0;  
+function openForm() {
+    
+    if (a==0) {
+        document.getElementById("form").style.display= "block";
+        a = 1;
+        document.getElementById("formBtn").innerHTML= "Close Form";
+    } else {
+        document.getElementById("form").style.display= "none";
+        a = 0;
+        document.getElementById("formBtn").innerHTML= "Open Form";
+    }
+
+}
