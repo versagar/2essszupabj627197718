@@ -7,14 +7,11 @@ function closeNav() {document.getElementById("mySidenav").style.width="0";
     }
     
 function openOv() {
-      document.getElementById("myOv").style.width="20vw";
-      document.getElementById("myOv").style.padding = "0.5vw";  
+      document.getElementById("myOv").style.width="20vw";  
       document.getElementById("myFeed").style.width="80vw";
-      document.getElementById("openOv").style.width="0";
+      document.getElementById("openOv").style.display="none";
     }
 function closeOv() {
-      document.getElementById("myOv").style.width = "0";
-      document.getElementById("myOv").style.padding = "0";  
+      document.getElementById("myOv").style.width = "0"; 
       document.getElementById("myFeed").style.width="100vw";
-      document.getElementById("openOv").style.width="auto";
-    }
+      document.getElementById("openOv").style.display="inline";}

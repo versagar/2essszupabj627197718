@@ -3,7 +3,7 @@
 }
 
 .feed::-webkit-scrollbar {
-    width: 1vw;
+    width: 1vmin;
 }
 
 .feed::-webkit-scrollbar-thumb {
@@ -32,70 +32,72 @@ header {
     align-items: center;
     background-color: #6C2E00;
     width: 100vw;
-    height: 12vh;
-    border-bottom: 0.1vw solid #c1c6af;
+    height: 12vmin;
+    border-bottom: 0.1vmin solid #c1c6af;
     overflow: hidden;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    padding-top: 0.5vmin;
+    padding-bottom: 0.5vmin;
 }
 
 .htitle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20vw;
-    height: 11vh;
+    width: auto;
+    height: 11vmin;
+    padding-left: 2vmin;
+    padding-right: 2vmin;
     text-align: center;
-    box-shadow: 0.1vw 0.1vw 0.2vw white;
-    border: 0.2vw solid #8c3f06;
+    box-shadow: 0.1vmin 0.1vmin 0.2vmin white;
+    border: 0.2vmin solid #8c3f06;
     
 }
 
 .htitle:hover {
     box-shadow: none;
     border: none;
-    margin-top: 0.1vw;
-    margin-left: 0.1vw;
+    margin-top: 0.1vmin;
+    margin-left: 0.1vmin;
 }
 
 .h1 {
     text-decoration: none;
-    font-size: 3.5vw;
+    font-size: 5vmin;
     font-weight: bold;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 0.3vw 0.3vw 0.1vw black;
+    text-shadow: 0.3vmin 0.3vmin 0.1vmin black;
 }
 
 .h3 {
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2vmin;
     color: #D9D8AB00;
-    text-shadow: 0.1vw 0.1vw 0.1vw white;
+    text-shadow: 0.1vmin 0.1vmin 0.1vmin white;
 }
 
 .logo {
     float: left;
-    height: 11vh;
+    height: 11vmin;
     width: calc(height);
-    margin-top: 0.25vw;
+    margin-top: 0.25vmin;
 }
 
 .menu {
     float: left;
-    font-size: 4vw;
-    height: 11vh;
-    padding: 1vh auto;
-    text-align: center
-    border: 0.1vw solid #8c3f06;
-    box-shadow: 0.3vw 0.3vw 0.5vw black;
-    text-shadow: 0.3vw 0.3vw 0.2vw black;
+    font-size: 4vmin;
+    height: 11vmin;
+    padding: 1vmin auto;
+    text-align: center;
+    border: 0.1vmin solid #8c3f06;
+    box-shadow: 0.3vmin 0.3vmin 0.5vmin black;
+    text-shadow: 0.3vmin 0.3vmin 0.2vmin black;
 }
 
 .menu:active {
     box-shadow: none;
-    border: 0.1vw solid #111;
+    border: 0.1vmin solid #111;
 }
 
 .mblock {
@@ -106,20 +108,22 @@ header {
 }
 
 .mblock a {
-    width: 3vw;
-    margin-right: 1vw;
-    border: 0.1vw solid black;
+    font-size: 3vmin;
+    width: 3.5vmin;
+    height: 3.5vmin;
+    margin-right: 1vmin;
+    border: 0.1vmin solid black;
     background-color: #c1c6af;
     text-decoration: none;
     text-align: center;
-    box-shadow: 0.1vw 0.1vw 0.1vw black;
+    box-shadow: 0.1vmin 0.1vmin 0.1vmin black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #6C2E00;
 }
 
 .mblock a:active {
     box-shadow: none;
-    margin-top: 0.5vw;
+    margin-top: 0.5vmin;
 }
 
 .sidenav {
@@ -135,8 +139,8 @@ header {
 }
 
 .closebtn {
-    font-size: 6vw;
-    margin-top: 0.5vw;
+    font-size: 6vmin;
+    margin-top: 0.5vmin;
     text-decoration: none;
     float: right;
     color: #fff;
@@ -145,10 +149,10 @@ header {
 }
 
 .ml {
-    padding: 1.5vw;
+    padding: 1.5vmin;
     text-decoration: none;
     width: 100%;
-    font-size: 2vw;
+    font-size: 2vmin;
     color: #f1f1f1;
     display: block;
     transition: 0.3s;
@@ -161,7 +165,7 @@ header {
 .wbody {
     display: block;
     width: 100vw;
-    height: 80vh;
+    height: 100vmin;
     margin: 0;
     padding: 0;
     background-color: #6C2E00;
@@ -177,18 +181,18 @@ header {
     transition: 0.3s;
     display: block;
     margin: 0;
-    padding-right: 0.5vw;
+    padding-right: 0.5vmin;
     overflow: hidden;
     position: absolute;
     background-color: #6c2e00;
 }
 
 .ov {
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     color: white;
     background-color: #111;
     text-align: center;
-    box-shadow: 0 0.2vw 0vw #C1C6AF;
+    box-shadow: 0 0.2vmin 0vmin #C1C6AF;
     display: block;
     overflow: hidden;
 }
@@ -196,13 +200,13 @@ header {
 .rFrame {
     width: 100% ;
     height: 30%;
-    border: 0.2vw solid #6C2E00;
-    margin-top: 0.5vw;
+    border: 0.2vmin solid #6C2E00;
+    margin-top: 0.5vmin;
     overflow: hidden;
 }
 
 .arframe {
-    padding-top: 0.5vw;
+    padding-top: 0.5vmin;
     width: 100%;
     height: 45%;
     display: flex;
@@ -217,44 +221,43 @@ header {
     font-stretch: condensed;
     flex-wrap: wrap;
     overflow: hidden;
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     display: flex;
     text-align: left;
     align-items: center;
     justify-content: flex-start;
     width: 80%;
     height: auto;
-    padding: 0.25vh;
+    padding: 0.25vmin;
     background-color: #C1C6AF;
     color: white;
     float: right;
-    margin-bottom: 0.4vw;
-    box-shadow: -0.3vw 0vw 0.1vw black;
-    text-shadow: 0.1vw 0.1vw 0.1vw black;
+    margin-bottom: 0.4vmin;
+    box-shadow: -0.3vmin 0vmin 0.1vmin black;
+    text-shadow: 0.1vmin 0.1vmin 0.1vmin black;
 }
 .arframe a:active {
     width: 80%;
     margin-right: 0.5%;
-    box-shadow: 0.1vw 0vw 0.1vw black;
+    box-shadow: 0.1vmin 0vmin 0.1vmin black;
 }
 .myFeed {
     width: 80vw;
     height: 100%;
     float: right;
     display: block;
-    padding: 0;
     margin: 0;
     overflow: hidden;
 }
 
 .phead {
     width: 100%;
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     display: block;
     color: white;
     background-color: #111;
     text-align: center;
-    box-shadow: 0vw 0.2vw 0vw #C1C6AF;
+    box-shadow: 0vmin 0.2vmin 0vmin #C1C6AF;
 }
 
 
@@ -263,15 +266,15 @@ header {
     float: right;
     width: 100%;
     height: 100%;
-    margin-top: 0.5vw;
+    margin-top: 0.5vmin;
     background-color: lightgrey;
-    padding: 0.5vw;
     overflow: scroll;
 }
 
 #info {
     width: 100%;
     height: 100vh;
+    padding: 1%;
     float: right;
     display: block;
 }
@@ -285,12 +288,11 @@ header {
 
 .openOv {
     text-decoration: none;
-    padding: 0;
-    float: left;
-    display: block;
-    width: 0;
+    padding: 1vmin;
+    margin: 1vmin;
+    display: none;
+    width: 10vmin;
     text-align: center;
-    margin-right: 2vw;
     color: white;
     text-shadow: 2px 2px 2px #6C2E00;
     overflow: hidden;
@@ -306,7 +308,7 @@ header {
 footer {
     background-color: black;
     width: 100vw;
-    min-height: 12vh;
+    min-height: 12vmin;
 	display: block;
     position: absolute;
     bottom: 0;
@@ -314,7 +316,7 @@ footer {
 
 .footlink {
     display: block;
-    margin: 1vw auto;
+    margin: 1vmin auto;
     float: none;
     width: fit-content;
 }
@@ -325,25 +327,25 @@ footer {
     float: right;
     color: white;
     background-color: #555555;
-    margin: 0.1vw;
-    padding: 0.2vw;
-    border: 0.1vw solid white;
-    text-shadow: 0.1vw 0.1vw 0.1vw black;
-    box-shadow: 0.2vw 0.2vw 0.1vw #555555;
+    margin: 0.1vmin;
+    padding: 0.2vmin;
+    border: 0.1vmin solid white;
+    text-shadow: 0.1vmin 0.1vmin 0.1vmin black;
+    box-shadow: 0.2vmin 0.2vmin 0.1vmin #555555;
 }
 
 .footlink a:active {
     box-shadow: none;
-    margin: 0.2vw 0.1vw 0.1vw 0.2vw;
+    margin: 0.2vmin 0.1vmin 0.1vmin 0.2vmin;
 }
-
-/*
-
 
 
 
 @media only screen and (max-width: 861px) {
-    .feed {
-       
+    .myFeed {
+       width: 100vw;
     }
+    .myOv {width: 0;}
+    .openOv {display: inline;}
+
 }
