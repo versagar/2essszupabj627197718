@@ -1,4 +1,4 @@
-document.getElementById("updates").innerHTML = '<object type="text/html" data="updateindex.html" width="100%" height="100%"></object>';
+document.getElementById("updates").innerHTML = '<object type="text/html" data="updateindex.html" width="100%" height="400vh"></object>';
 function openNav() { 
     document.getElementById("mySidenav").style.width = "20vw";
     document.getElementById("mySidenav").style.backgroundColor="rgba(0,0,0,0.7)"
