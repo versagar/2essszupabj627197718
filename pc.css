@@ -299,6 +299,17 @@ header {
     border-radius: 7px;
     font-weight: bold;
 }
+#fbBtn {
+    display: block;
+    background-color: rgb(35, 35, 243);
+    color: white;
+    font-size: 5vmin;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px #4b66fc;
+    height: 7vmin;
+    width: 7vmin;
+}
 
 #wpimg {
     margin: 10px auto;
@@ -334,6 +345,9 @@ footer {
     position: absolute;
     bottom: 0;
 }   
+footer p {
+    color: white;
+}
 
 .footlink {
     display: block;
