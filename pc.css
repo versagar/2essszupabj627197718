@@ -341,7 +341,7 @@ header {
 footer {
     background-color: black;
     width: 100vw;
-    min-height: 11vmin;
+    height: 12vmin;
 	display: block;
     position: absolute;
     bottom: 0;
@@ -352,19 +352,19 @@ footer p {
 }
 
 .footlink {
-    display: block;
-    margin: 1vmin auto;
-    float: none;
-    width: fit-content;
+    display: flex;
+    width: 48vmin;
+    margin: auto;
+    justify-content: space-between;
 }
 
 .footlink a {
+    font-size: 3vmin;
     display: block;
+    text-align: center;
     text-decoration: none;
-    float: right;
     color: white;
     background-color: #555555;
-    margin: 0.1vmin;
     padding: 0.2vmin;
     border: 0.1vmin solid white;
     text-shadow: 0.1vmin 0.1vmin 0.1vmin black;
