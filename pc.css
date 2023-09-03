@@ -223,9 +223,8 @@ header {
     justify-content: stretch;
     flex-direction: column;
     align-items: flex-end;
-
-    
 }
+
 .arframe a {
     font-stretch: condensed;
     flex-wrap: wrap;
@@ -277,6 +276,7 @@ header {
     float: right;
     width: 100%;
     height: 75vh;
+    height: 70vh;
     margin-top: 0.5vmin;
     background-color: lightgrey;
     overflow: scroll;
@@ -335,6 +335,7 @@ header {
     overflow: hidden;
 }
 
+
 .openOv:active {
     box-shadow: -2px -2px 1px black;
     margin-top: 2px;
@@ -389,4 +390,10 @@ footer p {
     .myOv {width: 0;}
     .openOv {display: inline;}
 
+}
+
+/*@media (orientation: landscape) { 
+    .feed {
+        height: 75vmin;
+    }
 }
