@@ -299,6 +299,10 @@ header {
     border-radius: 7px;
     font-weight: bold;
 }
+#socialBtn {
+    display: block;
+}
+
 #fbBtn {
     display: inline-block;
     background-color: rgb(35, 35, 243);
