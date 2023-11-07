@@ -357,7 +357,7 @@ footer p {
 
 .footlink {
     display: flex;
-    width: 48vmin;
+    width: 34vmin;
     margin: auto;
     justify-content: space-between;
 }
