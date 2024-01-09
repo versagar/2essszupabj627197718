@@ -300,6 +300,8 @@ header {
 }
 #socialBtn {
     display: block;
+    width: auto;
+    float: left;
 }
 
 #fbBtn {
@@ -357,9 +359,14 @@ footer p {
 
 .footlink {
     display: flex;
-    width: 34vmin;
     margin: auto;
+    width: 34vmin;
     justify-content: space-between;
+}
+.cpnotice {
+    color: white; 
+    font-size: 2vmin;
+    padding: 1vh;
 }
 
 .footlink a {
@@ -367,7 +374,7 @@ footer p {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: rgb(51, 30, 30);
     background-color: #555555;
     padding: 0.2vmin;
     border: 0.1vmin solid white;
