@@ -37,7 +37,7 @@
             padding: 0;
         }
         .sidebar a {
-            display: block;
+            display: flex;
             float: left;
             height: 9vw;
             width: 9vw;
@@ -47,16 +47,24 @@
             overflow-wrap: break-word;   
             font-weight: bold;
             text-decoration: none;
+            align-items: end;
+            justify-content: space-between;
+        }
+        .sectxt {
+            display: block;
+            float: left;
+            background-color: red;
+            width: 100%;
             text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <a href="#about"> About</a>
-        <a href="#experience">Experiences</a>
-        <a href="#qualifications">Skills and Trainings</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">A <div class="sectxt">About</div></a>
+        <a href="#experience">E<div class="sectxt">Experiences</div></a>
+        <a href="#qualifications">Q<div class="sectxt">Skills and Abilities</div></a>
+        <a href="#contact">C<div class="sectxt">contact</div></a>
     </div>
     <div class="desc">
         <div id="about">
