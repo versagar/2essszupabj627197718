@@ -37,38 +37,62 @@
             padding: 0;
         }
         .sidebar a {
-            display: flex;
-            float: left;
-            height: 9vw;
+            display: block;
+            position: relative;
+            min-height: 11vw;
             width: 9vw;
-            margin: 0.5vw auto;
-            background-color: aqua; 
-            font-size: 1vw;
-            overflow-wrap: break-word;   
-            font-weight: bold;
+            margin: auto;
+            background-color: antiquewhite; 
             text-decoration: none;
-            align-items: end;
-            justify-content: space-between;
+            text-align: center;
+            padding: 0;
+            
         }
         .sectxt {
             display: block;
-            float: left;
+            bottom: 0;
             background-color: red;
             width: 100%;
+            height: max-content;
             text-align: center;
+            font-size: auto;
+            color: darkgray;
+            text-shadow: 0.2vw 0.2vw black;
+            overflow-wrap: normal;   
+            font-weight: bold;
+            border-top: 0.25vmax solid gray;
+            border-bottom: 0.25vmax solid black;
+        }
+        .sidebar img{
+            display: block;
+            height: 8vw;
+            width: 8vw;
+            margin: auto;
+        }
+        #about {
+            display: block;
+            overflow-wrap: normal;
+        }
+        .photo {
+            display: block;
+            float: left;
+            width: 40vw;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <a href="#about">A <div class="sectxt">About</div></a>
-        <a href="#experience">E<div class="sectxt">Experiences</div></a>
-        <a href="#qualifications">Q<div class="sectxt">Skills and Abilities</div></a>
-        <a href="#contact">C<div class="sectxt">contact</div></a>
+        <a href="#about"> <img src="profile_bbg.png" alt=""> <div class="sectxt">About</div></a>
+        <a href="#experience"><img src="exp_icon.png" alt=""><div class="sectxt">Works</div></a>
+        <a href="#qualifications"><img src="skills_icon.png" alt=""><div class="sectxt">Skills</div></a>
+        <a href="#contact"><img src="contact_icon.png" alt=""><div class="sectxt">contact</div></a>
     </div>
     <div class="desc">
         <div id="about">
-
+<div class="photo"></div>
+<h1>Sagar Verma</h1>
+<h3>A Physics Tutor, Robotics Trainer and Web Designer</h3>
         </div>
         <div id="experience">
 
