@@ -7,16 +7,16 @@
     <style>
         * {
             box-sizing: border-box;
-            
         }
-        body {
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-
+       body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+       }
         .sidebar {
+            position: fixed;
             display: block;
             float: left;
             background-color: bisque;
@@ -27,13 +27,12 @@
         }
 
         .desc {
+            margin-left: 10vw;
             display: block;
             float: left;
             background-color: antiquewhite;
             width: 90vw;
-            height: 100%;
-            margin: 0;
-            padding: 0;
+            height: auto;
             overflow: hidden;
         }
         .sidebar a {
@@ -73,9 +72,12 @@
         #about {
             display: block;
             width: 100%;
-            height: 100vh;
+            height: auto;
             background-color: #f76d11;
-            overflow: hidden;
+        }
+        .photo img {
+            height: 40vw;
+            margin: calc(45vh - 20vw) auto;
         }
         .photo{
             background-color: aquamarine;
@@ -83,38 +85,48 @@
             float: left;
             height: 90vh;
             overflow: hidden;
-            
+           
         }
-        .photo img {
-            height: 40vw;
-            margin: calc(45vh - 20vw) auto;
-        }
-        
-        
         .short-desc {
             background-color: green;
             display: block;
             height: 90vh;
             width: auto;
+            padding-top: 30vh;
             overflow-wrap: break-word;
-            padding: 10px auto;
-            overflow: hidden;
-            text-align: center;
+       
         }
         .h1 {
-            display: inline-block;
-            vertical-align: middle;
+            font-size: 5vw;
+            text-align: center;
+            font-family:  'monospace', Courier New, Courier;
+            font-weight: bold;
+            border-bottom: 0.5vw solid grey;
+            box-shadow: 0 0.1vh 0 0;
+            text-shadow: 0.1vw 0.1vw gray;
         }
+        .h3 {
+            padding: 2vw;
+            font-size: 2.5vw;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium',
+             'Arial Narrow', Arial, sans-serif;
+             text-shadow: 0.1vw 0.1vw gray;
+        }
+
+        .about-desc {
+            display: block;
+            float: left;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f76d11;
+            
+          }
         
        
         @media screen and (max-aspect-ratio:1)
         {
-          .desc {
-            margin-top: 9vw;
-            width: 100vw;
-            
-          }
-          .sidebar {
+            .sidebar {
             height: 9vw;
             width: 100vw;
             top: 0;
@@ -125,6 +137,36 @@
             float: left;
             width: 25vw;
           }
+        #about {
+            height: fit-content;
+        }
+          .desc {
+            margin: 0;
+            top: 9vw;
+            padding-top: 9vw;
+            width: 100vw; 
+          }
+          
+          .photo img {
+            width: 80vw;
+            height: auto;
+            margin: 0;
+            margin-left: 10vw;
+           
+          }
+          .photo {
+            padding: 0;
+            width: 100vw;
+            height: fit-content;
+          }
+
+          .short-desc {
+            float: left;
+            width: 100vw;
+            height: auto;
+            padding: 0;
+          }
+          
         }
         
     </style>
@@ -142,12 +184,15 @@
   <img src="profile_img.png"></img>
 </div>
 <div class="short-desc">
-<div class="h1">Sagar Verma</div>
+<div class="h1">SAGAR VERMA</div>
 <div class="h3">A Physics Tutor, Robotics Trainer and Web Designer
 </div>
-
-
 </div>
+    <div class="about-desc">
+<p>
+    Hello, I am Sagar Verma. I am a physics and mathematics tutor, robotics trainer and web designer.
+</p>
+    </div>
         </div>
         <div id="experience">
 
