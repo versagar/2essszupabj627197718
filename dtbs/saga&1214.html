@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile: Sagar Verma</title>
+    <script>
+      
+function wDetail(w) {
+  var x = document.getElementById(w);
+  if (x.style.display=="none") {
+    x.style.display="block";
+  }
+  else {
+    x.style.display="none";
+  }
+}
+
+    </script>
     <style>
         * {
             box-sizing: border-box;
@@ -131,16 +144,25 @@
         .work_profile {
           display: block;
           float: left;
+          font-size: 2vw;
           background-color: aquamarine;
           width: 80%;
           height: fit-content;
-          margin-top: 20px;
-          padding-left: 10px;
+          margin-top: 2.5vw;
+          padding-left: 3vw;
           border-radius: 0 10px 10px 0px;
+          box-shadow: 1vw 1vw gray;
+        }
+
+        .work_profile:active {
+          box-shadow: none;
+          margin-top: 3vw;
+          width: 81%;
         }
 
         .work_detail {
-          display: block;
+          display: none;
+          margin-top: 1vw;
           margin-left: 5%;
           width: 95%;
           float: left;
@@ -224,36 +246,44 @@
     </div>
         </div>
         <div id="experience">
-<div class="work_profile" onclick="wDetailOne()">
+<div class="work_profile" onclick="wDetail('work1')">
   <p>Robotics Trainer : current</p>
 </div>
 <div class="work_detail" id="work1">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetailTwo()">
-  <p>Robotics Trainer : current</p>
+<div class="work_profile" onclick="wDetail('work2')">
+  <p>Byju's Home Tutor : current</p>
 </div>
 <div class="work_detail" id="work2">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetailThree()">
-  <p>Robotics Trainer : current</p>
+<div class="work_profile" onclick="wDetail('work5')">
+  <p>Web Developer on for Physer and Other Projects: Current</p>
+</div>
+<div class="work_detail" id="work5">
+  <p></p>
+</div>
+
+
+<div class="work_profile" onclick="wDetail('work3')">
+  <p>Content Creator for Physics : Former</p>
 </div>
 <div class="work_detail" id="work3">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetailFour()">
-  <p>Robotics Trainer : current</p>
+<div class="work_profile" onclick="wDetail('work4')">
+  <p>Physics Tutor at Delhi Public School Bhabua : Former</p>
 </div>
 <div class="work_detail" id="work4">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetailFour()">
-  <p>Robotics Trainer : current</p>
+<div class="work_profile" onclick="wDetail('work5')">
+  <p>Physic Tutor at BFL Online: Former</p>
 </div>
 <div class="work_detail" id="work5">
   <p></p>
