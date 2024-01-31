@@ -34,6 +34,8 @@ function wDetail(w) {
        p {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: normal;
+            padding: 3vw;
+            font-size: 2.5vw;
           }
 
         .sidebar {
@@ -89,30 +91,35 @@ function wDetail(w) {
             width: 8vw;
             margin: auto;
         }
-        #about {
+        .section {
             display: block;
             width: 100%;
             height: auto;
-            background-color: #f76d11;
+            overflow: hidden;
         }
+        #about  {
+          background-color: gray;
+        }
+        #experience  {
+          background-color: lightskyblue;
+        }
+
+
         .photo img {
             height: 40vw;
-            margin: calc(45vh - 20vw) auto;
         }
         .photo{
-            background-color: aquamarine;
             display: block;
             float: left;
-            height: 90vh;
+            height: auto;
             overflow: hidden;
            
         }
         .short-desc {
-            background-color: green;
             display: block;
-            height: 90vh;
+            height: 40vw;
             width: auto;
-            padding-top: 30vh;
+            padding-top: 15vw;
             overflow-wrap: break-word;
        
         }
@@ -121,9 +128,9 @@ function wDetail(w) {
             text-align: center;
             font-family:  'monospace', Courier New, Courier;
             font-weight: bold;
-            border-bottom: 0.5vw solid grey;
+            border-bottom: 0.5vw solid white;
             box-shadow: 0 0.1vh 0 0;
-            text-shadow: 0.1vw 0.1vw gray;
+            text-shadow: 0.1vw 0.1vw white;
         }
         .h3 {
             padding: 2vw;
@@ -131,7 +138,7 @@ function wDetail(w) {
             text-align: center;
             font-family: 'Franklin Gothic Medium',
              'Arial Narrow', Arial, sans-serif;
-             text-shadow: 0.1vw 0.1vw gray;
+             text-shadow: 0.1vw 0.1vw white;
         }
 
         .about-desc {
@@ -139,9 +146,7 @@ function wDetail(w) {
             float: left;
             width: 100%;
             height: auto;
-            font-size: 2.5vw;
-            background-color: #3350d3;
-            padding: 5vw;
+            background-color: lightgray;
           }
 
         .work_profile {
@@ -165,6 +170,7 @@ function wDetail(w) {
 
         .work_profile p {
           line-height: 0;
+          padding: 0;
           font-family: 'Times New Roman', Times, serif;
           font-weight: bold;
         }
@@ -175,7 +181,7 @@ function wDetail(w) {
           margin-left: 5%;
           width: 95%;
           float: left;
-          background-color: darkorange;
+          background-color: wheat;
           min-height: 20vh;
           border-radius: 20px 0 0 20px;
         }
@@ -234,7 +240,7 @@ function wDetail(w) {
         <a href="#contact"><img src="contact_icon.png" alt=""><div class="sectxt">contact</div></a>
     </div>
     <div class="desc">
-        <div id="about">
+        <div class="section" id="about">
 <div class="photo">
   <img src="profile_img.png"></img>
 </div>
@@ -254,7 +260,15 @@ function wDetail(w) {
 </p>
     </div>
         </div>
-        <div id="experience">
+
+
+        <div class="section" id="experience">
+<div>
+  <p class="h1">Work and experience</p>
+  <p>
+    I have experience working with four institutions for offline physics teaching, one for online physics teaching, and another for developing learning content. Currently, I am a part-time physics tutor and a full-time robotics trainer. Additionally, I am involved in website projects where I create websites using core coding.
+  </p>
+</div>          
 <div class="work_profile" onclick="wDetail('work1')">
   <p>Robotics Trainer : Current</p>
 </div>
@@ -297,12 +311,11 @@ function wDetail(w) {
 <div class="work_detail" id="work6">
   <p></p>
 </div>
+        </div>  
+        <div class="section" id="qualifications">
 
         </div>
-        <div id="qualifications">
-
-        </div>
-        <div id="contact">
+        <div class="section" id="contact">
 
         </div>
     </div>
