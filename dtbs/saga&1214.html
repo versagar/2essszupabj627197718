@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile: Sagar Verma</title>
-    <script>
-      
-function wDetail(w) {
+
+    <script>  
+setTimeout(function() {
+  if (document.getElementById('about')) {
+    window.scrollBy({
+      top: window.innerHeight,
+
+      behavior: 'smooth'
+    });
+  }
+}, 2000);
+
+function wDetail(w,opener,hanger) {
   var snd = new Audio("click-sound.wav");
   var x = document.getElementById(w);
+  var o = document.getElementById(opener);
+  var h = document.getElementById(hanger);
   snd.play();
   if (x.style.display=="block") {
     x.style.display="none";
+    o.src="downdraw.png";
+    h.style.display="none";
   }
   else {
     x.style.display="block";
+    o.src="updraw.png";
+    h.style.display="block";
   }
 }
+
 
     </script>
     <style>
@@ -96,15 +113,15 @@ function wDetail(w) {
             width: 100%;
             height: auto;
             overflow: hidden;
+            border-bottom: 1vw solid #505060;
+           
         }
         #about  {
-          background-color: gray;
+          background-color: #505060;
         }
         #experience  {
           background-color: lightskyblue;
         }
-
-
         .photo img {
             height: 40vw;
         }
@@ -138,7 +155,7 @@ function wDetail(w) {
             text-align: center;
             font-family: 'Franklin Gothic Medium',
              'Arial Narrow', Arial, sans-serif;
-             text-shadow: 0.1vw 0.1vw white;
+             
         }
 
         .about-desc {
@@ -152,38 +169,70 @@ function wDetail(w) {
         .work_profile {
           display: block;
           float: left;
-          font-size: 2.5vw;
           background-color: aquamarine;
-          width: 80%;
+          width: 90%;
           height: fit-content;
           margin-top: 2.5vw;
           padding-left: 3vw;
           border-radius: 0 10px 10px 0px;
           box-shadow: 1vw 1vw gray;
+          
+        }
+        
+        .work_profile img /*opener arrow*/{
+          display: block;
+          float: left;
+          width: 9%;
+          height: auto;
+          margin-top: 1.3vw;
+          outline: 0.5vw solid gray;
+          border: 0.3vw solid black;
+          border-radius: 8px;
+          background-color: wheat;
+        }
+        
+        .work_profile img:active {
+          border-left: 1vw solid black;
+          border-top: 1vw solid black;
         }
 
-        .work_profile:active {
+ /*       .work_profile:active {
           box-shadow: none;
           margin-top: 3vw;
           margin-left: 1%;
         }
-
+*/
         .work_profile p {
-          line-height: 0;
+          display: block;
+          float: left;
+          width: 90%;
+          height: auto;
           padding: 0;
+          font-size: 3vw;
           font-family: 'Times New Roman', Times, serif;
           font-weight: bold;
         }
 
+        .hanger {
+          display: none;
+          float: left;
+          margin-top: 1vw;
+          margin-left: 25%;
+          width: 50%;
+          height: 15vmin;
+          border-left: 1vw groove black;
+          border-right: 1vw groove black;
+        }
+
         .work_detail {
           display: none;
-          margin-top: 1vw;
-          margin-left: 5%;
-          width: 95%;
           float: left;
+          margin-left: 2.5%;
+          width: 95%;
           background-color: wheat;
           min-height: 20vh;
-          border-radius: 20px 0 0 20px;
+          border-radius: 20px;
+          box-shadow: 1vw 1vw gray;
         }
         @media screen and (max-aspect-ratio:1)
         {
@@ -246,7 +295,7 @@ function wDetail(w) {
 </div>
 <div class="short-desc">
 <div class="h1">SAGAR VERMA</div>
-<div class="h3">A Physics Tutor, Robotics Trainer and Web Designer
+<div class="h3">A <b>Physics Tutor</b>, <b>Robotics Trainer</b> and <b>Web Developer</b>
 </div>
 </div>
     <div class="about-desc">
@@ -268,46 +317,52 @@ function wDetail(w) {
   <p>
     I have experience working with four institutions for offline physics teaching, one for online physics teaching, and another for developing learning content. Currently, I am a part-time physics tutor and a full-time robotics trainer. Additionally, I am involved in website projects where I create websites using core coding.
   </p>
-</div>          
-<div class="work_profile" onclick="wDetail('work1')">
-  <p>Robotics Trainer : Current</p>
 </div>
+       
+<div class="work_profile" onclick="wDetail('work1','opener1','hanger1')">
+  <p>Robotics Trainer : Current</p><img src="downdraw.png" alt="↘" id="opener1">
+</div>
+<div class="hanger" id="hanger1"></div>
 <div class="work_detail" id="work1">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetail('work2')">
-  <p>Byju's Home Tutor : Current</p>
+<div class="work_profile" onclick="wDetail('work2','opener2','hanger2')">
+  <p>Byju's Home Tutor : Current</p><img src="downdraw.png" alt="↘" id="opener2">
 </div>
+<div class="hanger" id="hanger2"></div>
 <div class="work_detail" id="work2">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetail('work3')">
-  <p>Web Developer on for Physer and Other Projects: Current</p>
+<div class="work_profile" onclick="wDetail('work3','opener3','hanger3')">
+  <p>Web Developer for individual projects: Current</p><img src="downdraw.png" alt="↘" id="opener3">
 </div>
+<div class="hanger" id="hanger3"></div>
 <div class="work_detail" id="work3">
   <p></p>
 </div>
 
-
-<div class="work_profile" onclick="wDetail('work4')">
-  <p>Content Creator for Physics : Former</p>
+<div class="work_profile" onclick="wDetail('work4','opener4','hanger4')">
+  <p>Content Creator for Physics : Former</p><img src="downdraw.png" alt="↘" id="opener4">
 </div>
+<div class="hanger" id="hanger4"></div>
 <div class="work_detail" id="work4">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetail('work5')">
-  <p>Physics Tutor at Delhi Public School Bhabua : Former</p>
+<div class="work_profile" onclick="wDetail('work5','opener5','hanger5')">
+  <p>Physics Tutor at Delhi Public School Bhabua : Former</p><img src="downdraw.png" alt="↘" id="opener5">
 </div>
+<div class="hanger" id="hanger5"></div>
 <div class="work_detail" id="work5">
   <p></p>
 </div>
 
-<div class="work_profile" onclick="wDetail('work6')">
-  <p>Physic Tutor at BFL Online: Former</p>
+<div class="work_profile" onclick="wDetail('work6','opener6','hanger6')">
+  <p>Physic Tutor at BFL Online: Former</p><img src="downdraw.png" alt="↘" id="opener6">
 </div>
+<div class="hanger" id="hanger6"></div>
 <div class="work_detail" id="work6">
   <p></p>
 </div>
