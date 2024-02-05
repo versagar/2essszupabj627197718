@@ -51,9 +51,14 @@ function wDetail(w,opener,hanger) {
        p {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: normal;
-            padding: 3vw;
-            font-size: 2.5vw;
+            padding: 1vw 1vw 1vw 2vw;
+            font-size: 2.5vmin;
+            
           }
+        ul {
+          padding-left: 4vw;
+        }  
+      
 
         .sidebar {
             position: fixed;
@@ -245,6 +250,7 @@ function wDetail(w,opener,hanger) {
           min-height: 20vh;
           border-radius: 20px;
           box-shadow: 1vw 1vw gray;
+          overflow: hidden;
         }
         @media screen and (max-aspect-ratio:1)
         {
@@ -337,7 +343,16 @@ function wDetail(w,opener,hanger) {
 </div>
 <div class="hanger" id="hanger1"></div>
 <div class="work_detail" id="work1">
-  <p></p>
+  <p><b>As a robotics trainer at this institute, my responsibilities are - </b></p>
+    <ul>
+      <li>Training all kinds of students according to their learning behaviour.</li>
+      <li>Guiding them to become advanced in making mechanical Lego models from beginners.</li>
+      <li>Improving their creativity and problem solving in mechanical physics.</li>
+      <li>Guiding them to become advanced in coding using variables, loops, conditions, sensor controls, motors and other components for controlling their robotic models.</li>
+      <li>Improving their critical thinking and general creativity by giving them applications of the concepts in real life problem solving.</li>
+    </ul>
+    <p>Apart from these, I am also involved in IT management and troubleshooting. I am also responsible for managing business tools like whatsapp automation, google sheet automation, CRM management and workflows, etc.</p>
+    
 </div>
 
 <div class="work_profile" onclick="wDetail('work2','opener2','hanger2')">
@@ -345,7 +360,28 @@ function wDetail(w,opener,hanger) {
 </div>
 <div class="hanger" id="hanger2"></div>
 <div class="work_detail" id="work2">
-  <p></p>
+  <p><b>As a physics tutor at Byju’s Home Tuitions, my responsibilities are to -</b></p>
+  <ul>
+    <li>Teach students as per curriculum and schedule with personalised attention.</li>
+    <li>Assess students progress through homework, exam grades, and Individual Performance Tracking system.</li>
+    <li>Discuss homework, resolve doubts and prepare customised assignments.</li>
+    <li>Provide detailed study plans.</li>
+  </ul>  
+</div>
+
+<div class="work_profile" onclick="wDetail('work2a','opener2a','hanger2a')">
+  <p>One-on-one Tutor (Physics, Maths, Computer Science)</p><img src="downdraw.png" alt="↘" id="opener2a">
+</div>
+<div class="hanger" id="hanger2a"></div>
+<div class="work_detail" id="work2a">
+  <p><b>As a one-on-one individual tutor, my responsibilities include -</b></p>
+  <ul>
+    <li>Teaching students how to learn maths, computer science and physics.</li>
+    <li>Giving them the concepts of their board curriculum.</li>
+    <li>Helping in visualising the real life applications of the science concepts.</li>
+    <li>Improving their creativity and critical thinking by giving problems and then by encouraging them to solve.</li>
+
+  </ul>  
 </div>
 
 <div class="work_profile" onclick="wDetail('work3','opener3','hanger3')">
