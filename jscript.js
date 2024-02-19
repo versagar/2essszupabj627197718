@@ -1,3 +1,12 @@
+// Disable right-click context menu
+document.addEventListener('contextmenu', event => event.preventDefault());
+// Disable F12 key and Ctrl+Shift+I combo
+document.addEventListener('keydown', event => {
+  if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
+    event.preventDefault();
+  }
+});
+
 document.getElementById("updates").innerHTML = '<object type="text/html" data="updateindex.html" width="100%" height="400vh"></object>';
 function openNav() { 
     document.getElementById("mySidenav").style.width = "20vw";
