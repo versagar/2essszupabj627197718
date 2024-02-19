@@ -26,7 +26,8 @@ function closeOv() {
       document.getElementById("myFeed").style.width="100vw";
       document.getElementById("openOv").style.display="inline";
     }
-    var a = 0;  
+    var a = 0;
+    var b = 0;  
 function openForm() {
     
     if (a==0) {
@@ -34,24 +35,32 @@ function openForm() {
         a = 1;
         document.getElementById("guideFrame").src= "https://docs.google.com/forms/d/e/1FAIpQLSdPYLXazozE5HBf9LSb7frOYMblCh5PnoVQeiBv1dNdhJTTAA/viewform?";
         document.getElementById("formBtn").innerHTML= "Close Form";
+        document.getElementById("footer").style.display= "none";
+        document.getElementById("feed").style.height= "100vh";
     } else {
         document.getElementById("form").style.display= "none";
         a = 0;
         document.getElementById("formBtn").innerHTML= "Open Form";
+        document.getElementById("footer").style.display= "block";
+        document.getElementById("feed").style.height= "70vh";
     }
 
 }
 function openSagar() {
     
-    if (a==0) {
+    if (b==0) {
         document.getElementById("form").style.display= "block";
-        a = 1;
+        b = 1;
         document.getElementById("guideFrame").src= "dtbs/saga&1214.html";
         document.getElementById("sagarBtn").innerHTML= "Close Profile";
+        document.getElementById("footer").style.display= "none";
+        document.getElementById("feed").style.height= "100vh";
     } else {
         document.getElementById("form").style.display= "none";
-        a = 0;
+        b = 0;
         document.getElementById("sagarBtn").innerHTML= "Open Profile";
+        document.getElementById("footer").style.display= "block";
+        document.getElementById("feed").style.height= "70vh";
     }
 
 }
