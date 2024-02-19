@@ -296,8 +296,7 @@ header {
 #guideFrame {
 	width: 70vw;
 	height: 70vh;
-	marginheight: 0; 
-	marginwidth: 0;
+}
 #formBtn {
     border: 3px solid white;
     border-radius: 7px;
