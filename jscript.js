@@ -23,7 +23,7 @@ function openForm() {
     if (a==0) {
         document.getElementById("form").style.display= "block";
         a = 1;
-        document.getElementById("form").src= "forms.google.com";
+        document.getElementById("guideFrame").src= "https://docs.google.com/forms/d/e/1FAIpQLSdPYLXazozE5HBf9LSb7frOYMblCh5PnoVQeiBv1dNdhJTTAA/viewform?";
         document.getElementById("formBtn").innerHTML= "Close Form";
     } else {
         document.getElementById("form").style.display= "none";
@@ -37,7 +37,7 @@ function openSagar() {
     if (a==0) {
         document.getElementById("form").style.display= "block";
         a = 1;
-        document.getElementById("form").src= "dtbs/saga&1214.html";
+        document.getElementById("guideFrame").src= "dtbs/saga&1214.html";
         document.getElementById("sagarBtn").innerHTML= "Close Profile";
     } else {
         document.getElementById("form").style.display= "none";
