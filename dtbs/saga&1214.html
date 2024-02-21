@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile: Sagar Verma</title>
   <script src="../jscript.js"></script>
+
   <script>
     setTimeout(function () {
       if (document.getElementById('about')) {
@@ -40,15 +41,14 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      overflow: scroll;
-
+      width: 100%;
+      min-height: 100vh;
+      overflow-wrap: normal;
     }
 
     p {
@@ -56,14 +56,15 @@
       font-weight: normal;
       padding: 1vw 1vw 1vw 2vw;
       font-size: 2.5vmin;
-
     }
 
     ul {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-weight: normal;
-      padding-left: 4vw;
+      padding-left: 5vw;
+      padding-right: 1vw;
       font-size: 2.5vmin;
+      line-height: 4vmin;
     }
 
 
@@ -72,26 +73,25 @@
       display: block;
       float: left;
       background-color: bisque;
-      width: 10vw;
+      width: 8%;
       height: 100%;
       margin: 0;
       padding: 0;
     }
 
     .desc {
-      margin-left: 10vw;
+      margin-left: 8%;
       display: block;
       float: left;
       background-color: antiquewhite;
-      width: 90vw;
+      width: 92%;
       height: auto;
     }
 
     .sidebar a {
       display: block;
       position: relative;
-      min-height: 11vw;
-      width: 9vw;
+      width: 90%;
       margin: auto;
       background-color: antiquewhite;
       text-decoration: none;
@@ -108,7 +108,7 @@
       width: 100%;
       height: max-content;
       text-align: center;
-      font-size: 2vw;
+      font-size: 4vmin;
       color: darkgray;
       text-shadow: 0.1vw 0.1vw black;
       overflow-wrap: normal;
@@ -119,9 +119,9 @@
 
     .sidebar img {
       display: block;
-      height: 8vw;
-      width: 8vw;
+      width: 80%;
       margin: auto;
+      background-color: bisque;
     }
 
     .section {
@@ -320,17 +320,22 @@
     @media screen and (max-aspect-ratio:1) {
       .sidebar {
         height: 9vw;
-        width: 100vw;
+        width: 100%;
         top: 0;
         position: fixed;
+        
       }
 
       .sidebar a {
         margin: auto;
         float: left;
-        width: 25vw;
+        width: 25%;
       }
 
+      .sidebar img {
+        width: 40%;
+      }
+     
       #about {
         padding-top: 9vw;
         height: fit-content;
@@ -338,7 +343,7 @@
 
       .desc {
         margin: 0;
-        width: 100vw;
+        width: 100%;
       }
 
       .photo img {
@@ -351,7 +356,7 @@
 
       .photo {
         padding: 0;
-        width: 100vw;
+        width: 100%;
         height: fit-content;
       }
 
