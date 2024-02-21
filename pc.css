@@ -303,6 +303,9 @@ header {
     border-radius: 7px;
     font-weight: bold;
 }
+.frameBtn:active {
+	border: none;
+}
 #socialBtn {
     display: block;
     width: auto;
