@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -15,11 +17,8 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     display: block;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
 }
 
@@ -31,7 +30,7 @@ img {
 }
 
 #line {
-    width: 100vw;
+    width: 100%;
     height: 2px;
     background-color: black;
 }
@@ -40,7 +39,7 @@ header {
     display: flex;
     align-items: center;
     background-color: #6C2E00;
-    width: 100vw;
+    width: 100%;
     height: 12vmin;
     border-bottom: 0.1vmin solid #c1c6af;
     overflow: hidden;
@@ -173,8 +172,8 @@ header {
 
 .wbody {
     display: block;
-    width: 100vw;
-    height: 100vmax;
+    width: 100%;
+    height: calc(100vh - 26vmin);
     margin: 0;
     padding: 0;
     background-color: #6C2E00;
@@ -250,7 +249,7 @@ header {
     box-shadow: 0.1vmin 0vmin 0.1vmin black;
 }
 .myFeed {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     float: right;
     display: block;
@@ -273,9 +272,9 @@ header {
 
 .feed {
     display: block;
-    float: right;
+    float: left;
     width: 100%;
-    height: calc(100vh - 26vmin);
+    height: calc(100vh -26vmin);
     margin-top: 0.5vmin;
     background-color: lightgrey;
     overflow: scroll;
@@ -295,16 +294,13 @@ header {
 }
 
 #guideFrame {
-	width: 100vw;
+	width: 100%;
 	height: 80vh;
 }
 .frameBtn {
     border: 3px solid white;
     border-radius: 7px;
     font-weight: bold;
-}
-.frameBtn:active {
-	border: none;
 }
 #socialBtn {
     display: block;
@@ -354,13 +350,12 @@ header {
 
 footer {
     background-color: black;
-    width: 100vw;
+    width: 100%;
     height: 14vmin;
 	display: block;
     float: left;
     bottom: 0;
     padding: 1vh;
-    overflow: hidden;
     position: absolute;
 }   
 footer p {
@@ -401,7 +396,7 @@ footer p {
 
 @media only screen and (max-width: 761px) {
     .myFeed {
-       width: 100vw;
+       width: 100%;
     }
     .myOv {width: 0;}
     .openOv {display: inline;}
