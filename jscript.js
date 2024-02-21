@@ -9,7 +9,7 @@ document.addEventListener('keydown', event => {
 
 document.getElementById("updates").innerHTML = '<object type="text/html" data="updateindex.html" width="100%" height="400vh"></object>';
 function openNav() {
-    document.getElementById("mySidenav").style.width = "20vw";
+    document.getElementById("mySidenav").style.width = "20%";
     document.getElementById("mySidenav").style.backgroundColor = "rgba(0,0,0,0.7)"
 }
 
@@ -18,13 +18,13 @@ function closeNav() {
 }
 
 function openOv() {
-    document.getElementById("myOv").style.width = "20vw";
-    document.getElementById("myFeed").style.width = "80vw";
+    document.getElementById("myOv").style.width = "20%";
+    document.getElementById("myFeed").style.width = "80%";
     document.getElementById("openOv").style.display = "none";
 }
 function closeOv() {
     document.getElementById("myOv").style.width = "0";
-    document.getElementById("myFeed").style.width = "100vw";
+    document.getElementById("myFeed").style.width = "100%";
     document.getElementById("openOv").style.display = "inline";
 }
 var a = 0;
