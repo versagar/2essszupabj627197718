@@ -38,13 +38,13 @@ function openForm() {
         document.getElementById("guideFrame").src = "https://docs.google.com/forms/d/e/1FAIpQLSdPYLXazozE5HBf9LSb7frOYMblCh5PnoVQeiBv1dNdhJTTAA/viewform?";
         document.getElementById("formBtn").innerHTML = "Close Form";
         document.getElementById("footer").style.display = "none";
-        document.getElementById("feed").style.height = "100vh";
+        document.getElementById("wbody").style.height = "calc(100vh - 12vmin)";
     } else {
         a = 0;
         document.getElementById("form").style.display = "none";
         document.getElementById("formBtn").innerHTML = "Open Form";
         document.getElementById("footer").style.display = "block";
-        document.getElementById("feed").style.height = "calc(100vh - 26vmin)";
+        document.getElementById("wbody").style.height = "calc(100vh - 26vmin)";
     }
 }
 
@@ -57,13 +57,13 @@ function openSagar() {
         document.getElementById("guideFrame").src = "dtbs/saga&1214.html";
         document.getElementById("sagarBtn").innerHTML = "Close Profile";
         document.getElementById("footer").style.display = "none";
-        document.getElementById("feed").style.height = "100vh";
+        document.getElementById("wbody").style.height = "calc(100vh - 12vmin)";
     } else {
         b = 0;
         document.getElementById("form").style.display = "none";
         document.getElementById("sagarBtn").innerHTML = "Open Profile";
         document.getElementById("footer").style.display = "block";
-        document.getElementById("feed").style.height = "calc(100vh - 26vmin)";
+        document.getElementById("wbody").style.height = "calc(100vh - 26vmin)";
     }
 
 }
