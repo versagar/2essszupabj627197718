@@ -274,7 +274,7 @@ header {
     display: block;
     float: left;
     width: 100%;
-    height: calc(100vh -26vmin);
+    height: 100%;
     margin-top: 0.5vmin;
     background-color: lightgrey;
     overflow: scroll;
@@ -301,6 +301,10 @@ header {
     border: 3px solid white;
     border-radius: 7px;
     font-weight: bold;
+}
+.frameBtn:active {
+    border: none;
+    border-radius: 0;
 }
 #socialBtn {
     display: block;
