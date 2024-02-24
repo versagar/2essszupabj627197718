@@ -302,10 +302,6 @@ header {
     border-radius: 7px;
     font-weight: bold;
 }
-.frameBtn:active {
-    border: none;
-    border-radius: 0;
-}
 #socialBtn {
     display: block;
     width: auto;
@@ -411,4 +407,5 @@ footer p {
     .feed {
         height: 75vmin;
     }
-}
+	}
+	
