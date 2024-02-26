@@ -283,8 +283,8 @@ header {
 #info {
     width: 100%;
     height: fit-content;
-    padding: 1%;
     float: right;
+    padding: 1%;
     display: block;
 }
 
@@ -301,6 +301,10 @@ header {
     border: 3px solid white;
     border-radius: 7px;
     font-weight: bold;
+}
+.frameBtn:active {
+    border: none;
+    border-radius: 0;
 }
 #socialBtn {
     display: block;
@@ -395,17 +399,6 @@ footer p {
 
 
 @media only screen and (max-width: 761px) {
-    .myFeed {
-       width: 100%;
-    }
-    .myOv {width: 0;}
     .openOv {display: inline;}
 
 }
-
-/*@media (orientation: landscape) { 
-    .feed {
-        height: 75vmin;
-    }
-	}
-	
