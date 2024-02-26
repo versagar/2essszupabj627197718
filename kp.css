@@ -1,4 +1,4 @@
-@media only screen and (max-width:445px){
+@media only screen and (max-width:240px){
   
   body {
     overflow: scroll;
@@ -20,6 +20,7 @@
   
   .feed {
     height: auto;
+    overflow: auto;
   }
   .openOv {
     display: none;
@@ -37,13 +38,10 @@
 
 
 /* for keypad phones of width less than 240 px.
-*/
-@media only screen and (max-width: 240px) {
-
-
-}
 
 @media only screen and (max-width: 128px) {
  
 
   }
+
+*/
