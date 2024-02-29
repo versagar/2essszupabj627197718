@@ -285,6 +285,7 @@ header {
     height: fit-content;
     float: right;
     padding: 1%;
+padding-bottom: 5vmin;
     display: block;
 }
 
@@ -360,7 +361,7 @@ footer {
     float: left;
     bottom: 0;
     padding: 1vh;
-    position: absolute;
+    
 }   
 footer p {
     color: white;
