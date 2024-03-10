@@ -27,9 +27,11 @@ function closeOv() {
     document.getElementById("myFeed").style.width = "100%";
     document.getElementById("openOv").style.display = "inline";
 }
+var c = 0;
 var a = 0;
 var b = 0;
 function openForm() {
+   
     if (a == 0) {
         a = 1;
         b = 1;
@@ -49,7 +51,9 @@ function openForm() {
 }
 
 function openSagar() {
+    
     if (b == 0) {
+
         b = 1;
         a = 1;
         openForm();
@@ -66,4 +70,17 @@ function openSagar() {
         document.getElementById("wbody").style.height = "calc(100vh - 26vmin)";
     }
 
+}
+
+function openCpnotice() {
+
+if (c == 0) {
+    c = 1;
+    document.getElementById("cpnotice").style.display = "block";
+    
+} else {
+    c = 0;
+    document.getElementById("cpnotice").style.display = "none";
+   
+}
 }
