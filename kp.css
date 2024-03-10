@@ -4,13 +4,7 @@
     overflow: scroll;
   }  
     
-  header {
-    position: relative;
-    height: auto;
-  }
-  footer {
-    position: relative;
-  }
+ 
   .wbody {
     height: auto;
   }
