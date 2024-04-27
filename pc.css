@@ -295,7 +295,7 @@ header {
     box-shadow: 1vw 1vw black;
 }
 .full_frame {
-    width: 100%;
+    width: 40%;
     height: 60vh;
     overflow: scroll;
 }
