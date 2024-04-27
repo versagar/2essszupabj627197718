@@ -286,7 +286,19 @@ header {
     padding-bottom: 5vmin;
     display: block;
 }
-
+.r_opener_btn {
+    height: 6vmin;
+    font-size: 2vmin;
+    padding: 0.5vmin;
+    background-color: antiquewhite;
+    border-radius: 2vmin;
+    box-shadow: 1vw 1vw black;
+}
+.full_frame {
+    width: 100%;
+    height: 60vh;
+    overflow: scroll;
+}
 #form {
     overflow: hidden;
     display: none;
