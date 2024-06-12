@@ -47,8 +47,24 @@ function switchWidth(w,u,id) {if (sw == 1) {
     sw = 1;
     document.getElementById(id).style.width = w + u;
 }
-
 }
+
+function fullOpen() {
+    document.getElementById('footer').style.display = "none";
+    document.getElementById('header').style.display = "none";
+    document.getElementById('fullOpener').style.display = "none";
+    document.getElementById('fullCloser').style.display = "block";
+    setWidthHeight(100,"%",100,"%","wbody");
+}
+
+function fullClose() {
+    document.getElementById('footer').style.display = "block";
+    document.getElementById('header').style.display = "flex";
+    document.getElementById('fullOpener').style.display = "block";
+    document.getElementById('fullCloser').style.display = "none";
+    document.getElementById('wbody').style.height = 'calc(100% - 26vmin)';
+}
+
 
 //var containerWidth = document.getElementById('two').offsetWidth; // Get the container width if needed.
 //var adjustedWidth = containerWidth - awidth; // Calculate the adjusted width

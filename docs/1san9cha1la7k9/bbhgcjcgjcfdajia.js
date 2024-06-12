@@ -614,6 +614,16 @@ function getLink() {
     if(hint==="6rnrjrq8n7o7r7r"){link="https://docs.google.com/document/d/1AwGSv73nPrztq-lmtU8YngGv-BOYNjbInXVf-vrVcW8/pub?embedded=true";}
     if(hint==="rsrnrjrqs8n7k7r7q"){link="https://docs.google.com/document/d/11XrUCT36zMrhXTggGkcIOMULXe8nr-leqdFaX9RHPb4/pub?embedded=true";}
     if(hint==="rrrmrjsrpq8rs7p7q7p"){link="https://docs.google.com/document/d/11M2Gps3CFzUh2qWVWPZf2iHg9WL0b-EbkEaBFoPwLa4/pub?embedded=true";}
+   
+   
+    const iframe = document.getElementById('descFrame'); // Replace with your iframe ID
+    const loader = document.getElementById('loaderGif');
+    
+    // Attach the event listener before setting the iframe src
+    iframe.addEventListener('load', () => {
+        loader.style.display = 'none'; // Hide the loader
+    });
+    
     descFrame.src = link;
 }
 
