@@ -278,11 +278,11 @@ img {
 #fullOpener {
     display: block;
     top: 14vmin;
-    right: 0;
+    right: 0.5vw;
     position: absolute;
 }
 #fullCloser {
-    display: block;
+    display: none;
     top: 0;
     right: 0;
     position: absolute;
