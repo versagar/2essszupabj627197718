@@ -37,13 +37,13 @@
   </a>
   
     <div class="mblock">
-      <button onclick="audible('myFeed')">A</button>
-	  <button onclick="dforum('myFeed')">D</button>
-	  <button onclick="opnities('myFeed')">E</button>
-    <button onclick="vphysics('myFeed')">V</button>
-	  <button onclick="guide('myFeed')">G</button>
-	  <button onclick="iphysics('myFeed')">I</button>
-	  <button onclick="rphysics('myFeed')">R</button>
+    <a href="javascript:void(0)" onclick="audible('myFeed')">A</a>
+	  <a href="javascript:void(0)" onclick="dforum('myFeed')">D</a>
+	  <a href="javascript:void(0)" onclick="opnities('myFeed')">E</a>
+    <a href="javascript:void(0)" onclick="vphysics('myFeed')">V</a>
+	  <a href="javascript:void(0)" onclick="guide('myFeed')">G</a>
+	  <a href="javascript:void(0)" onclick="iphysics('myFeed')">I</a>
+	  <a href="javascript:void(0)" onclick="rphysics('myFeed')">R</a>
     </div>
 
 
@@ -57,13 +57,17 @@
     <a class="ml" href="javascript:void(0)"  onclick="dforum('myFeed')">Doubts</a>
     <a class="ml" href="javascript:void(0)"  onclick="opnities('myFeed')">Events</a>
   </div>
-  <a class="openOv" id="openOv" href="javascript:void(0)" onclick="openOv()">⇲</a>
-  
-
     </header>
+    <a class="top-btns" id="openOv" href="javascript:void(0)" onclick="openOv()">⇲</a>
+    <div id="helpOv" class="helpBlock">Overview</div>
+   
+    <a id="fullOpener" class="top-btns" href="javascript:void(0)" onclick="fullOpen()">🔳</a>
+    <div id="helpFull" class="helpBlock">Fullscreen View</div>
+    <a id="fullCloser" href="javascript:void(0)" onclick="fullClose()">🔲</a>
+
   <div id="wbody">
-    <button id="fullOpener" onclick="fullOpen()">🔳</button>
-    <button id="fullCloser" onclick="fullClose()">🔲</button>
+    
+    
   <div class="myOv" id="myOv">
   <div class="ov">
     Overview

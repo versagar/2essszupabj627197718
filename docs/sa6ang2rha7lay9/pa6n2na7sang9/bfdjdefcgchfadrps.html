@@ -22,13 +22,15 @@
 
 
                 <div id="info">
-                        <button class="r_opener_btn" id="contentOpener" onclick="showTgp()">The
-                                Great Physics</button>
+                        <a href="javascript:void(0)" class="top-btns" id="tgpOpener" onclick="showTgp()">The
+                                Great Physics</a>
                         <div id="tgpMenu" class="tgp_menu">
-                                <button class="tgp_menu_btn" id="contentbtn"
-                                        onclick="showContent()">Contents</button>
-                                <button class="tgp_menu_btn" id="contentLockbtn"
-                                        onclick="displayBlock('contentbtn')">🔒</button>
+                                <a href="javascript:void(0)" class="top-btns" id="contentbtn"
+                                        onclick="showContent()">Contents</a>
+                                <div class="helpBlock" id="helpToc">Show/Hide Table of Contents</div>        
+                                <a href="javascript:void(0)" class="top-btns" id="contentLockbtn"
+                                        onclick="displayBlock('contentbtn')">🔒</a>
+                                <div class="helpBlock" id="helpTocLock">Freeze Table of Contents</div>        
 
                         </div>
                         <div id="rTgp">
@@ -39,7 +41,8 @@
                                                 <p class="c9 c14"><span class="c0"></span></p>
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0 start" start="1">
                                                         <li onclick="tgpOpen('5ross8r7s7s7s')" class="c8 li-bullet-0">
-                                                                <span class="c0">Introduction</span></li>
+                                                                <span class="c0">Introduction</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8r7r7s7s')" class="c6 li-bullet-0">
@@ -49,7 +52,8 @@
                                                                 <span class="c0">Introduction to Science</span>
                                                         </li>
                                                         <li onclick="tgpOpen('5ross8r7p7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Natural Sciences</span></li>
+                                                                <span class="c0">Natural Sciences</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5ross8r7o7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Introduction to Physics</span>
                                                         </li>
@@ -63,7 +67,8 @@
                                                         </li>
                                                         <li onclick="tgpOpen('5rlqsjs8r7o7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Importance of Physics in Daily
-                                                                        Life</span></li>
+                                                                        Life</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rkrjsss8r7o7o7s')"
                                                                 class="c4 li-bullet-0"><span class="c0">Branches of
                                                                         Physics</span>
@@ -71,102 +76,127 @@
                                                 </ul>
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="2">
                                                         <li onclick="tgpOpen('5ross8q7s7s7s')" class="c8 li-bullet-0">
-                                                                <span class="c0">Mathematical Tools</span></li>
+                                                                <span class="c0">Mathematical Tools</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8q7r7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Algebra:</span></li>
+                                                                <span class="c0">Algebra:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Algebraic equations and
-                                                                        expressions</span></li>
+                                                                        expressions</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7r7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Solving linear and quadratic
-                                                                        equations</span></li>
+                                                                        equations</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8q7r7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Manipulating algebraic
-                                                                        formulas</span></li>
+                                                                        formulas</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7q7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Geometry:</span></li>
+                                                                <span class="c0">Geometry:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Coordinate geometry: Analyzing
                                                                         points, lines, and shapes in a coordinate
-                                                                        plane.</span></li>
+                                                                        plane.</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7q7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Distance formula: Calculating
                                                                         the shortest distance between two points in a
-                                                                        plane.</span></li>
+                                                                        plane.</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8q7q7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Equations of lines and circles:
                                                                         Describing geometric objects using algebraic
-                                                                        equations.</span></li>
+                                                                        equations.</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7p7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Trigonometry:</span></li>
+                                                                <span class="c0">Trigonometry:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Trigonometric functions (sine,
-                                                                        cosine, tangent, etc.)</span></li>
+                                                                        cosine, tangent, etc.)</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7p7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Right triangles and their
-                                                                        properties</span></li>
+                                                                        properties</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8q7p7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Applications in physics, such
-                                                                        as analyzing oscillations and waves.</span></li>
+                                                                        as analyzing oscillations and waves.</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7o7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Calculus:</span></li>
+                                                                <span class="c0">Calculus:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7o7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Differentiation: Finding
                                                                         derivatives of functions with respect to
-                                                                        variables.</span></li>
+                                                                        variables.</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7o7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Integration: Calculating areas
                                                                         under curves and solving problems related to
-                                                                        rates of change.</span></li>
+                                                                        rates of change.</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8q7o7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Fundamental theorem of
                                                                         calculus: Relating differentiation and
-                                                                        integration.</span></li>
+                                                                        integration.</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7n7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Complex Analysis:</span></li>
+                                                                <span class="c0">Complex Analysis:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7n7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Functions of a complex
-                                                                        variable</span></li>
+                                                                        variable</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7n7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Residues and contour
-                                                                        integrals</span></li>
+                                                                        integrals</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8q7n7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Applications in quantum
-                                                                        mechanics and electromagnetism.</span></li>
+                                                                        mechanics and electromagnetism.</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7m7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Linear Algebra:</span></li>
+                                                                <span class="c0">Linear Algebra:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7m7r7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Vectors and matrices</span></li>
+                                                                <span class="c0">Vectors and matrices</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7m7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Eigenvalues and
-                                                                        eigenvectors</span></li>
+                                                                        eigenvectors</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8q7m7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Solving systems of linear
-                                                                        equations</span></li>
+                                                                        equations</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7l7s7s')" class="c6 li-bullet-0">
@@ -177,41 +207,50 @@
                                                         <li onclick="tgpOpen('5rnrjs8q7l7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Ordinary differential equations
                                                                         (ODEs) and partial differential equations
-                                                                        (PDEs)</span></li>
+                                                                        (PDEs)</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7l7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Modelling physical processes
                                                                         (e.g., motion, heat transfer, wave
-                                                                        propagation)</span></li>
+                                                                        propagation)</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8q7k7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Special Functions:</span></li>
+                                                                <span class="c0">Special Functions:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8q7k7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Bessel functions, Legendre
-                                                                        polynomials, and Hermite polynomials</span></li>
+                                                                        polynomials, and Hermite polynomials</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rmrjss8q7k7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Solutions to specific
-                                                                        differential equations</span></li>
+                                                                        differential equations</span>
+                                                        </li>
                                                 </ul>
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="3">
                                                         <li onclick="tgpOpen('5ross8p7s7s7s')" class="c8 li-bullet-0">
-                                                                <span class="c0">Experimental Physics</span></li>
+                                                                <span class="c0">Experimental Physics</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8p7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Measurement of Physical
-                                                                        Quantities:</span></li>
+                                                                        Quantities:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8p7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Measurement units (SI units,
-                                                                        conversions)</span></li>
+                                                                        conversions)</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8p7r7r7r')" class="c2 li-bullet-0">
-                                                                <span class="c0">Length</span></li>
+                                                                <span class="c0">Length</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8p7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Time</span></li>
                                                         <li onclick="tgpOpen('rrrnrjrpq8p7r7r7p')"
@@ -233,7 +272,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8p7r7p7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Instruments:</span></li>
+                                                                <span class="c0">Instruments:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8p7r7p7r')"
@@ -264,7 +304,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8p7q7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Error Analysis:</span></li>
+                                                                <span class="c0">Error Analysis:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8p7q7r7s')" class="c4 li-bullet-0">
@@ -295,11 +336,13 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8p7p7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Graphical Analysis:</span></li>
+                                                                <span class="c0">Graphical Analysis:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8p7p7r7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Line graphs:</span></li>
+                                                                <span class="c0">Line graphs:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8p7p7r7r')" class="c2 li-bullet-0">
@@ -312,7 +355,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8p7p7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Scatter plots:</span></li>
+                                                                <span class="c0">Scatter plots:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8p7p7q7r')"
@@ -325,7 +369,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8p7p7p7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Linear regression:</span></li>
+                                                                <span class="c0">Linear regression:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8p7p7p7r')"
@@ -340,19 +385,23 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8p7o7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Data Interpretation and
-                                                                        Statistical Methods:</span></li>
+                                                                        Statistical Methods:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8p7o7r7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Mean, median, mode:</span></li>
+                                                                <span class="c0">Mean, median, mode:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8p7o7r7r')" class="c2 li-bullet-0">
-                                                                <span class="c0">Central tendency</span></li>
+                                                                <span class="c0">Central tendency</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8p7o7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Standard deviation:</span></li>
+                                                                <span class="c0">Standard deviation:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8p7o7q7r')"
@@ -388,19 +437,23 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8p7n7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Experimental Design:</span></li>
+                                                                <span class="c0">Experimental Design:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8p7n7r7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Control groups:</span></li>
+                                                                <span class="c0">Control groups:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8p7n7r7r')" class="c2 li-bullet-0">
-                                                                <span class="c0">Placebo effect</span></li>
+                                                                <span class="c0">Placebo effect</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8p7n7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Randomization:</span></li>
+                                                                <span class="c0">Randomization:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8p7n7q7r')"
@@ -409,7 +462,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8p7n7p7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Replication:</span></li>
+                                                                <span class="c0">Replication:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8p7n7p7r')"
@@ -431,19 +485,23 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8p7m7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Scientific Report Writing and
-                                                                        Documentation:</span></li>
+                                                                        Documentation:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8p7m7r7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Abstract:</span></li>
+                                                                <span class="c0">Abstract:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8p7m7r7r')" class="c2 li-bullet-0">
-                                                                <span class="c0">Concise summary</span></li>
+                                                                <span class="c0">Concise summary</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8p7m7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Introduction:</span></li>
+                                                                <span class="c0">Introduction:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8p7m7q7r')"
@@ -457,7 +515,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8p7m7p7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Methodology:</span></li>
+                                                                <span class="c0">Methodology:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8p7m7p7r')"
@@ -517,22 +576,26 @@
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="4">
                                                         <li onclick="tgpOpen('5ross8o7s7s7s')" class="c8 li-bullet-0">
                                                                 <span class="c0">Classical
-                                                                        Mechanics</span></li>
+                                                                        Mechanics</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8o7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Newtonian
-                                                                        Mechanics:</span></li>
+                                                                        Mechanics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8o7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Laws of
-                                                                        Motion:</span></li>
+                                                                        Motion:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8o7r7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Newton’s first law
-                                                                        (inertia)</span></li>
+                                                                        (inertia)</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8o7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Newton’s second
                                                                         law (force and acceleration)</span></li>
@@ -559,7 +622,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8o7r7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Dynamics of
-                                                                        Particles and Systems:</span></li>
+                                                                        Particles and Systems:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8o7r7p7r')"
@@ -607,17 +671,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8o7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Lagrangian
-                                                                        Mechanics:</span></li>
+                                                                        Mechanics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8o7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Principle of Least
-                                                                        Action:</span></li>
+                                                                        Action:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8o7q7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Lagrangian and
-                                                                        action</span></li>
+                                                                        action</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8o7q7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Euler-Lagrange
                                                                         equations</span></li>
@@ -628,7 +695,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8o7q7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Lagrange
-                                                                        Equations:</span></li>
+                                                                        Equations:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8o7q7q7r')"
@@ -644,17 +712,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8o7p7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Hamiltonian
-                                                                        Mechanics:</span></li>
+                                                                        Mechanics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8o7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Hamilton’s
-                                                                        Equations:</span></li>
+                                                                        Equations:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8o7p7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Canonical
-                                                                        momenta</span></li>
+                                                                        momenta</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8o7p7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Hamiltonian
                                                                         function</span></li>
@@ -665,7 +736,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8o7p7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Canonical
-                                                                        Transformations:</span></li>
+                                                                        Transformations:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8o7p7q7r')"
@@ -678,17 +750,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8o7o7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Celestial
-                                                                        Mechanics:</span></li>
+                                                                        Mechanics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8o7o7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Kepler’s
-                                                                        Laws:</span></li>
+                                                                        Laws:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8o7o7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Elliptical
-                                                                        orbits</span></li>
+                                                                        orbits</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8o7o7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Orbital
                                                                         periods</span></li>
@@ -699,7 +774,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8o7o7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Orbits of Planets
-                                                                        and Satellites:</span></li>
+                                                                        and Satellites:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8o7o7q7r')"
@@ -715,7 +791,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8o7o7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Tidal Forces and
-                                                                        Resonances:</span></li>
+                                                                        Resonances:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8o7o7p7r')"
@@ -735,17 +812,20 @@
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8n7r7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Basic</span></li>
+                                                                <span class="c0">Basic</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Thermal
-                                                                        Equilibrium:</span></li>
+                                                                        Equilibrium:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7r7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Definition and
-                                                                        conditions</span></li>
+                                                                        conditions</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Zeroth Law of
                                                                         Thermodynamics</span></li>
@@ -753,7 +833,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7r7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Temperature and
-                                                                        Heat:</span></li>
+                                                                        Heat:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7r7q7r')"
@@ -769,30 +850,35 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Laws of
-                                                                        Thermodynamics</span></li>
+                                                                        Thermodynamics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">First Law of
                                                                         Thermodynamics (Law of Energy
-                                                                        Conservation):</span></li>
+                                                                        Conservation):</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7q7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Internal
-                                                                        energy</span></li>
+                                                                        energy</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7q7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Work done and
                                                                         heat exchange</span></li>
                                                         <li onclick="tgpOpen('5rnrjs8n7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Mathematical
-                                                                        expression: ΔU=Q−W</span></li>
+                                                                        expression: ΔU=Q−W</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7q7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Second Law of
-                                                                        Thermodynamics:</span></li>
+                                                                        Thermodynamics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7q7q7r')"
@@ -808,7 +894,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8n7q7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Third Law of
-                                                                        Thermodynamics:</span></li>
+                                                                        Thermodynamics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8n7q7p7r')"
@@ -821,32 +908,38 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7p7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Third Law of
-                                                                        Thermodynamics</span></li>
+                                                                        Thermodynamics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Heat and Work</span>
                                                         </li>
                                                         <li onclick="tgpOpen('5rmrjss8n7p7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Entropy</span></li>
+                                                                <span class="c0">Entropy</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rlqsjs8n7p7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Thermodynamic
-                                                                        Processes</span></li>
+                                                                        Processes</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7o7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Properties of Pure
-                                                                        Substances</span></li>
+                                                                        Substances</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7o7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Phase
-                                                                        Diagrams:</span></li>
+                                                                        Diagrams:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7o7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Phases (solid,
-                                                                        liquid, gas)</span></li>
+                                                                        liquid, gas)</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7o7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Triple point and
                                                                         critical point</span></li>
@@ -857,7 +950,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7o7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Equations of
-                                                                        State:</span></li>
+                                                                        State:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7o7q7r')"
@@ -873,17 +967,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7n7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Thermodynamic
-                                                                        Processes</span></li>
+                                                                        Processes</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7n7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Isothermal
-                                                                        Process:</span></li>
+                                                                        Process:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7n7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Constant
-                                                                        temperature</span></li>
+                                                                        temperature</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7n7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Work done and
                                                                         heat exchange</span></li>
@@ -891,7 +988,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7n7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Adiabatic
-                                                                        Process:</span></li>
+                                                                        Process:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7n7q7r')"
@@ -904,7 +1002,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8n7n7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Reversible and
-                                                                        Irreversible Processes:</span></li>
+                                                                        Irreversible Processes:</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('6rlqsjrq8n7n7p7r')"
                                                                 class="c2 li-bullet-0"><span class="c0">Efficiency and
                                                                         reversibility</span></li>
@@ -915,7 +1014,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7m7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Thermodynamic
-                                                                        Cycles</span></li>
+                                                                        Cycles</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7m7r7s')" class="c4 li-bullet-0">
@@ -925,7 +1025,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7m7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Idealized heat
-                                                                        engine</span></li>
+                                                                        engine</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7m7r7q')"
                                                                 class="c2 li-bullet-0"><span
                                                                         class="c0">Efficiency</span>
@@ -937,7 +1038,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7m7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Rankine
-                                                                        Cycle:</span></li>
+                                                                        Cycle:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7m7q7r')"
@@ -949,17 +1051,20 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7l7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Entropy</span></li>
+                                                                <span class="c0">Entropy</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7l7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Definition of
-                                                                        Entropy:</span></li>
+                                                                        Entropy:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7l7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Microscopic and
-                                                                        macroscopic viewpoints</span></li>
+                                                                        macroscopic viewpoints</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7l7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Entropy change
                                                                         in
@@ -968,7 +1073,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7l7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Entropy and
-                                                                        Disorder:</span></li>
+                                                                        Disorder:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7l7q7r')"
@@ -981,7 +1087,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7k7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Thermodynamic
-                                                                        Potentials</span></li>
+                                                                        Potentials</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7k7r7s')" class="c4 li-bullet-0">
@@ -991,7 +1098,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7k7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Heat at constant
-                                                                        pressure</span></li>
+                                                                        pressure</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7k7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Enthalpy change
                                                                         in reactions</span></li>
@@ -999,7 +1107,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7k7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Gibbs Free
-                                                                        Energy:</span></li>
+                                                                        Energy:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7k7q7r')"
@@ -1012,17 +1121,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8n7j7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Applications of
-                                                                        Thermodynamics</span></li>
+                                                                        Thermodynamics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8n7j7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Heat Engines and
-                                                                        Refrigerators:</span></li>
+                                                                        Refrigerators:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8n7j7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Efficiency and
-                                                                        COP</span></li>
+                                                                        COP</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8n7j7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Air conditioners
                                                                         and heat pumps</span></li>
@@ -1030,7 +1142,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8n7j7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Thermodynamics in
-                                                                        Daily Life:</span></li>
+                                                                        Daily Life:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8n7j7q7r')"
@@ -1046,20 +1159,24 @@
                                                                         Verma)</a> </span></p>
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="6">
                                                         <li onclick="tgpOpen('5ross8m7s7s7s')" class="c8 li-bullet-0">
-                                                                <span class="c0">Electromagnetism</span></li>
+                                                                <span class="c0">Electromagnetism</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8m7r7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Electrostatics</span></li>
+                                                                <span class="c0">Electrostatics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8m7r7r7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Coulomb’s Law</span></li>
+                                                                <span class="c0">Coulomb’s Law</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7r7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Concept
-                                                                        of Electric Charge</span></li>
+                                                                        of Electric Charge</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8m7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Force
                                                                         Between Two Charges</span></li>
@@ -1082,7 +1199,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7r7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Concept
-                                                                        of Electric Flux</span></li>
+                                                                        of Electric Flux</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rkrjsss8m7r7o7s')"
                                                                 class="c4 li-bullet-0"><span class="c0">Applications of
                                                                         Gauss’s
@@ -1121,17 +1239,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8m7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Current
-                                                                        Electricity</span></li>
+                                                                        Electricity</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8m7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Introduction to Current
-                                                                        Electricity:</span></li>
+                                                                        Electricity:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7q7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Electric current and its
-                                                                        flow</span></li>
+                                                                        flow</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8m7q7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Charge carriers
                                                                         (electrons,
@@ -1140,7 +1261,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8m7q7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Ohm’s
-                                                                        Law and Resistivity:</span></li>
+                                                                        Law and Resistivity:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8m7q7q7r')"
@@ -1159,7 +1281,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7q7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Electrical Energy and
-                                                                        Power:</span></li>
+                                                                        Power:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8m7q7p7r')"
@@ -1223,13 +1346,15 @@
 
                                                         <li onclick="tgpOpen('5ross8m7p7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Moving
-                                                                        Charges and Magnetism</span></li>
+                                                                        Charges and Magnetism</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8m7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Magnetic
-                                                                        Force:</span></li>
+                                                                        Force:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7p7r7r')" class="c2 li-bullet-0">
@@ -1243,7 +1368,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8m7p7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Motion
-                                                                        in a Magnetic Field:</span></li>
+                                                                        in a Magnetic Field:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8m7p7q7r')"
@@ -1257,7 +1383,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7p7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Magnetic Field due to
-                                                                        Currents:</span></li>
+                                                                        Currents:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8m7p7p7r')"
@@ -1317,17 +1444,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8m7o7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Magnetism
-                                                                        and Matter</span></li>
+                                                                        and Matter</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8m7o7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">The Bar
-                                                                        Magnet:</span></li>
+                                                                        Magnet:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7o7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Magnetic poles and magnetic
-                                                                        field lines</span></li>
+                                                                        field lines</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8m7o7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Magnetic dipole
                                                                         moment</span>
@@ -1336,7 +1466,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8m7o7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Magnetism and Gauss’s
-                                                                        Law:</span></li>
+                                                                        Law:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8m7o7q7r')"
@@ -1349,7 +1480,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7o7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">The
-                                                                        Earth’s Magnetism:</span></li>
+                                                                        Earth’s Magnetism:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8m7o7p7r')"
@@ -1406,7 +1538,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7n7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Electromagnetic
-                                                                        induction</span></li>
+                                                                        induction</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8m7n7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Faraday’s law of
                                                                         electromagnetic induction</span></li>
@@ -1414,7 +1547,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8m7n7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Lenz’s
-                                                                        Law:</span></li>
+                                                                        Law:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8m7n7q7r')"
@@ -1429,7 +1563,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7n7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Self-Inductance and Mutual
-                                                                        Inductance:</span></li>
+                                                                        Inductance:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8m7n7p7r')"
@@ -1474,19 +1609,22 @@
 
                                                         <li onclick="tgpOpen('5ross8m7m7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Alternating Current (AC)
-                                                                        Circuits</span></li>
+                                                                        Circuits</span>
+                                                        </li>
                                                         </h3>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8m7m7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Introduction to AC
-                                                                        Circuits:</span></li>
+                                                                        Circuits:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7m7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">AC
-                                                                        voltage and current</span></li>
+                                                                        voltage and current</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8m7m7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Frequency and
                                                                         period</span>
@@ -1495,7 +1633,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8m7m7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">AC
-                                                                        Generators and RMS Value:</span></li>
+                                                                        Generators and RMS Value:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8m7m7q7r')"
@@ -1509,7 +1648,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7m7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Phasor
-                                                                        Diagrams and Complex Numbers:</span></li>
+                                                                        Diagrams and Complex Numbers:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8m7m7p7r')"
@@ -1550,16 +1690,19 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8m7l7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Electromagnetic Waves</span></li>
+                                                                <span class="c0">Electromagnetic Waves</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8m7l7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Introduction to Electromagnetic
-                                                                        Waves:</span></li>
+                                                                        Waves:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8m7l7r7r')" class="c2 li-bullet-0">
-                                                                <span class="c0">Maxwell’s equations</span></li>
+                                                                <span class="c0">Maxwell’s equations</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8m7l7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Speed
                                                                         of light</span></li>
@@ -1567,7 +1710,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8m7l7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Properties of Electromagnetic
-                                                                        Waves:</span></li>
+                                                                        Waves:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8m7l7q7r')"
@@ -1584,7 +1728,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8m7l7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Electromagnetic
-                                                                        Spectrum:</span></li>
+                                                                        Spectrum:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8m7l7p7r')"
@@ -1599,22 +1744,26 @@
                                                 </ul>
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="7">
                                                         <li onclick="tgpOpen('5ross8l7s7s7s')" class="c8 li-bullet-0">
-                                                                <span class="c0">Optics</span></li>
+                                                                <span class="c0">Optics</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8l7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Geometric
-                                                                        Optics</span></li>
+                                                                        Optics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8l7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Reflection and
-                                                                        Refraction:</span></li>
+                                                                        Refraction:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8l7r7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Specular and diffuse
-                                                                        reflection</span></li>
+                                                                        reflection</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8l7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Snell’s law for
                                                                         refraction</span></li>
@@ -1624,7 +1773,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8l7r7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Mirrors:</span></li>
+                                                                <span class="c0">Mirrors:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8l7r7q7r')"
@@ -1641,7 +1791,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8l7r7p7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Lenses:</span></li>
+                                                                <span class="c0">Lenses:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8l7r7p7r')"
@@ -1658,17 +1809,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8l7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Wave
-                                                                        Optics</span></li>
+                                                                        Optics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8l7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Diffraction and
-                                                                        Interference:</span></li>
+                                                                        Interference:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8l7q7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Young’s
-                                                                        double-slit experiment</span></li>
+                                                                        double-slit experiment</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8l7q7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Diffraction
                                                                         patterns</span>
@@ -1680,7 +1834,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8l7q7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Polarization:</span></li>
+                                                                <span class="c0">Polarization:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8l7q7q7r')"
@@ -1693,7 +1848,8 @@
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8l7p7s7s')" class="c6 li-bullet-0">
-                                                                <span class="c0">Dispersion and Prisms</span></li>
+                                                                <span class="c0">Dispersion and Prisms</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8l7p7r7s')" class="c4 li-bullet-0">
@@ -1703,7 +1859,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8l7p7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Rainbow
-                                                                        formation</span></li>
+                                                                        formation</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8l7p7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Dispersion of
                                                                         white
@@ -1712,7 +1869,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8l7p7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Optical
-                                                                        Instruments:</span></li>
+                                                                        Instruments:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8l7p7q7r')"
@@ -1730,17 +1888,20 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8l7o7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Lens Combinations and
-                                                                        Aberrations</span></li>
+                                                                        Aberrations</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8l7o7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Multiple Lens
-                                                                        Systems:</span></li>
+                                                                        Systems:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8l7o7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Lens combinations
-                                                                        (converging and diverging)</span></li>
+                                                                        (converging and diverging)</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8l7o7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Image formation
                                                                         in
@@ -1762,7 +1923,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8l7n7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Applications of
-                                                                        Optics</span></li>
+                                                                        Optics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8l7n7r7s')" class="c4 li-bullet-0">
@@ -1772,14 +1934,17 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('5rnrjs8l7n7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Total internal
-                                                                        reflection in optical fibers</span></li>
+                                                                        reflection in optical fibers</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('5rnrjs8l7n7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Communication through
-                                                                        optical cables</span></li>
+                                                                        optical cables</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8l7n7q7s')" class="c4 li-bullet-0">
-                                                                <span class="c0">Holography:</span></li>
+                                                                <span class="c0">Holography:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8l7n7q7r')"
@@ -1798,19 +1963,22 @@
 
                                                         <li onclick="tgpOpen('5ross8k7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Foundations of Quantum
-                                                                        Mechanics</span></li>
+                                                                        Mechanics</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8k7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Wave-Particle
-                                                                        Duality:</span></li>
+                                                                        Duality:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8k7r7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Understanding the dual
                                                                         nature of particles (wave-like and
-                                                                        particle-like behavior)</span></li>
+                                                                        particle-like behavior)</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8k7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">De Broglie
                                                                         wavelength</span></li>
@@ -1821,7 +1989,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8k7r7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Quantum States and
-                                                                        Operators:</span></li>
+                                                                        Operators:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8k7r7q7r')"
@@ -1837,7 +2006,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8k7r7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Heisenberg Uncertainty
-                                                                        Principle:</span></li>
+                                                                        Principle:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8k7r7p7r')"
@@ -1890,19 +2060,22 @@
 
                                                         <li onclick="tgpOpen('5ross8k7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Quantum Mechanics and
-                                                                        Applications</span></li>
+                                                                        Applications</span>
+                                                        </li>
                                                         </h3>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8k7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Quantum Mechanics in One
-                                                                        Dimension:</span></li>
+                                                                        Dimension:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8k7q7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Schrödinger
-                                                                        equation</span></li>
+                                                                        equation</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8k7q7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Particle in a
                                                                         box</span></li>
@@ -1913,7 +2086,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8k7q7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Angular Momentum and
-                                                                        Spin:</span></li>
+                                                                        Spin:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8k7q7q7r')"
@@ -1930,7 +2104,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8k7q7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Quantum Harmonic
-                                                                        Oscillator:</span></li>
+                                                                        Oscillator:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8k7q7p7r')"
@@ -1982,18 +2157,21 @@
 
                                                         <li onclick="tgpOpen('5ross8k7p7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Advanced Quantum
-                                                                        Topics</span></li>
+                                                                        Topics</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8k7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Quantum Field
-                                                                        Theory:</span></li>
+                                                                        Theory:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8k7p7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Second
-                                                                        quantization</span></li>
+                                                                        quantization</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8k7p7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Creation and
                                                                         annihilation operators</span></li>
@@ -2004,7 +2182,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8k7p7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Quantum Electrodynamics
-                                                                        (QED):</span></li>
+                                                                        (QED):</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8k7p7q7r')"
@@ -2020,7 +2199,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8k7p7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Quantum Chromodynamics
-                                                                        (QCD):</span></li>
+                                                                        (QCD):</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8k7p7p7r')"
@@ -2083,18 +2263,21 @@
 
                                                         <li onclick="tgpOpen('5ross8j7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Special Theory of
-                                                                        Relativity</span></li>
+                                                                        Relativity</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8j7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Lorentz
-                                                                        Transformations:</span></li>
+                                                                        Transformations:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8j7r7r7r')" class="c2 li-bullet-0">
                                                                 <span class="c0">Time
-                                                                        dilation</span></li>
+                                                                        dilation</span>
+                                                        </li>
                                                         <li onclick="tgpOpen('rsrnrjrqs8j7r7r7q')"
                                                                 class="c2 li-bullet-0"><span class="c0">Length
                                                                         contraction</span></li>
@@ -2105,7 +2288,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8j7r7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Relativistic
-                                                                        Energy and Momentum:</span></li>
+                                                                        Energy and Momentum:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8j7r7q7r')"
@@ -2121,7 +2305,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8j7r7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Twin
-                                                                        Paradox:</span></li>
+                                                                        Paradox:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8j7r7p7r')"
@@ -2132,13 +2317,15 @@
 
                                                         <li onclick="tgpOpen('5ross8j7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">General Theory of
-                                                                        Relativity</span></li>
+                                                                        Relativity</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8j7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Principle of
-                                                                        Equivalence:</span></li>
+                                                                        Equivalence:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8j7q7r7r')" class="c2 li-bullet-0">
@@ -2152,7 +2339,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rmrjss8j7q7q7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Curved
-                                                                        Spacetime and Geodesics:</span></li>
+                                                                        Spacetime and Geodesics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rmrjsrq8j7q7q7r')"
@@ -2165,7 +2353,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2">
                                                         <li onclick="tgpOpen('5rlqsjs8j7q7p7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Einstein’s
-                                                                        Field Equations:</span></li>
+                                                                        Field Equations:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rlqsjrq8j7q7p7r')"
@@ -2202,19 +2391,22 @@
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="10">
                                                         <li onclick="tgpOpen('5ross8rs7s7s7s')" class="c8 li-bullet-0">
                                                                 <span class="c0">Nuclear
-                                                                        Physics</span></li>
+                                                                        Physics</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
 
                                                         <li onclick="tgpOpen('5ross8rs7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Atomic Nuclei
-                                                                        and Structure</span></li>
+                                                                        and Structure</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rs7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Nuclear
-                                                                        Constituents:</span></li>
+                                                                        Constituents:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rs7r7r7r')"
@@ -2264,13 +2456,15 @@
 
                                                         <li onclick="tgpOpen('5ross8rs7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Radioactivity
-                                                                        and Decay</span></li>
+                                                                        and Decay</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rs7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Radioactive
-                                                                        Decay:</span></li>
+                                                                        Decay:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rs7q7r7r')"
@@ -2319,14 +2513,16 @@
 
                                                         <li onclick="tgpOpen('5ross8rs7p7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Nuclear Energy
-                                                                        and Applications</span></li>
+                                                                        and Applications</span>
+                                                        </li>
                                                         </h3>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rs7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Nuclear
-                                                                        Fission:</span></li>
+                                                                        Fission:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rs7p7r7r')"
@@ -2382,19 +2578,22 @@
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="11">
                                                         <li onclick="tgpOpen('5ross8rr7s7s7s')" class="c8 li-bullet-0">
                                                                 <span class="c0">Particle
-                                                                        Physics</span></li>
+                                                                        Physics</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
 
                                                         <li onclick="tgpOpen('5ross8rr7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Introduction to
-                                                                        Particle Physics</span></li>
+                                                                        Particle Physics</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rr7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Fundamental
-                                                                        Interactions:</span></li>
+                                                                        Interactions:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rr7r7r7r')"
@@ -2449,13 +2648,15 @@
 
                                                         <li onclick="tgpOpen('5ross8rr7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Particle
-                                                                        Interactions and Decays</span></li>
+                                                                        Interactions and Decays</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rr7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Particle
-                                                                        Collisions and Scattering:</span></li>
+                                                                        Collisions and Scattering:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rr7q7r7r')"
@@ -2504,19 +2705,22 @@
                                                 </ul>
                                                 <ol class="c1 lst-kix_35pifyb1exqg-0" start="12">
                                                         <li onclick="tgpOpen('5ross8rq7s7s7s')" class="c8 li-bullet-0">
-                                                                <span class="c0">Astrophysics</span></li>
+                                                                <span class="c0">Astrophysics</span>
+                                                        </li>
                                                 </ol>
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-1 start">
 
                                                         <li onclick="tgpOpen('5ross8rq7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Stellar
-                                                                        Astrophysics</span></li>
+                                                                        Astrophysics</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rq7r7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Stellar
-                                                                        Structure and Evolution:</span></li>
+                                                                        Structure and Evolution:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rq7r7r7r')"
@@ -2580,13 +2784,15 @@
 
                                                         <li onclick="tgpOpen('5ross8rq7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Galactic
-                                                                        and Extragalactic Astrophysics</span></li>
+                                                                        and Extragalactic Astrophysics</span>
+                                                        </li>
                                                         </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rq7q7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Galactic
-                                                                        Structure and Dynamics:</span></li>
+                                                                        Structure and Dynamics:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rq7q7r7r')"
@@ -2646,7 +2852,8 @@
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-2 start">
                                                         <li onclick="tgpOpen('5rnrjs8rq7p7r7s')" class="c4 li-bullet-0">
                                                                 <span class="c0">Black
-                                                                        Holes and Neutron Stars:</span></li>
+                                                                        Holes and Neutron Stars:</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_fph9hr6rx2dr-3 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rq7p7r7r')"
@@ -2706,7 +2913,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1 start">
                                                         <li onclick="tgpOpen('5ross8rp7r7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">The
-                                                                        Future of Physics</span></li>
+                                                                        Future of Physics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rp7r7r7r')"
@@ -2719,7 +2927,8 @@
                                                 <ul class="c1 lst-kix_35pifyb1exqg-1">
                                                         <li onclick="tgpOpen('5ross8rp7q7s7s')" class="c6 li-bullet-0">
                                                                 <span class="c0">Unsolved
-                                                                        Problems in Physics</span></li>
+                                                                        Problems in Physics</span>
+                                                        </li>
                                                 </ul>
                                                 <ul class="c1 lst-kix_35pifyb1exqg-2 start">
                                                         <li onclick="tgpOpen('6rnrjrq8rp7q7r7r')"
@@ -2733,25 +2942,25 @@
 
                                 </div>
                                 <div id="topicDesc" class="topic_desc">
-                                        
+
                                         <div id="loaderGif"></div>
-                                        <iframe name="descFrame" id="descFrame" class="desc_frame" src="../../ady12ata14n9/tgpupdates.html"
-                                        frameborder="0" width="100%" height="100%"></iframe></div>
-                                
+                                        <iframe name="descFrame" id="descFrame" class="desc_frame"
+                                                src="../../ady12ata14n9/tgpupdates.html" frameborder="0" width="100%"
+                                                height="100%"></iframe>
+                                </div>
+
                         </div>
                         <div class="cpnotice" id="resizeTgp">
-                                You just resized your window. Please Click on "The Great Physics" button again to open it. Enjoy Reading 😊!
+                                You just resized your window. Please Click on "The Great Physics" button again to open
+                                it. Enjoy Reading 😊!
                         </div>
                 </div>
         </div>
 
 
         <script>
-               
                 loadScript("../../OO0O00O010O0OO0O00");
                 loadScript("../../OO0O0O0010O00O0O00");
-
-
         </script>
 
 </body>

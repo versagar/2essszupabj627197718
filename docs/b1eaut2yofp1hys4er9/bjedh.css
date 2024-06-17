@@ -16,8 +16,9 @@
     background-color: #632000;
 }
 
+
 body {
-    height: 100%;
+    height: 100vh;
     display: block;
     overflow: hidden;
 }
@@ -61,7 +62,7 @@ img {
     
 }
 
-.htitle:hover {
+.htitle:active {
     box-shadow: none;
     border: none;
     margin-top: 0.1vmin;
@@ -114,7 +115,7 @@ img {
     flex-direction: row-reverse;
 }
 
-.mblock button {
+.mblock a {
     font-size: 3vmin;
     width: 5vmin;
     height: 5vmin;
@@ -129,7 +130,7 @@ img {
     color: #6C2E00;
 }
 
-.mblock button:active {
+.mblock a:active {
     box-shadow: none;
     margin-top: 0.5vmin;
 }
@@ -178,8 +179,23 @@ img {
     background-color: #6C2E00;
     overflow: hidden;
 }
-
-    
+.top-btns {
+    display: block;
+    float: left;
+    height: 5vmin;
+    font-size: 3vmin;
+    padding: 1vmin;
+    border-radius: 4px;
+    box-shadow: 0.5vmin 0.5vmin gray;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 1px 1px 1px #6C2E00;
+}
+.top-btns:active {
+    box-shadow: -2px -2px 1px black;
+    margin-top: 2px;
+    margin-right: 12px;
+}    
 .myOv {
     width: 0;
     height: 100%;
@@ -253,32 +269,15 @@ img {
     margin: 0;
     overflow: hidden;
 }
-.openOv {
-    font-size: 2vmin;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.5vmin;
+#openOv {
     top: 14vmin;
-    display: block;
-    width: 5vmin;
-    text-align: center;
     color: white;
-    text-shadow: 1px 1px 1px #6C2E00;
-    border-radius: 0 15px 15px 0px;
-    box-shadow: 0.3vw 0.3vw gray;
     position: absolute;
-    overflow: hidden;
-}
-
-.openOv:active {
-    box-shadow: -2px -2px 1px black;
-    margin-top: 2px;
-    margin-right: 12px;
 }
 #fullOpener {
-    display: block;
     top: 14vmin;
-    right: 0.5vw;
+    right: 1vw;
+    padding: 0;
     position: absolute;
 }
 #fullCloser {
@@ -288,6 +287,46 @@ img {
     position: absolute;
 }
 
+.helpBlock {
+    display: none;
+    position: absolute;
+    box-shadow: 1vmin 1vmin 10px #111;
+    font-weight: 800;
+    color: #000000;
+    background-color: rgba(232, 238, 147, 0.938);
+    border: 2vmin black;
+    border-radius: 10px;
+    padding: 1vmin;
+}
+
+#helpOv {
+   top: 13vmin;
+   left: 3vw;
+}
+#openOv:hover + #helpOv {
+    display: block;
+}
+#helpFull {
+    top: 13vmin;
+    right: 5vw;
+}
+#fullOpener:hover + #helpFull {
+    display: block;
+}
+#helpToc {
+    top: 0;
+    left: 20vw;
+}
+#contentbtn:hover + #helpToc {
+    display: block;
+}
+#helpTocLock {
+    top: 0;
+    left: 25vw;
+}
+#contentLockbtn:hover + #helpTocLock {
+    display: block;
+}
 .phead {
     width: 100%;
     font-size: 2.5vmin;
@@ -305,65 +344,33 @@ img {
     display: block;
     float: left;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 2.5vmin);
     background-color: lightgrey;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #info {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     float: left;
-    padding: 0.5vmin;
-    padding-bottom: 5vmin;
     display: block;
+}
+#tgpOpener {
+    margin-left: 3vw;
 }
 #rTgp {
     display: none;
     width: 100%;
-    height: calc(100vh - 10vmin);
+    height: calc(100% - 6vmin);
     overflow: hidden;
-}
-.r_opener_btn {
-    float: left;
-    margin-top: 0;
-    margin-left: 7vmin;
-    font-size: 3vmin;
-    font-weight: 700;
-    background-color: antiquewhite;
-    border-radius: 1vmin;
-    box-shadow: 0.3vw 0.3vw black;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 1px 1px 1px #6C2E00;
-    overflow: hidden;
-}
-.r_opener_btn:active {
-    box-shadow: none;
-    margin-left: 7.3vmin;
-    margin-top: 0.3vmin;
 }
 #tgpMenu {
     display: none;
 }
 .tgp_menu {
     float: left;
-    overflow: hidden;
 }
-.tgp_menu_btn {
-    float: left;
-    margin-top: 0;
-    margin-left: 0.5vmin;
-    font-size: 3vmin;
-    font-weight: 700;
-    background-color: antiquewhite;
-    border-radius: 1vmin;
-    box-shadow: 0.3vw 0.3vw black;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 1px 1px 1px #6C2E00;
-    overflow: hidden;
-}
+
 .nav_frame {
     display: block;
     float: left;
@@ -390,11 +397,11 @@ img {
 
 }
 .topic_desc {
-    
     display: block;
     float: left;
     /* height: calc(100vh - 30vmin); */
     overflow-y: scroll;
+    overflow-x: hidden;
     background-color: #fff1a0;
     scrollbar-width: 0;
 }
@@ -443,9 +450,6 @@ img {
     width: 30%;
     display: block;
 }
-
-
-
 
 footer {
     background-color: black;
@@ -526,3 +530,17 @@ footer p {
     }
 }
 */
+@keyframes blinkBlock {
+    0%{
+        display: block;
+    }
+    25%{
+        display: none;
+    }
+    75%{
+        display: block;
+    }
+    100%{
+        display: none;
+    }
+}
