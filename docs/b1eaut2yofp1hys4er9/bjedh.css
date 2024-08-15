@@ -354,6 +354,7 @@ img {
     height: 100%;
     float: left;
     display: block;
+	overflow: scroll;
 }
 #tgpOpener {
     margin-left: 3vw;
