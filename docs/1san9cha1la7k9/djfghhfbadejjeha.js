@@ -83,5 +83,6 @@ function rcontent(pid) {
     document.getElementById(pid).innerHTML='<object type="text/html" data="rcontent.html" width="100%" height="100%"></object>';
 }
 
+
 index('myFeed');
 guide('rframe');

@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    font-weight: 900;
+
+}
+
+#pNav {
+    display: block;
+    font-size: 4vmin;
+}
+#pLogo {
+   aspect-ratio: 1;
+}
+#proTitle {
+    margin-left: 2vmin; 
+    font-weight: 700;
+    font-size: 6vmin;
+}
+#profileBody {
+    display: block;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10vmin;
+    overflow: scroll;
+}
+.ttmenubtn.pnbtn {
+    float: right;
+    margin-right: 2vmin;
+    line-height: 1.5;
+}
+.tablexp {
+    width: 90%;
+    margin: auto;
+}
+.rowxp {
+    width: 100%;
+    height: 50vmin;
+    margin-top: 5vmin;
+    overflow: hidden;
+    text-align: center;
+}
+.cxp {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+.cxp img {
+    display: block;
+    height: 100%;
+}
+.rowxp>:nth-child(1){
+    float: left;
+}
+.rowxp>:nth-child(2){
+    float: right;
+}

@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    font-weight: 900;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+#twch1 a {
+    color: transparent;
+}
+#wbody, #twcFeed {
+    background-color: antiquewhite;
+}
+#twcFeed {
+    padding: 0;
+    padding-top: 1vmin;
+    height: 100%;
+    width: 100%;
+}
+#twcLogo {
+    display: block;
+    position: absolute;
+    top: 0.5vmin;
+    left: 0;
+    margin: 0;
+    width: 11vmin;
+    aspect-ratio: 1;
+}
+
+#twch1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8vmin;
+    background-image: url(water.jpg);
+        background-clip: text;
+        background-size: cover;
+        -webkit-text-stroke: 0.05vmin white;
+        color: transparent;
+}
+#twcmenubtn {
+    display: block;
+    position: absolute;
+    right: 2vmin;
+    height: 7vmin;
+    aspect-ratio: 1;
+    background-color: antiquewhite;
+    box-shadow: 0.5vmin 0.5vmin gray; 
+}
+#twcmenubtn:active {
+box-shadow: none;
+right: 1.5vmin;
+}
+#twcmenu {
+    display: none;
+    position: absolute;
+    width: 50vmin;
+    top: 10vmin;
+    right: 2vmin;
+    height: 70vmin;
+    box-shadow: 0.5vmin 0.5vmin gray;
+    overflow-y: scroll;
+}
+#twcmenu::-webkit-scrollbar {
+    width: 1vmin;
+}
+#twcmenu::-webkit-scrollbar-thumb {
+    width: 1vmin;
+    background-color: white;
+}
+#twcmenu a {
+    display: block;
+    color: antiquewhite;
+    font-size: 5vmin;
+    width: 100%;
+    margin-top: 1vmin;
+    border-bottom: 1vmin solid #6C2E00;
+    background-color: gray;
+    font-weight: 900;
+    overflow-wrap: normal;
+}
+#ttmContainer{
+    display: none;
+    position: fixed;
+    top: 6vmin;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vmin;
+    border-bottom: 1vmin solid #6C2E00;
+    box-shadow: 0.5vmin 0.5vmin 5px;
+}
+.ttbody {
+    display: block;
+    width: 100%;
+}
+
+#ttmBtn {
+    height: 100%;
+}
+#twctBack {
+    float: right;
+}
+#ttHead {
+    display: block;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 45vmin;
+    width: max-content;
+    font-size: 4vmin;
+    line-height: 5vmin;
+    min-height: 5vmin;
+    background-color: white;
+    box-shadow: 1vmin 1vmin 5px black;
+    border-bottom: 1vmin solid #6C2E00;
+    text-align: center;
+
+}
+#ttmContainer a  {
+    display: block;
+    width: 100%;
+    color: #6C2E00;
+    background-color: rgba(250, 235, 215, 0.801);
+    font-size: 3vmin;
+    padding-left: 2vmin;
+    line-height: 5vmin;
+    margin-top: 0.5vmin;
+    border-bottom: 0.75vmin solid white;
+    box-shadow: 0 -0.3vmin 2px gray;
+    font-weight: 900;
+    transition: ease-in 1s;
+}
+.twctopic {
+    display: block;
+    background-color: aqua;
+    margin-left: 2vmin;
+    margin-bottom: 2vmin;
+    float: left;
+    width: 31vmin;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+.twctopicpre {
+    display: block;
+    background-color: blueviolet;
+    width: 100%;
+    height: 22vmin;
+}
+.twctopicsub {
+    display: block;
+    color: #6C2E00;
+    background-color: blue;
+    width: 100%;
+    height: 9vmin;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+}
+#ttgidBox {
+        display: block;
+        height: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    margin: auto;
+    padding: 0;
+
+}
+#ttgidFrame {
+    height: 100%;
+    width: 100%;
+}
+#twcloaderGif {
+    background-color: #6C2E00;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../../loader.gif) center center no-repeat;
+}
+#twctBack {
+    display: block;
+    position: absolute;
+    top: 14vmin;
+    right: 0;
+}
+
+
+@media (max-aspect-ratio: 4/3) {
+            #ttgidBox {
+                width: 100%;
+                aspect-ratio: 4/3;
+            }
+
+  }

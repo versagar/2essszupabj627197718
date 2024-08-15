@@ -65,5 +65,84 @@ function fullClose() {
     document.getElementById('wbody').style.height = 'calc(100% - 26vmin)';
 }
 
+function pgtwc(id, name) {
+    var oname = '<object type="text/html" data="' + name + 'twc.html" width="100%" height="100%"></object>';
+   // document.getElementById(id).innerHTML = twcloader;
+    document.getElementById(id).innerHTML = oname;
+  }
+  function loadIn(id, page) {
+    var oname = '<object type="text/html" data="' + page + '" width="100%" height="100%"></object>';
+   // document.getElementById(id).innerHTML = twcloader;
+    document.getElementById(id).innerHTML = oname;
+  }  
+
+function gslidetwc (id, gid) {
+   // var twcloader = '<div id="twcloaderGif"></div>';
+    var oname = '<div id="ttgidBox"><iframe id="ttgidFrame" src="https://docs.google.com/presentation/d/'+ gid +'/embed" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true";></iframe></div>';
+   // document.getElementById(id).innerHTML = twcloader;
+    document.getElementById(id).innerHTML = oname;
+}
+
+function inptwcData(tid, rid) {
+    var source = document.getElementById(tid);
+    document.getElementById(rid).innerText = source.innerText;
+}
+var twctidLast = 'wbody';
+var twctfLast = 'sa6ang2rha7lay9/t6w2c7pfs/home';
+//var twcttStat = 0;
+//var twctUndo = 0;
+//function viewBackbtn() {console.log('twcttStat:', twcttStat); if (twcttStat === 1) {showBlock('twctBack');} else {hideBlock('twctBack');}}
+
+
+//hideBlock('twctBack');
+function omTwc(fName, aid) {
+    pgtwc('wbody', 'sa6ang2rha7lay9/t6w2c7pfs/'+ fName);
+    openMenu('twcmenu','tmBtn',"ecjigjd/ecabejdcddgiah.png","ecjigjd/updraw.png");
+    inptwcData(aid,'twcpHead');
+    twctfLast = 'sa6ang2rha7lay9/t6w2c7pfs/'+ fName;
+    twctidLast = aid;
+  }
+
+
+function twctgoBack() {
+    pgtwc('wbody', twctfLast);
+    inptwcData(twctidLast,'twcpHead');
+}  
+
+function twcttOpen(ttstt, gid) {
+    showBlock('twcHeadline'); 
+    inptwcData(ttstt, 'ttHead');
+    gslidetwc('ttBody', gid); 
+}
+
+function openMenu(w, opener, imgOpener, imgCloser) {
+    var snd = new Audio("ecjigjd/ekdjgjchdjjacgfbElca.wav");
+    var x = document.getElementById(w);
+    var o = document.getElementById(opener);
+    snd.play();
+    if (x.style.display == "block") {
+      x.style.display = "none";
+      o.src = imgOpener;// "ecjigjd/ecabejdcddgiah.png";
+    }
+    else {
+      x.style.display = "block";
+      o.src = imgCloser; // "ecjigjd/updraw.png";
+    }
+  }
+  function opentMenu(w, opener, tOpener, tCloser) {
+    var snd = new Audio("ecjigjd/ekdjgjchdjjacgfbElca.wav");
+    var x = document.getElementById(w);
+    var o = document.getElementById(opener);
+    snd.play();
+    if (x.style.display == "block") {
+      x.style.display = "none";
+      o.innerHTML = tOpener;// "ecjigjd/ecabejdcddgiah.png";
+    }
+    else {
+      x.style.display = "block";
+      o.innerHTML = tCloser; // "ecjigjd/updraw.png";
+    }
+  }  
+
 //var containerWidth = document.getElementById('two').offsetWidth; // Get the container width if needed.
 //var adjustedWidth = containerWidth - awidth; // Calculate the adjusted width
