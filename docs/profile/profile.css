@@ -24,36 +24,11 @@
     width: 100%;
     height: 100%;
     padding-bottom: 10vmin;
+    margin: auto;
     overflow: scroll;
 }
 .ttmenubtn.pnbtn {
     float: right;
     margin-right: 2vmin;
     line-height: 1.5;
-}
-.tablexp {
-    width: 90%;
-    margin: auto;
-}
-.rowxp {
-    width: 100%;
-    height: 50vmin;
-    margin-top: 5vmin;
-    overflow: hidden;
-    text-align: center;
-}
-.cxp {
-    display: block;
-    height: 100%;
-    overflow: hidden;
-}
-.cxp img {
-    display: block;
-    height: 100%;
-}
-.rowxp>:nth-child(1){
-    float: left;
-}
-.rowxp>:nth-child(2){
-    float: right;
 }
