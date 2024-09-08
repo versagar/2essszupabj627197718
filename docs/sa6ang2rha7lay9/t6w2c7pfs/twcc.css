@@ -48,12 +48,17 @@ a {
     right: 2vmin;
     height: 7vmin;
     aspect-ratio: 1;
+    overflow: hidden;
     background-color: antiquewhite;
     box-shadow: 0.5vmin 0.5vmin gray; 
 }
 #twcmenubtn:active {
 box-shadow: none;
 right: 1.5vmin;
+}
+#tmbtn {
+    width: 100%;
+    height: 100%;
 }
 #twcmenu {
     display: none;
@@ -91,9 +96,8 @@ right: 1.5vmin;
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    padding-right: 5vmin;
     width: 40vmin;
-    border-bottom: 1vmin solid #6C2E00;
-    box-shadow: 0.5vmin 0.5vmin 5px;
 }
 .ttbody {
     display: block;
@@ -106,13 +110,17 @@ right: 1.5vmin;
 #twctBack {
     float: right;
 }
-#ttHead {
+.tthcenter {
     display: block;
     color: black;
     margin-right: auto;
     margin-left: auto;
-    min-width: 45vmin;
     width: max-content;
+}
+#ttHead {
+   display: block;
+   float: left;
+   min-width: 45vmin;
     font-size: 4vmin;
     line-height: 5vmin;
     min-height: 5vmin;
