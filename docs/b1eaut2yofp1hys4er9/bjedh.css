@@ -27,13 +27,6 @@ a {
     text-decoration: none;
 }
 
-
-#line {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-}
-
 #header {
     display: flex;
     align-items: center;
@@ -504,10 +497,13 @@ footer p {
 }
 
 .twcheadline {
+    position: fixed;
+    top: 0;
     display: none;
     width: 100%;
     height: 7vmin;
     background-color: antiquewhite;
+    z-index: 1;
 }
 
 .ttmenubtn {
@@ -515,55 +511,7 @@ footer p {
     float: left;
     height: 100%;
 }
-.tablexp {
-    display: block;
-    width: 100%;
-    margin: auto;
-}
-.rowxp {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    margin-top: 5vmin;
-}
-.txp {
-    display: block;
-    width: 100%;
-    height: max-content;
-    margin: auto;
-}
-.txp h1 {
-    font-size: 5vmin;
-    display: block;
-    text-align: center;
-}
-.ixp {
-    display: block;
-    width: 100%;
-    margin: auto;
 
-}
-.ixp img {
-    display: block;
-    width: 100%;
-
-}
-
-.rowxp>:nth-child(1){
-    float: left;
-}
-.rowxp>:nth-child(2){
-    float: right;
-}
-.divider {
-    display: block;
-    float: left;
-    width: 100%;
-    margin-top: 2vmin;
-    height: 1px;
-    background-color: black;
-    outline: 1px solid gray;
-}
 .fwbox {
     display: block;
     margin-top: 2vmin;
@@ -571,7 +519,14 @@ footer p {
     float: left;
     overflow: hidden;
 }
-
+.loadedobject {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-wrap: normal;
+}
 
 
 
@@ -608,47 +563,50 @@ footer p {
 }
 
 
-#resizable {
+#chatBox {
     display: none;
     position: absolute;
-    top: 15vmin;
     right: 0;
-    width: 30vw;
-    height: 70%;
-    min-width: 200px; /* Initial width */
+    width: 50%;
+    max-width: 700px;
+    height: calc(100% - 26vmin);
     min-height: 300px; /* Initial height */
-    background-color: #fcf2706e;
+    background-color: #fcf370ad;
     border-radius: 5px;
     cursor: move; /* Default cursor */
     overflow: hidden;
+    background-image: url('../sa6ang2rha7lay9/1tas2wee1r4sang9/dchdjbbci.png');
+    background-size: 30vmin 30vmin;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
-#resizable .resizer {
-    width: 10px;
-    height: 10px;
-    background: darkblue;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    cursor: sw-resize; /* Cursor for resizing from bottom-left */
-}
-#resizable iframe {
+
+#chatBox iframe {
     display: block;
     float: left;
-}
-#mitrabox {
-    height: max-content;
+    width: 100%;
 }
 #mitraCloser {
     display: block;
-    width: 5%;
-    font-size: 80%;
-    float: left;
+    position: absolute;
+}
+.mitrabtns {
+    font-size: 5vmin;
     color: antiquewhite;
-    font-weight: 800;
-    background-color: red;
+    background-color: rgba(128, 128, 128, 0.658);
     border-radius: 10px;
-    padding: auto;
-    text-align: center;
+    z-index: 2;
+}
+#botCover {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+}
+.mitrabtns:active {
+    font-size: 4vmin;
+    color: black;
 }
 #chatMitra {
     position:  absolute;
@@ -674,3 +632,8 @@ footer p {
     right: 5vmin;
     top: 20vmin;
 }
+
+
+
+/* General css */
+

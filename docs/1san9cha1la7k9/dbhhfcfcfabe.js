@@ -74,11 +74,16 @@ function pgtwc(id, name) {
     var oname = '<object type="text/html" data="' + page + '" width="100%" height="100%"></object>';
    // document.getElementById(id).innerHTML = twcloader;
     document.getElementById(id).innerHTML = oname;
-  }  
-
+  } 
+  
+  function loadhPagesuff(id, name, suff, dir) {
+    var oname = '<object type="text/html" data="'+ dir + name + suff +'.html" class="loadedobject" id="obin'+id+'"></object>';
+   // document.getElementById(id).innerHTML = twcloader;
+    document.getElementById(id).innerHTML = oname;
+  } 
 function gslidetwc (id, gid) {
    // var twcloader = '<div id="twcloaderGif"></div>';
-    var oname = '<div id="ttgidBox"><iframe id="ttgidFrame" src="https://docs.google.com/presentation/d/'+ gid +'/embed" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true";></iframe></div>';
+    var oname = '<div id="ttgidBox"><iframe id="ttgidFrame" src="https://docs.google.com/presentation/d/'+ gid +'/embed" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true";></iframe><div class="abs gslidestrip"></div></div>';
    // document.getElementById(id).innerHTML = twcloader;
     document.getElementById(id).innerHTML = oname;
 }
@@ -112,7 +117,8 @@ function twctgoBack() {
 function twcttOpen(ttstt, gid) {
     showBlock('twcHeadline'); 
     inptwcData(ttstt, 'ttHead');
-    gslidetwc('ttBody', gid); 
+    gslidetwc('ttFrame1', gid);
+    setDisplay('none', 'ttFrame4');
 }
 
 function openMenu(w, opener, imgOpener, imgCloser) {
@@ -144,5 +150,44 @@ function openMenu(w, opener, imgOpener, imgCloser) {
     }
   }  
 
+  function loadttMenu(suff,tname) {
+    var pagename = document.getElementById('ttHead').innerText.toLowerCase().trim();
+    loadhPagesuff("ttFrame2", pagename, suff,"topics/"+tname+"/");
+    setDisplay("none","ttmContainer");
+  }
+  
+  function loadttFrame(num,suff,pre){
+    loadhPagesuff("ttFrame"+num,pre,suff,"topics/");
+  }
+
+  function setDisplay(option, id) {
+    document.getElementById(id).style.display = option;
+  }
+
 //var containerWidth = document.getElementById('two').offsetWidth; // Get the container width if needed.
 //var adjustedWidth = containerWidth - awidth; // Calculate the adjusted width
+// General Blocks
+
+function toggleCon(id, con, vone, vtwo) {
+  var el = document.getElementById(id);
+
+  // If 'con' starts with '.style', toggle inline CSS styles
+  if (con.startsWith('style.')) {
+    // Remove '.style' from the string to access the actual style property
+    var styleProperty = con.replace('style.', '').trim();
+
+    // Toggle the inline CSS property
+    if (el.style[styleProperty] === vtwo) {
+      el.style[styleProperty] = vone;
+    } else {
+      el.style[styleProperty] = vtwo;
+    }
+  }else {
+    // Otherwise, toggle the property (like class, attribute, etc.)
+    if (el[con] === vtwo) {
+      el[con] = vone;
+    } else {
+      el[con] = vtwo;
+    }
+  }
+}
