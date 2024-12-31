@@ -7,13 +7,12 @@ document.addEventListener("keydown", event => {
 getBeauty("dtp");
 getBeauty("mbp");
 getBeauty("kpp");
-// getBeauty("../dtp");
-// getBeauty("../mbp");
-// getBeauty("../kpp");
-// getBeauty("../../dtp");
-// getBeauty("../../mbp");
-// getBeauty("../../kpp");
-getBeauty("tempresp");
+getBeauty("../dtp");
+getBeauty("../mbp");
+getBeauty("../kpp");
+getBeauty("../../dtp");
+getBeauty("../../mbp");
+getBeauty("../../kpp");
 //document.getElementById("updates").innerHTML = '<object type="text/html" data="../../ady12ata14n9/updateindex.html" width="100%" height="400vh"></object>';
 function openNav() {
     document.getElementById("mySidenav").style.width = "20%";
@@ -181,7 +180,6 @@ function pgtwc(id, name) {
 
 function loadObject(elementId, url) {
     var oname = '<object type="text/html" data="' + url + '" class="loadedobject" id="obin' + elementId + '"></object>';
-    //var oname = url;
     if (url) {
         document.getElementById(elementId).innerHTML = oname;
     } else {

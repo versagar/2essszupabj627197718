@@ -84,6 +84,4 @@ function rcontent(pid) {
 }
 
 
-
 guide('rframe');
-index('myFeed');

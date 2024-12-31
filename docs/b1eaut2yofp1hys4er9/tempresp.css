@@ -2,9 +2,12 @@
 * {
     z-index: 0;
     margin: 0;
-    padding: 0;}
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
-    --w:  50;
+    --w:  50%;
+    --iw: 50vmin;
     --lmar: 10vmin;
     --rmar: 10vmin;
     --tmar: 10vmin;
@@ -17,7 +20,7 @@
         display: block;
         max-width: 1000px;
         margin: auto;
-        overflow: hidden;
+        overflow: scroll;
         background-color: antiquewhite;
 }
 .sec {
@@ -46,12 +49,13 @@
     .col2 {
         /* background-color: blue; */
         display: block;
-        width: calc(1%*var(--w));
+        width: var(--w);
         min-height: max-content;
         padding: 2vmin;
     }
     .col2 img {
         position: relative;
+        width: var(--iw);
         display: block;
         margin: auto;
         height: auto;
@@ -63,7 +67,6 @@
     .circle {
         aspect-ratio: 1;
         border-radius: 50%;
-        margin: 2vmin auto;
     }
     .whalf {
         width: calc(0.5*calc(450px - 25vw));
@@ -74,8 +77,9 @@
     }
     .abc {
         position: absolute;
-        transform: translateY(-50%);
+        transform: translate(-50%,-50%);
         top: 50%;
+        left: 50%;
     }
     
     .abs {
@@ -103,7 +107,7 @@
     .fancybox {
         width: 95%;
         display: block;
-        background-color: lightgray;
+        background-color: grey;
         padding: 2vmin;
         margin: auto;
         border-radius: 0 5vmin;
@@ -133,12 +137,10 @@
         margin-bottom: var(--bmar);
         bottom: var(--bmar);
     }
-
-
-
-
-
-
+    .nopm {
+        margin: 0;
+        padding: 0;
+    }
 
 
 @media (max-width: 512px){
