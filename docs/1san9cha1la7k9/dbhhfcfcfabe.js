@@ -202,7 +202,7 @@ function loadIn(elementId, url) {
             document.getElementById(elementId).innerHTML = html; // Inject HTML into the element
         })
         .catch(error => {
-            console.error('Error loading page:', error);
+           // console.error('Error loading page:', error);
             loadObject(elementId, url);
             // Display the error message on the front-end
         });
@@ -212,6 +212,7 @@ function loadIn(elementId, url) {
 function loadhPagesuff(id, name, suff, dir) {
     var page = dir + name + suff + '.html';
     loadIn(id, page);
+    //loadObject(id, page);
 }
 
 function gslidetwc(id, gid) {

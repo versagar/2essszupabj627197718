@@ -37,6 +37,8 @@ a {
     overflow: hidden;
     padding-top: 0.5vmin;
     padding-bottom: 0.5vmin;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    font-weight: 900;
 }
 
 .htitle {
@@ -50,6 +52,7 @@ a {
     text-align: center;
     box-shadow: 0.1vmin 0.1vmin 0.2vmin white;
     border: 0.2vmin solid #8c3f06;
+    
     
 }
 
@@ -338,6 +341,10 @@ a {
     width: 90%;
     margin: auto;
 }
+#odinUpdate {
+    width: 100%;
+    height: calc(130% - 10vw);
+}
 #tgpOpener {
     margin-left: 3vw;
 }
@@ -387,7 +394,7 @@ a {
     scrollbar-width: 0;
 }
 #tgpCover img {
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 #form {
@@ -398,7 +405,7 @@ a {
 #guideFrame {
     background: url(../loader.gif) center center no-repeat;
 	width: 100%;
-	height: 80vh;
+	height: 100%;
 }
 .frameBtn {
     border: 3px solid white;
@@ -515,7 +522,7 @@ footer p {
 .fwbox {
     display: block;
     margin-top: 2vmin;
-    width: 90%;
+    width: 100%;
     float: left;
     overflow: hidden;
 }

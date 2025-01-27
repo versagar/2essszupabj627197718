@@ -84,4 +84,5 @@ function rcontent(pid) {
 }
 
 
-guide('rframe');
+//guide('rframe');
+loadObject('rframe','sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html');

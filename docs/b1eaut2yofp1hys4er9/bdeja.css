@@ -24,5 +24,8 @@
 .rowxp  {
   display: block;
 }
+#odinUpdate {
+  height: calc(120% - 5vw);
+}
 
 }
