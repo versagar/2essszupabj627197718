@@ -63,14 +63,17 @@ right: 1.5vmin;
 #twcmenu {
     display: none;
     position: absolute;
+    z-index: 1;
     width: 50vmin;
     top: 10vmin;
     right: 2vmin;
-    height: 70vmin;
+    height: 75%;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     direction: rtl;
     border-left: 1vmin solid gray;
-
+    border-right: 1vmin solid antiquewhite;
+    outline: 1vmin solid #6C2E00;
 }
 #twcmenu::-webkit-scrollbar {
     width: auto;

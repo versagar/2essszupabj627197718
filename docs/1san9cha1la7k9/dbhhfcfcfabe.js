@@ -331,3 +331,21 @@ function move(dir, id, step) {
     hor = hor + 2 - dir;
     document.getElementById(id).style.right = step * hor + "vw";
 }
+
+function autoScroll(containerId, top) {
+    const container = document.getElementById(containerId);
+
+    // Scroll down by the specified amount
+    container.scrollBy({
+        top: top,  // Adjust how far to scroll each time
+        behavior: 'smooth' // Smooth scrolling effect
+    });
+
+    // Wait for 0.5 seconds before scrolling back to the original position
+    setTimeout(() => {
+        container.scrollBy({
+            top: -top,  // Scroll back up to the original position
+            behavior: 'smooth' // Smooth scrolling effect
+        });
+    }, 500); // Delay in milliseconds (500ms = 0.5 seconds)
+}
