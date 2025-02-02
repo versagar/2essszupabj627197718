@@ -354,9 +354,7 @@ a {
 #twcAdin a {
     color: white;
 }
-#twcAdin:hover + #frameOverview {
-    display: block;
-}
+
 .uipara p {
     padding: 1vmin;
 }

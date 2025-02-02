@@ -66,6 +66,9 @@
     .h500 {
         min-height: 300px;
     }
+    .h600 {
+        min-height: 400px;
+    }
     .thickcapt {
         font-weight: bolder;
         font-size: 150%;
