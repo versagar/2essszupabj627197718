@@ -217,10 +217,18 @@ function loadhPagesuff(id, name, suff, dir) {
 
 function gslidetwc(id, gid) {
     // var twcloader = '<div id="twcloaderGif"></div>';
-    var oname = '<div id="ttgidBox"><iframe id="ttgidFrame" src="https://docs.google.com/presentation/d/' + gid + '/embed" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true";></iframe><div class="abs gslidestrip"></div></div>';
+    var oname = '<div id="ttgsidBox'+id+'" class="ttgsidbox"><iframe id="ttgsidFrame'+id+'" class="ttgsidframe" src="https://docs.google.com/presentation/d/' + gid + '/embed" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true";></iframe><div class="abs gslidestrip"></div></div>';
     // document.getElementById(id).innerHTML = twcloader;
     document.getElementById(id).innerHTML = oname;
 }
+
+function gdoctwc(id, gid) {
+    // var twcloader = '<div id="twcloaderGif"></div>';
+    var oname = '<div id="ttgdidBox'+id+'" class="ttgdidbox"><iframe id="ttgdidFrame'+id+'" class="ttgdidframe" src="https://docs.google.com/document/d/' + gid + '/pub?embedded=true" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true";></iframe><div class="abs gdocstrip"></div></div>';
+    // document.getElementById(id).innerHTML = twcloader;
+    document.getElementById(id).innerHTML = oname;
+}
+
 
 function inptwcData(tid, rid) {
     var source = document.getElementById(tid);
@@ -248,10 +256,11 @@ function twctgoBack() {
     inptwcData(twctidLast, 'twcpHead');
 }
 
-function twcttOpen(ttstt, gid) {
+function twcttOpen(ttstt, gsid, gdid) {
     showBlock('twcHeadline');
     inptwcData(ttstt, 'ttHead');
-    gslidetwc('ttFrame1', gid);
+    gslidetwc('ttFrame1', gsid);
+    gdoctwc('ttFrame2',gdid);
     setDisplay('none', 'ttFrame4');
 }
 
@@ -282,9 +291,19 @@ function opentMenu(w, opener, tOpener, tCloser) {
         o.innerHTML = tCloser; // "ecjigjd/updraw.png";
     }
 }
+function shortenTitle(title) {
+    return title
+        .split(' ') // Split the title into words based on spaces
+        .map(word => word.substring(0, 2).toLowerCase()) // Get the first two letters of each word and convert to lowercase
+        .join('') // Join the letters without any separator
+        .replace('&', '') // Remove '&'
+        .replace('(', '') // Remove '('
+        .replace(')', ''); // Remove ')'
+}
 
 function loadttMenu(suff, tname) {
-    var pagename = document.getElementById('ttHead').innerText.toLowerCase().trim();
+    //var pagename = document.getElementById('ttHead').innerText.toLowerCase().trim();
+    var pagename = shortenTitle(document.getElementById('ttHead').innerText);
     loadhPagesuff("ttFrame2", pagename, suff, "topics/" + tname + "/");
     setDisplay("none", "ttmContainer");
 }
