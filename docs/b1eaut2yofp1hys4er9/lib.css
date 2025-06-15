@@ -1,0 +1,152 @@
+:root {
+--max-body: 95%;
+  --primary-color: #6c2e00;
+  --secondary-color: antiquewhite;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: rgb(255, 227, 191);
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  
+  /* Backgrounds */
+  --bg-light: #ffffff;
+  --bg-dark: #222;
+ 
+  --text1: 5vmin;
+  --text2: 3vmin;
+  --text3: 1vmin;
+  --text4: 0.5vmin;
+}
+
+
+* {
+  margin: 0vmin;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--dark-color);
+  padding: 1vmin;
+}
+.bold {font-weight: bold;}
+.bolder {font-weight: bolder;}
+.text1 {font-size: var(--text1);}
+.text2 {font-size: var(--text2);}
+.text3 {font-size: var(--text3);}
+.text4 {font-size: var(--text4);}
+
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-success { color: var(--success-color); }
+.text-danger { color: var(--danger-color); }
+.text-warning { color: var(--warning-color); }
+.text-info { color: var(--info-color); }
+.text-light { color: var(--light-color); }
+.text-dark { color: var(--dark-color); }
+
+/* Background Colors */
+.bg-primary { background-color: var(--primary-color); color: white; }
+.bg-secondary { background-color: var(--secondary-color); color: white; }
+.bg-success { background-color: var(--success-color); color: white; }
+.bg-danger { background-color: var(--danger-color); color: white; }
+.bg-warning { background-color: var(--warning-color); color: black; }
+.bg-info { background-color: var(--info-color); color: black; }
+.bg-light { background-color: var(--light-color); color: black; }
+.bg-dark { background-color: var(--dark-color); color: white; }
+
+.flex { display: flex; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-column { display: flex; flex-direction: column; }
+.flex-space-between { display: flex; justify-content: space-between; }
+.flex-space-around { display: flex; justify-content: space-around; }
+
+
+.btn {
+    border: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-secondary { background-color: var(--secondary-color); color: white; }
+.btn-success { background-color: var(--success-color); color: white; }
+.btn-danger { background-color: var(--danger-color); color: white; }
+.btn-warning { background-color: var(--warning-color); color: black; }
+.btn-info { background-color: var(--info-color); color: white; }
+
+.btn:hover {
+  opacity: 0.8;
+}
+.round1 {border-radius: 7vmin;}
+.round2 {border-radius: 3vmin;}
+.round3 {border-radius: 1vmin;}
+
+.container-full {width: 100%; height: 100%;}
+.container-max-x {width: var(--max-body); height: 100%; margin: auto;}
+
+.pad1 {padding: 3vmin;}
+.pad2 {padding: 1vmin;}
+.pad3 {padding: 0.5vmin;}
+
+.mar1 {margin: 3vmin auto;}
+.mar2 {margin: 1vmin auto;}
+.mar3 {margin: 0.5vmin auto;}
+/* ========================= */
+/* Block Display Utilities */
+/* ========================= */
+.block { display: block; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+
+/* ========================= */
+/* Block Alignment Utilities */
+/* ========================= */
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.shadow1 {
+    box-shadow: 1vmin 1vmin 10px black;
+}
+
+.full-width { width: 100%; }
+.auto-width { width: auto; }
+.max-width { width: var(--max-body); margin: auto; }
+
+.height-full { height: 100vh; }
+.height-auto { height: auto; }
+
+/* ========================= */
+/* 7. Animations */
+/* ========================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ========================= */
+/* 8. Dark Mode Support */
+/* ========================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: #222;
+    --bg-dark: #fff;
+    --text-light: #fff;
+    --text-dark: #000;
+  }
+  
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+}

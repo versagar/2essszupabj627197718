@@ -52,7 +52,7 @@
         display: block;
         width: var(--w);
         min-height: max-content;
-        padding: 2vmin;
+        overflow: hidden;
     }
     .col2 img {
         position: relative;
@@ -61,6 +61,7 @@
         margin: auto;
         height: auto;
         aspect-ratio: 1;
+        overflow: hidden;
     }
     
     .h500 {
@@ -87,15 +88,19 @@
         background-color: rgba(223, 157, 157, 0.301);
         text-align: center;
         text-shadow: 0vmin 0.5vmin 0.1px white;
-        box-shadow: 0.5vmin 0.5vmin 5px grey;
+        box-shadow: 0.5vmin 0.5vmin 2px grey;
     }
     .tobtn:active {
-        margin-top: 0.5vmin;
-        margin-left: 0.5vmin;
+        margin-top: 0.1vmin;
+        margin-left: 0.1vmin;
+    }
+    button {
+        cursor: pointer;
     }
     .square {
         width: var(--w);
         aspect-ratio: 1;
+        overflow: hidden;
     }
     .circle {
         aspect-ratio: 1;
@@ -120,7 +125,9 @@
     .abs {
         position: absolute;
     }
-   
+   /* .fix-c2-img {
+    margin-top: 5vmin;
+   } */
     .left {
         display: block;
         left: 0;
@@ -137,6 +144,7 @@
         font-size: 5vmin;
         font-weight: 900;
         text-align: center;
+        justify-self: left;
         text-shadow: 0.5vmin 0.5vmin 10px #6c2e00;
     }
     .htext1  {
@@ -202,11 +210,14 @@
         margin: auto;
     }
     .col2 img {
-        width: 80%;
+        width: 90%;
         height: auto;
     }
     .htext {
         font-size: 8vmin;
+    }
+    .htext1 {
+        font-size: 9vmin;
     }
     .subh {
         font-size: 6vmin;
