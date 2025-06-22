@@ -1,4 +1,6 @@
 :root {
+  --b-unit: 1vmin;
+  --t-unit: 1em;
 --max-body: 95%;
   --primary-color: #6c2e00;
   --secondary-color: antiquewhite;
@@ -19,19 +21,21 @@
   --text4: 0.5vmin;
 }
 
-
 * {
-  margin: 0vmin;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scrollbar-width: none;
 }
+
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--bg-light);
+  background-color: var(--bg-secondary);
   color: var(--dark-color);
-  padding: 1vmin;
 }
+a {color: unset;}
 .bold {font-weight: bold;}
 .bolder {font-weight: bolder;}
 .text1 {font-size: var(--text1);}
@@ -101,15 +105,51 @@ body {
 .block { display: block; }
 .inline-block { display: inline-block; }
 .hidden { display: none; }
+.ov-hidden { overflow: hidden;}
 
 /* ========================= */
 /* Block Alignment Utilities */
 /* ========================= */
-.block-center {
+.center {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+
+.square {
+  aspect-ratio: 1;
+}
+.circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+/* Width classes */
+.w1  { width:  calc(100 * var(--b-unit) / 1); }
+.w2  { width:  calc(100 * var(--b-unit) / 2); }
+.w3  { width:  calc(100 * var(--b-unit) / 3); }
+.w4  { width:  calc(100 * var(--b-unit) / 4); }
+.w5  { width:  calc(100 * var(--b-unit) / 5); }
+.w6  { width:  calc(100 * var(--b-unit) / 6); }
+.w7  { width:  calc(100 * var(--b-unit) / 7); }
+.w8  { width:  calc(100 * var(--b-unit) / 8); }
+.w9  { width:  calc(100 * var(--b-unit) / 9); }
+.w10 { width:  calc(100 * var(--b-unit) / 10); }
+.w11 { width:  calc(100 * var(--b-unit) / 11); }
+.w12 { width:  calc(100 * var(--b-unit) / 12); }
+
+/* Height classes */
+.ht1  { height: calc(100 * var(--b-unit) / 1); }
+.ht2  { height: calc(100 * var(--b-unit) / 2); }
+.ht3  { height: calc(100 * var(--b-unit) / 3); }
+.ht4  { height: calc(100 * var(--b-unit) / 4); }
+.ht5  { height: calc(100 * var(--b-unit) / 5); }
+.ht6  { height: calc(100 * var(--b-unit) / 6); }
+.ht7  { height: calc(100 * var(--b-unit) / 7); }
+.ht8  { height: calc(100 * var(--b-unit) / 8); }
+.ht9  { height: calc(100 * var(--b-unit) / 9); }
+.ht10 { height: calc(100 * var(--b-unit) / 10); }
+.ht11 { height: calc(100 * var(--b-unit) / 11); }
+.ht12 { height: calc(100 * var(--b-unit) / 12); }
 
 .shadow1 {
     box-shadow: 1vmin 1vmin 10px black;
@@ -121,6 +161,7 @@ body {
 
 .height-full { height: 100vh; }
 .height-auto { height: auto; }
+
 
 /* ========================= */
 /* 7. Animations */
