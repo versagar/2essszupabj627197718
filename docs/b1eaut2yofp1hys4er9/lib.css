@@ -89,6 +89,9 @@ a {color: unset;}
 .btn:hover {
   opacity: 0.8;
 }
+.btn:active {
+   margin: 0.2vmin 0.2vmin;
+}
 .round1 {border-radius: 7vmin;}
 .round2 {border-radius: 3vmin;}
 .round3 {border-radius: 1vmin;}
@@ -176,7 +179,7 @@ a {color: unset;}
 .ht12 { height: calc(100 * var(--b-unit) / 12); }
 
 .shadow1 {
-    box-shadow: 1vmin 1vmin 10px black;
+    box-shadow: 1vmin 1vmin 5px black;
 }
 
 .full-width { width: 100%; }
