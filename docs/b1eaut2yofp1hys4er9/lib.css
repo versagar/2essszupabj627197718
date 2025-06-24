@@ -1,6 +1,6 @@
 :root {
   --b-unit: 1vmin;
-  --t-unit: 1em;
+  --t-unit: 0.5em;
 --max-body: 95%;
   --primary-color: #6c2e00;
   --secondary-color: antiquewhite;
@@ -14,11 +14,6 @@
   /* Backgrounds */
   --bg-light: #ffffff;
   --bg-dark: #222;
- 
-  --text1: 5vmin;
-  --text2: 3vmin;
-  --text3: 1vmin;
-  --text4: 0.5vmin;
 }
 
 * {
@@ -38,10 +33,11 @@ body {
 a {color: unset;}
 .bold {font-weight: bold;}
 .bolder {font-weight: bolder;}
-.text1 {font-size: var(--text1);}
-.text2 {font-size: var(--text2);}
-.text3 {font-size: var(--text3);}
-.text4 {font-size: var(--text4);}
+
+.text1 {font-size: calc(1 * var(--t-unit));}
+.text2 {font-size: calc(2 * var(--t-unit));}
+.text3 {font-size: calc(3 * var(--t-unit));}
+.text4 {font-size: calc(4 * var(--t-unit));}
 
 .text-primary { color: var(--primary-color); }
 .text-secondary { color: var(--secondary-color); }
@@ -67,7 +63,15 @@ a {color: unset;}
 .flex-column { display: flex; flex-direction: column; }
 .flex-space-between { display: flex; justify-content: space-between; }
 .flex-space-around { display: flex; justify-content: space-around; }
-
+.flex-start { display: flex; justify-content: flex-start; }
+.flex-end { display: flex; justify-content: flex-end; }
+.flex-align-top { display: flex; align-items: flex-start; }
+.flex-align-bottom { display: flex; align-items: flex-end; }
+.flex-align-center { display: flex; align-items: center; }
+.flex-align-stretch { display: flex; align-items: stretch; }
+.flex-row { display: flex; flex-direction: row; }
+.flex-row-reverse { display: flex; flex-direction: row-reverse; }
+.flex-column-reverse { display: flex; flex-direction: column-reverse; }
 
 .btn {
     border: 1px;
@@ -99,6 +103,14 @@ a {color: unset;}
 .mar1 {margin: 3vmin auto;}
 .mar2 {margin: 1vmin auto;}
 .mar3 {margin: 0.5vmin auto;}
+
+.ml1 {margin-left: calc(1 * var(--b-unit));}
+.ml2 {margin-left: calc(2 * var(--b-unit));}
+.ml3 {margin-left: calc(3 * var(--b-unit));}
+
+.mr1 {margin-right: calc(1 * var(--b-unit));}
+.mr2 {margin-right: calc(2 * var(--b-unit));}
+.mr3 {margin-right: calc(3 * var(--b-unit));}
 /* ========================= */
 /* Block Display Utilities */
 /* ========================= */
@@ -114,6 +126,18 @@ a {color: unset;}
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+.left {
+  float: left;
+  margin-right: auto;
+  margin-left: 0;
+  left: 0;
+}
+.right {
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+  right: 0;
 }
 
 .square {
