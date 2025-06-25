@@ -158,7 +158,6 @@ function switchWidth(w, u, id) {
 }
 
 function fullOpen() {
-    document.getElementById('footer').style.display = "none";
     document.getElementById('header').style.display = "none";
     document.getElementById('fullOpener').style.display = "none";
     document.getElementById('fullCloser').style.display = "block";
@@ -166,11 +165,10 @@ function fullOpen() {
 }
 
 function fullClose() {
-    document.getElementById('footer').style.display = "block";
     document.getElementById('header').style.display = "flex";
     document.getElementById('fullOpener').style.display = "block";
     document.getElementById('fullCloser').style.display = "none";
-    document.getElementById('wbody').style.height = 'calc(100% - 26vmin)';
+    document.getElementById('wbody').style.height = 'calc(100% - 12vmin)';
 }
 
 function pgtwc(id, name) {
