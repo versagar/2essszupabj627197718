@@ -14,6 +14,7 @@
   /* Backgrounds */
   --bg-light: #ffffff;
   --bg-dark: #222;
+  --bg-img-1: /sa6ang2rha7lay9/1tas2wee1r4sang9/general/sunlight.webp;
 }
 
 * {
@@ -31,7 +32,10 @@ body {
   background-color: var(--bg-secondary);
   color: var(--dark-color);
 }
+.bg-img-1 {background-image: url("/sa6ang2rha7lay9/1tas2wee1r4sang9/general/sunlight.webp");}
 a {color: unset;}
+.link {opacity: 0.8;}
+.link:hover {opacity: 1.8;}
 .bold {font-weight: bold;}
 .bolder {font-weight: bolder;}
 
@@ -118,9 +122,20 @@ a {color: unset;}
 .mr2 {margin-right: calc(2 * var(--b-unit));}
 .mr3 {margin-right: calc(3 * var(--b-unit));}
 
+.vw100 {width: 100vw;}
+.vw80 {width: 80vw;}
+.vw50 {width: 50vw;}
+.vw25 {width: 25vw;}
+
 .line1 {line-height: 1;}
 .line1-5{line-height: 1.5;}
 .line2{line-height: 2;}
+
+.op1 {opacity: 0.2;}
+.op2 {opacity: 0.4;}
+.op3 {opacity: 0.6;}
+.op4 {opacity: 0.8;}
+.op5 {opacity: 1.0;}
 /* ========================= */
 /* Block Display Utilities */
 /* ========================= */
