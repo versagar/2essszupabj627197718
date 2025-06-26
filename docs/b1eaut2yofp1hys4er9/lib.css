@@ -122,10 +122,29 @@ a {color: unset;}
 .mr2 {margin-right: calc(2 * var(--b-unit));}
 .mr3 {margin-right: calc(3 * var(--b-unit));}
 
-.vw100 {width: 100vw;}
-.vw80 {width: 80vw;}
-.vw50 {width: 50vw;}
-.vw25 {width: 25vw;}
+/* Viewport Width */
+.vw100 { width: 100vw; }
+.vw80  { width: 80vw; }
+.vw50  { width: 50vw; }
+.vw25  { width: 25vw; }
+
+/* Viewport Height */
+.vh100 { height: 100vh; }
+.vh80  { height: 80vh; }
+.vh50  { height: 50vh; }
+.vh25  { height: 25vh; }
+
+/* Percentage Width */
+.pw100 { width: 100%; }
+.pw80  { width: 80%; }
+.pw50  { width: 50%; }
+.pw25  { width: 25%; }
+
+/* Percentage Height */
+.ph100 { height: 100%; }
+.ph80  { height: 80%; }
+.ph50  { height: 50%; }
+.ph25  { height: 25%; }
 
 .line1 {line-height: 1;}
 .line1-5{line-height: 1.5;}
