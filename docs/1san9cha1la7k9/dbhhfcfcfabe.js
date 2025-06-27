@@ -188,24 +188,38 @@ function loadObject(elementId, url) {
 }
 
 function loadIn(elementId, url) {
+    const el = document.getElementById(elementId);
 
+    // Step 1: Animate fade out and shrink
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    el.style.opacity = '0';
+    el.style.transform = 'scale(0.8)';
+
+    // Step 2: Fetch the content while it's fading out
     fetch(url)
         .then(response => {
-            if (!response.ok) { // Check if the response status is not OK (e.g., 404)
-                throw new Error('Page not found'); // Throw an error if not OK
+            if (!response.ok) {
+                throw new Error('Page not found');
             }
-            return response.text(); // Return the HTML content if the response is successful
+            return response.text();
         })
         .then(html => {
-            document.getElementById(elementId).innerHTML = html; // Inject HTML into the element
+            // Step 3: After fade-out completes, change content and fade back in
+            setTimeout(() => {
+                el.innerHTML = html;
+                el.style.opacity = '1';
+                el.style.transform = 'scale(1)';
+            }, 500); // Delay matches the transition duration
         })
         .catch(error => {
-           // console.error('Error loading page:', error);
-            loadObject(elementId, url);
-            // Display the error message on the front-end
+            console.error('Error loading page:', error);
+            // Optional: Fallback function
+            if (typeof loadObject === 'function') {
+                loadObject(elementId, url);
+            }
         });
-
 }
+
 
 function loadhPagesuff(id, name, suff, dir) {
     var page = dir + name + suff + '.html';
