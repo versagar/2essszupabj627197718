@@ -54,13 +54,17 @@
         min-height: max-content;
         overflow: hidden;
     }
-    .col2 img {
+    .col2 img{
         position: relative;
         display: block;
         margin: auto;
+        width: 100%;
         height: auto;
         aspect-ratio: 1;
         overflow: hidden;
+    }
+    .col2 p, .col2 a{
+        padding: 2vw;
     }
     
     .h500 {

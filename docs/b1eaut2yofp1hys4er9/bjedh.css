@@ -313,7 +313,7 @@ a {
 #contentLockbtn:hover + #helpTocLock {
     display: block;
 }
-.phead,.ov {
+.phead, .ov {
     width: 100%;
     font-size: 100%;
     display: block;
@@ -329,7 +329,7 @@ a {
     float: left;
     width: 100%;
     padding-bottom: 5vmin;
-    height: calc(100% - 3vmin);
+    height: calc(100% - 12vmin);
     overflow-y: scroll;
 }
 #info {

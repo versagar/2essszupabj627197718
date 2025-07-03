@@ -1,7 +1,7 @@
 :root {
   --b-unit: 1vmin;
   --t-unit: 0.5em;
---max-body: 95%;
+--max-body: 1400px;
   --primary-color: #6c2e00;
   --secondary-color: antiquewhite;
   --success-color: #28a745;
@@ -107,7 +107,7 @@ a {color: unset;}
 .round3 {border-radius: 1vmin;}
 
 .container-full {width: 100%; height: 100%;}
-.container-max-x {width: var(--max-body); height: 100%; margin: auto;}
+.container-max-x {max-width: var(--max-body); height: 100%; margin: auto;}
 
 .pad1 {padding: 3vmin;}
 .pad2 {padding: 1vmin;}
