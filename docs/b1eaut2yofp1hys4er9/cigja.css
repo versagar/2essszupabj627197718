@@ -1,21 +1,4 @@
 @media only screen and (max-width:512px){
-  
-  body {
-    overflow: scroll;
-  }  
-    
- 
-  .wbody {
-    height: auto;
-  }
-  .myFeed {
-    height: auto;
-  }
-  
-  .feed {
-    height: auto;
-    overflow: auto;
-  }
   .openOv {
     display: none;
   }

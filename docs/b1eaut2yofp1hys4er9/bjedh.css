@@ -329,7 +329,7 @@ a {
     float: left;
     width: 100%;
     padding-bottom: 5vmin;
-    height: calc(100% - 12vmin);
+    height: 100%;
     overflow-y: scroll;
 }
 #info {
