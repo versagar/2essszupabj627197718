@@ -64,7 +64,8 @@
         overflow: hidden;
     }
     .col2 p, .col2 a{
-        padding: 2vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
     
     .h500 {

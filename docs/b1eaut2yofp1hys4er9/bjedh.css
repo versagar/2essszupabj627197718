@@ -171,9 +171,6 @@ a {
     overflow: hidden;
 }
 
-#wbody {
-    background-color: #6C2E00;
-}
 .top-btns {
     display: block;
     float: left;
@@ -326,11 +323,13 @@ a {
 
 .feed {
     display: block;
-    float: left;
+    margin: auto;
     width: 100%;
     padding-bottom: 5vmin;
     height: 100%;
     overflow-y: scroll;
+    max-width: 1400px;
+    padding: 2vmin;
 }
 #info {
     display: block;
