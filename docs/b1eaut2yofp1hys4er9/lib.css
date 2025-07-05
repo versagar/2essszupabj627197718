@@ -165,6 +165,9 @@ a {color: unset;}
 .inline-block { display: inline-block; }
 .hidden { display: none; }
 .ov-hidden { overflow: hidden;}
+.ov-scroll { overflow: scroll;}
+.ov-scrollx {overflow-x: scroll;}
+.ov-scrolly {overflow-y: scroll;}
 
 /* ========================= */
 /* Block Alignment Utilities */
