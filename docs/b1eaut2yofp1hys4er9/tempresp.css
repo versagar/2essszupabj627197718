@@ -132,18 +132,7 @@
    /* .fix-c2-img {
     margin-top: 5vmin;
    } */
-    .left {
-        display: block;
-        left: 0;
-        float: left;
-        margin-right: auto;
-    }
-    .right {
-        display: block;
-        right: 0;
-        float: right;
-        margin-left: auto;
-    }
+
     .htext, .htext1 {
         font-size: 5vmin;
         font-weight: 900;
