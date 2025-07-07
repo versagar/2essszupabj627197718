@@ -1,6 +1,11 @@
 :root {
   --b-unit: 1vmin;
   --t-unit: 0.5em;
+
+  --rad1: 3vmin;
+  --rad2: 7vmin;
+
+  
 --max-body: 1400px;
   --primary-color: #6c2e00;
   --secondary-color: antiquewhite;
@@ -39,6 +44,11 @@ a {color: unset;}
 .bold {font-weight: bold;}
 .bolder {font-weight: bolder;}
 
+.hov-focus:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
 .text1 {font-size: calc(1 * var(--t-unit));}
 .text2 {font-size: calc(2 * var(--t-unit));}
 .text3 {font-size: calc(3 * var(--t-unit));}
@@ -55,7 +65,7 @@ a {color: unset;}
 
 /* Background Colors */
 .bg-primary { background-color: var(--primary-color); color: white; }
-.bg-secondary { background-color: var(--secondary-color); color: white; }
+.bg-secondary { background-color: var(--secondary-color); color: var(--primary-color); }
 .bg-success { background-color: var(--success-color); color: white; }
 .bg-danger { background-color: var(--danger-color); color: white; }
 .bg-warning { background-color: var(--warning-color); color: black; }
@@ -87,7 +97,7 @@ a {color: unset;}
 }
 
 .btn-primary { background-color: var(--primary-color); color: white; }
-.btn-secondary { background-color: var(--secondary-color); color: white; }
+.btn-secondary { background-color: var(--secondary-color); color: var(--primary-color); }
 .btn-success { background-color: var(--success-color); color: white; }
 .btn-danger { background-color: var(--danger-color); color: white; }
 .btn-warning { background-color: var(--warning-color); color: black; }
@@ -150,8 +160,8 @@ a {color: unset;}
 .ph25  { height: 25%; }
 
 .line1 {line-height: 1;}
-.line1-5{line-height: 1.5;}
-.line2{line-height: 2;}
+.line1-5 {line-height: 1.5;}
+.line2 {line-height: 2;}
 
 .op1 {opacity: 0.2;}
 .op2 {opacity: 0.4;}
@@ -175,8 +185,15 @@ a {color: unset;}
 .center {
   margin: auto;
 }
+.radius1010 {border-radius: 7vmin 0 7vmin 0;}
 .text-center {
 text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-rigth {
+  text-align: right;
 }
 .left {
   float: left;
@@ -223,6 +240,41 @@ text-align: center;
 .ht10 { height: calc(100 * var(--b-unit) / 10); }
 .ht11 { height: calc(100 * var(--b-unit) / 11); }
 .ht12 { height: calc(100 * var(--b-unit) / 12); }
+
+.rad0000 { border-radius: 0 0 0 0; }
+.rad0001 { border-radius: 0 0 0 var(--rad1); }
+.rad0010 { border-radius: 0 0 var(--rad1) 0; }
+.rad0011 { border-radius: 0 0 var(--rad1) var(--rad1); }
+.rad0100 { border-radius: 0 var(--rad1) 0 0; }
+.rad0101 { border-radius: 0 var(--rad1) 0 var(--rad1); }
+.rad0110 { border-radius: 0 var(--rad1) var(--rad1) 0; }
+.rad0111 { border-radius: 0 var(--rad1) var(--rad1) var(--rad1); }
+.rad1000 { border-radius: var(--rad1) 0 0 0; }
+.rad1001 { border-radius: var(--rad1) 0 0 var(--rad1); }
+.rad1010 { border-radius: var(--rad1) 0 var(--rad1) 0; }
+.rad1011 { border-radius: var(--rad1) 0 var(--rad1) var(--rad1); }
+.rad1100 { border-radius: var(--rad1) var(--rad1) 0 0; }
+.rad1101 { border-radius: var(--rad1) var(--rad1) 0 var(--rad1); }
+.rad1110 { border-radius: var(--rad1) var(--rad1) var(--rad1) 0; }
+.rad1111 { border-radius: var(--rad1) var(--rad1) var(--rad1) var(--rad1); }
+
+.rad2000 { border-radius: 0 0 0 0; }
+.rad2001 { border-radius: 0 0 0 var(--rad2); }
+.rad2010 { border-radius: 0 0 var(--rad2) 0; }
+.rad2011 { border-radius: 0 0 var(--rad2) var(--rad2); }
+.rad2100 { border-radius: 0 var(--rad2) 0 0; }
+.rad2101 { border-radius: 0 var(--rad2) 0 var(--rad2); }
+.rad2110 { border-radius: 0 var(--rad2) var(--rad2) 0; }
+.rad2111 { border-radius: 0 var(--rad2) var(--rad2) var(--rad2); }
+.rad2200 { border-radius: var(--rad2) 0 0 0; }
+.rad2201 { border-radius: var(--rad2) 0 0 var(--rad2); }
+.rad2210 { border-radius: var(--rad2) 0 var(--rad2) 0; }
+.rad2211 { border-radius: var(--rad2) 0 var(--rad2) var(--rad2); }
+.rad2300 { border-radius: var(--rad2) var(--rad2) 0 0; }
+.rad2301 { border-radius: var(--rad2) var(--rad2) 0 var(--rad2); }
+.rad2310 { border-radius: var(--rad2) var(--rad2) var(--rad2) 0; }
+.rad2311 { border-radius: var(--rad2) var(--rad2) var(--rad2) var(--rad2); }
+
 
 .shadow1 {
     box-shadow: 1vmin 1vmin 5px black;

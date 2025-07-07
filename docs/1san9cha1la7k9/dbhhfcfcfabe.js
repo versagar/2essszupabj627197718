@@ -14,6 +14,7 @@ getBeauty("kpp");
 // getBeauty("../../mbp");
 // getBeauty("../../kpp");
 getBeauty("tempresp");
+getBeauty('lib');
 //document.getElementById("updates").innerHTML = '<object type="text/html" data="../../ady12ata14n9/updateindex.html" width="100%" height="400vh"></object>';
 function openNav() {
     document.getElementById("mySidenav").style.width = "20%";
