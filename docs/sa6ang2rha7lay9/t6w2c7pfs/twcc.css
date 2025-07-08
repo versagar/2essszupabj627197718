@@ -145,8 +145,7 @@ right: 1.5vmin;
 .tthcenter {
     display: block;
     color: black;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     width: max-content;
 }
 #ttHead {
