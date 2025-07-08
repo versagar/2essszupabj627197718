@@ -185,6 +185,13 @@ a {color: unset;}
 .center {
   margin: auto;
 }
+.middle {
+margin: auto;
+}
+
+.min-h-content {
+  min-height: max-content;
+}
 .radius1010 {border-radius: 7vmin 0 7vmin 0;}
 .text-center {
 text-align: center;
