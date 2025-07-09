@@ -19,17 +19,23 @@
 <script>
 // Watch for URL/path changes in a vanilla JS way
 function handleRouting() {
-  const route = window.location.hash;
-  if (route === '#/twc/courses') {
-    loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/courses.html');
-  }
+
+ const path = window.location.href;
+const secondSegment = path.split('/')[1];
+if (secondSegment) {
+     if (secondSegment === 'courses') {
+      loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/courses.html');
+      } else {
+        loadObject('wbody','/file-error.html');
+      }
+} else {
+loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/hometwc.html');
+}
+ 
 }
 
-window.addEventListener('hashchange', handleRouting);
-window.addEventListener('DOMContentLoaded', handleRouting);
-
 </script>
-<body onload="loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/hometwc.html');" class="ov-hidden">
+<body onload="handleRouting()" class="ov-hidden">
 
   <header id="header">
     <div>
