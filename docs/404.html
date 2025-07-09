@@ -21,27 +21,9 @@
 
   <link rel="stylesheet" href="b1eaut2yofp1hys4er9/lib.css" />
 
-  <body
-    class="ov-hidden bg-secondary"
-    onload="loadObject('myFeed','file-error.html')"
-  >
-    <script>
-      const path = window.location.pathname;
-      const firstSegment = path.split("/")[1];
-
-      if (firstSegment === "twc") {
-        const obj = document.createElement("object");
-        obj.type = "text/html";
-        obj.data = "/twc.html";
-        obj.style.width = "100%";
-        obj.style.height = "100%";
-        obj.style.border = "none";
-        document.body.appendChild(obj);
-      } else {
-        document.body.innerHTML =
-          '<h2 style="text-align:center; margin-top:2em;">404 - Page Not Found</h2>';
-      }
-    </script>
+  <body onload="load404()"
+    class="ov-hidden bg-secondary">
+ 
     <header id="header" class="">
       <div>
         <img
@@ -212,6 +194,23 @@
   </footer> -->
     <script>
       loadScript("OO0O00O010O0OO0O00");
+function load404() {
+         const path = window.location.pathname;
+      const firstSegment = path.split("/")[1];
+
+      if (firstSegment === "twc") {
+        const obj = document.createElement("object");
+        obj.type = "text/html";
+        obj.data = "/twc.html";
+        obj.style.width = "100%";
+        obj.style.height = "100%";
+        obj.style.border = "none";
+        document.body.innerHTML = "";
+        document.body.appendChild(obj);
+      } else {
+        loadObject('myFeed','/file-error.html');
+      }
+}
     </script>
   </body>
 </html>
