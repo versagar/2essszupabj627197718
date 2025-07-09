@@ -17,17 +17,21 @@
   <link rel="stylesheet" href="sa6ang2rha7lay9\t6w2c7pfs\twcc.css">
 </head>
 <script>
-// Watch for URL/path changes in a vanilla JS way
 function handleRouting() {
 
- const path = window.location.href;
-const secondSegment = path.split('/')[1];
+ const path = localStorage.getItem('physertwcpathInput');
+const secondSegment = path.split('/')[2];
 if (secondSegment) {
-     if (secondSegment === 'courses') {
-      loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/courses.html');
-      } else {
-        loadObject('wbody','/file-error.html');
-      }
+switch (secondSegment) {
+  case 'courses':
+    loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/courses.html');
+    break;
+case 'mechanical-robotics':
+  loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/mroboticstwc.html');
+  default:
+    loadObject('wbody','/file-error.html');
+    break;
+}
 } else {
 loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/hometwc.html');
 }
