@@ -210,11 +210,33 @@ function loadIn(elementId, url) {
                 el.innerHTML = html;
                 el.style.opacity = '1';
                 el.style.transform = 'scale(1)';
-            }, 500); // Delay matches the transition duration
+
+                // Now extract and re-run <script> tags inside the newly injected HTML
+                const scripts = el.querySelectorAll("script");
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement("script");
+
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src;
+                    } else {
+                        newScript.textContent = oldScript.textContent;
+                    }
+
+                    // Optional: Copy script attributes (e.g. type, async)
+                    [...oldScript.attributes].forEach(attr =>
+                        newScript.setAttribute(attr.name, attr.value)
+                    );
+
+                    // Append to body to execute it
+                    document.body.appendChild(newScript);
+                    document.body.removeChild(newScript);
+                });
+
+            }, 500); // Delay must match transition
         })
         .catch(error => {
             console.error('Error loading page:', error);
-            // Optional: Fallback function
+            // Optional fallback
             if (typeof loadObject === 'function') {
                 loadObject(elementId, url);
             }

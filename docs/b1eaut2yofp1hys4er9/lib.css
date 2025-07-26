@@ -15,8 +15,9 @@
   --info-color: rgb(255, 227, 191);
   --light-color: #f8f9fa;
   --dark-color: #343a40;
-  
+  --blue-color:   #1a73e8;
   /* Backgrounds */
+  
   --bg-light: #ffffff;
   --bg-dark: #222;
   --bg-img-1: /sa6ang2rha7lay9/1tas2wee1r4sang9/general/sunlight.webp;
@@ -33,9 +34,7 @@
 
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-secondary);
-  color: var(--dark-color);
+        font-family: 'Segoe UI', Arial, sans-serif;
 }
 .bg-img-1 {background-image: url("/sa6ang2rha7lay9/1tas2wee1r4sang9/general/sunlight.webp");}
 a {color: unset;}
@@ -72,6 +71,7 @@ a {color: unset;}
 .bg-info { background-color: var(--info-color); color: black; }
 .bg-light { background-color: var(--light-color); color: black; }
 .bg-dark { background-color: var(--dark-color); color: white; }
+.bg-blue { background-color: var(--blue-color);}
 
 .flex { display: flex; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
@@ -319,8 +319,112 @@ text-align: center;
     --text-dark: #000;
   }
   
-  body {
-    background-color: var(--bg-light);
-    color: var(--text-light);
-  }
 }
+
+
+    /* :root {
+      --primary: #1a73e8;
+      --secondary: #ff7043;
+      --background: #f9f9fb;
+      --text-dark: #212121;
+      --text-light: #ffffff;
+      --card-bg: #ffffff;
+    } */
+
+    header {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      color: var(--text-light);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem 1rem;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--bg-light);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      padding: 2rem;
+      flex: 1 1 45%;
+      max-width: 500px;
+    }
+
+    .card h2 {
+      color: var(--blue-color);
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .image-section {
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .form-section {
+      background-color: #e3f2fd;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .form-section h2 {
+      color: var(--primary);
+    }
+
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .form-section input,
+    .form-section button {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-top: 1rem;
+
+      }
+    }

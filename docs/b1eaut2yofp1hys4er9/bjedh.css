@@ -165,7 +165,7 @@ a {
 }
 
 .wbody {
-    background: url(../loader.gif) center center no-repeat;
+    /* background: url(../loader.gif) center center no-repeat; */
     display: block;
     width: 100%;
     height: calc(100% - 12vmin);
@@ -326,11 +326,9 @@ a {
     display: block;
     margin: auto;
     width: 100%;
-    padding-bottom: 5vmin;
     height: 96%;
     overflow-y: scroll;
     max-width: 1200px;
-    padding: 2vmin;
 }
 #info {
     display: block;
