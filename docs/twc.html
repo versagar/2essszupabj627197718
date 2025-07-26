@@ -38,6 +38,11 @@ break;
 loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/hometwc.html');
 }
  
+setTimeout(() => {
+  if (typeof initHometwc === "function") {
+    initHometwc();
+  }
+}, 600);
 }
 
 </script>
