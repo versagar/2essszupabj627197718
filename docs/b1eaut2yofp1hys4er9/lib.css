@@ -71,7 +71,11 @@ a {color: unset;}
 .bg-info { background-color: var(--info-color); color: black; }
 .bg-light { background-color: var(--light-color); color: black; }
 .bg-dark { background-color: var(--dark-color); color: white; }
+<<<<<<< HEAD
 .bg-blue { background-color: var(--blue-color);}
+=======
+.bg-blue { background-color: #1a73e8;}
+>>>>>>> refs/remotes/origin/dev
 
 .flex { display: flex; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
@@ -322,14 +326,22 @@ text-align: center;
 }
 
 
+<<<<<<< HEAD
     /* :root {
+=======
+    :root {
+>>>>>>> refs/remotes/origin/dev
       --primary: #1a73e8;
       --secondary: #ff7043;
       --background: #f9f9fb;
       --text-dark: #212121;
       --text-light: #ffffff;
       --card-bg: #ffffff;
+<<<<<<< HEAD
     } */
+=======
+    }
+>>>>>>> refs/remotes/origin/dev
 
     header {
       background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
@@ -357,7 +369,11 @@ text-align: center;
     }
 
     .card {
+<<<<<<< HEAD
       background: var(--bg-light);
+=======
+      background: var(--card-bg);
+>>>>>>> refs/remotes/origin/dev
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       border-radius: 10px;
       padding: 2rem;
@@ -366,7 +382,11 @@ text-align: center;
     }
 
     .card h2 {
+<<<<<<< HEAD
       color: var(--blue-color);
+=======
+      color: var(--primary);
+>>>>>>> refs/remotes/origin/dev
       margin-top: 0;
     }
 
@@ -417,6 +437,19 @@ text-align: center;
       max-width: 400px;
     }
 
+<<<<<<< HEAD
+=======
+    .form-section button {
+      background-color: var(--secondary);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-section button:hover {
+      background-color: #e64a19;
+    }
+>>>>>>> refs/remotes/origin/dev
 
 
     @media (max-width: 768px) {
@@ -427,4 +460,8 @@ text-align: center;
         padding-top: 1rem;
 
       }
+<<<<<<< HEAD
     }
+=======
+    }
+>>>>>>> refs/remotes/origin/dev
