@@ -22,14 +22,14 @@
     <h2>Smart Learning. Real Skills.</h2>
     <p>Powered by <strong>Physer: The Wise Craze</strong> </p>
   </div>
-      <p class="mar1 pad1 op5 center pw80 block bg-info round2 shadow2">
-    In today’s fast-changing world, skills like logical thinking, creativity, and problem-solving are more important than ever. At <strong>TWC Classrooms</strong>, we offer engaging, hands-on courses in <strong>STEM education</strong>—covering physics, robotics, coding, electronics, and more—designed to prepare learners for real challenges and future careers.
+      <p class="mar1 pad1 op5 center pw80 block bg-info round2 shadow2 line2">
+    In today’s fast-changing world, skills like logical thinking, creativity, and problem-solving are more important than ever. At <strong>TWC Classrooms</strong>, we offer engaging, hands-on courses in <strong>STEM education</strong>—covering Robotics, Coding & Programming, Electronics, Science and Mathematics, Artificial Intelligence and Information Technology and more—designed courses to prepare learners for real challenges and future careers.
     
     Through practical learning and personalized guidance, we help students of all levels not just learn concepts, but truly understand and apply them. Whether you're curious about how the world works or eager to create something new, you're in the right place.
     
     Explore. Think. Build. Succeed. Start your learning journey with us today.
 
-<button class="btn-primary round3 bold center block pad3" onclick="loadIn('wbody','/sa6ang2rha7lay9/t6w2c7pfs/courses.html')">Explore Courses</button>
+<button class="btn-primary round3 bold center block pad3 mar1" onclick="loadIn('wbody','/sa6ang2rha7lay9/t6w2c7pfs/courses.html')">Explore Courses</button>
   
 </p>   
 
@@ -58,7 +58,7 @@
 
   <section class="container">
     <div class="card">
-      <h2>Courses We Offer</h2>
+      <h2>Courses Categories</h2>
       <ul>
         <li>🤖 Robotics & Mechanical Models</li>
         <li>💻 Coding & Programming</li>
@@ -91,7 +91,7 @@
       <input name="availability" type="text" placeholder="Preferred Time (e.g. Weekends, Evenings)" />
        <input type="text" name="hp_field" style="display: none;" autocomplete="off" tabindex="-1">
 
-      <button class="btn btn-primary" type="submit">Get a Callback</button>
+      <button class="btn btn-primary" type="submit" onsubmit="event.preventDefault()">Get a Callback</button>
     </form>
   </section>
             </div>
@@ -113,9 +113,9 @@
   </div>    
 
  <script>
-function initHometwc() {
+
   const form = document.getElementById("callbackForm");
-  if (!form) return;
+ // if (!form) return;
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -141,7 +141,7 @@ function initHometwc() {
     try {
       const response = await fetch("https://twc.physer.workers.dev", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json"},
         body: JSON.stringify(payload),
       });
       const result = await response.json();
@@ -150,7 +150,7 @@ function initHometwc() {
       respBox.textContent = "Error submitting form.";
     }
   });
-}
+
 </script>
 
 
