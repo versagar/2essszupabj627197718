@@ -386,20 +386,46 @@ function move(dir, id, step) {
     document.getElementById(id).style.right = step * hor + "vw";
 }
 
-function autoScroll(containerId, top) {
-    const container = document.getElementById(containerId);
+function autoScroll(id, dist, dur1, dur2, stayTime) {
+  const el = document.getElementById(id);
+  let cancelled = false;
 
-    // Scroll down by the specified amount
-    container.scrollBy({
-        top: top,  // Adjust how far to scroll each time
-        behavior: 'smooth' // Smooth scrolling effect
-    });
+  function cancelScroll() {
+    cancelled = true;
+    el.removeEventListener('wheel', cancelScroll);
+    el.removeEventListener('touchstart', cancelScroll);
+    el.removeEventListener('keydown', cancelScroll);
+  }
 
-    // Wait for 0.5 seconds before scrolling back to the original position
-    setTimeout(() => {
-        container.scrollBy({
-            top: -top,  // Scroll back up to the original position
-            behavior: 'smooth' // Smooth scrolling effect
-        });
-    }, 500); // Delay in milliseconds (500ms = 0.5 seconds)
+  // Add user-interaction listeners
+  el.addEventListener('wheel', cancelScroll, { passive: true });
+  el.addEventListener('touchstart', cancelScroll, { passive: true });
+  el.addEventListener('keydown', cancelScroll);
+
+  const start = el.scrollTop;
+  const startTime = performance.now();
+
+  function animate(time) {
+    if (cancelled) return;
+    const p = Math.min((time - startTime) / dur1, 1);
+    el.scrollTop = start + dist * p;
+    if (p < 1) requestAnimationFrame(animate);
+    else setTimeout(scrollBack, stayTime);
+  }
+
+  function scrollBack() {
+    const backStart = el.scrollTop;
+    const backTime = performance.now();
+
+    function back(t) {
+      if (cancelled) return;
+      const p = Math.min((t - backTime) / dur2, 1);
+      el.scrollTop = backStart - dist * p;
+      if (p < 1) requestAnimationFrame(back);
+    }
+
+    requestAnimationFrame(back);
+  }
+
+  requestAnimationFrame(animate);
 }
