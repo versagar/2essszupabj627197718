@@ -44,7 +44,7 @@
 
 <!-- Timezone Input Container -->
 <div class="timezone-input-container">
-  <input type="text" id="timezoneInput" class="timezone-input" value="(UTC+05:30) Indian Standard Time (IST), Sri Lanka Standard Time (SLST)" placeholder="Type and search your timezone...">
+  <input type="text" id="timezoneInput" class="timezone-input" placeholder="Type and search your timezone...">
   
   <!-- Predefined options in the dropdown -->
 <div id="timezoneList" class="timezone-list">
@@ -91,6 +91,31 @@
 const timezoneInput = document.getElementById('timezoneInput');
 const timezoneList = document.getElementById('timezoneList');
 const timezoneOptions = document.querySelectorAll('.timezone-option');
+
+function getUTCOffsetString() {
+  const offsetMinutes = new Date().getTimezoneOffset();
+  const totalMinutes = -offsetMinutes;
+  const sign = totalMinutes >= 0 ? '+' : '−';
+  const hours = String(Math.floor(Math.abs(totalMinutes) / 60)).padStart(2, '0');
+  const minutes = String(Math.abs(totalMinutes) % 60).padStart(2, '0');
+  return `UTC${sign}${hours}:${minutes}`;
+}
+
+
+  const userUTC = getUTCOffsetString(); // e.g. "UTC+05:30"
+  let matched = false;
+  timezoneOptions.forEach(option => {
+    if (option.textContent.trim().includes(userUTC)) {
+      timezoneInput.value = option.textContent;
+      matched = true;
+    }
+      if (!matched) {
+    timezoneInput.value = userUTC;
+  }
+  });
+
+
+
 
 // Show the dropdown when the input is clicked
 timezoneInput.addEventListener('click', function() {
@@ -149,7 +174,6 @@ return toShow;
 }
 //document.getElementById('timeStamp').value=getDate();
 document.getElementsByName('Timestamp').forEach(el => el.value = getDate());
-
 </script>
 
 </body>
