@@ -98,9 +98,6 @@
         margin-top: 0.1vmin;
         margin-left: 0.1vmin;
     }
-    button {
-        cursor: pointer;
-    }
     .square {
         width: var(--w);
         aspect-ratio: 1;
