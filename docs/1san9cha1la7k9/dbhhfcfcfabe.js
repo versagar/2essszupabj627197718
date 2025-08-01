@@ -191,52 +191,43 @@ function loadObject(elementId, url) {
 function loadIn(elementId, url) {
     const el = document.getElementById(elementId);
 
-    // Step 1: Animate fade out and shrink
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     el.style.opacity = '0';
     el.style.transform = 'scale(0.8)';
 
-    // Step 2: Fetch the content while it's fading out
-    fetch(url)
+    return fetch(url)
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Page not found');
-            }
+            if (!response.ok) throw new Error('Page not found');
             return response.text();
         })
         .then(html => {
-            // Step 3: After fade-out completes, change content and fade back in
-            setTimeout(() => {
-                el.innerHTML = html;
-                el.style.opacity = '1';
-                el.style.transform = 'scale(1)';
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    el.innerHTML = html;
+                    el.style.opacity = '1';
+                    el.style.transform = 'scale(1)';
 
-                // Now extract and re-run <script> tags inside the newly injected HTML
-                const scripts = el.querySelectorAll("script");
-                scripts.forEach(oldScript => {
-                    const newScript = document.createElement("script");
+                    const scripts = el.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        if (oldScript.src) {
+                            newScript.src = oldScript.src;
+                        } else {
+                            newScript.textContent = oldScript.textContent;
+                        }
+                        [...oldScript.attributes].forEach(attr =>
+                            newScript.setAttribute(attr.name, attr.value)
+                        );
+                        document.body.appendChild(newScript);
+                        document.body.removeChild(newScript);
+                    });
 
-                    if (oldScript.src) {
-                        newScript.src = oldScript.src;
-                    } else {
-                        newScript.textContent = oldScript.textContent;
-                    }
-
-                    // Optional: Copy script attributes (e.g. type, async)
-                    [...oldScript.attributes].forEach(attr =>
-                        newScript.setAttribute(attr.name, attr.value)
-                    );
-
-                    // Append to body to execute it
-                    document.body.appendChild(newScript);
-                    document.body.removeChild(newScript);
-                });
-
-            }, 500); // Delay must match transition
+                    resolve(); // ✅ indicate that it's done
+                }, 500);
+            });
         })
         .catch(error => {
             console.error('Error loading page:', error);
-            // Optional fallback
             if (typeof loadObject === 'function') {
                 loadObject(elementId, url);
             }

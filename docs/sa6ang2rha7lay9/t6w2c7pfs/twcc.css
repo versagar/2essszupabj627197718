@@ -210,7 +210,7 @@ right: 1.5vmin;
     font-weight: 900;
 }
 
-.ttgsidbox {
+.ttgsidbox, .ttgdidbox {
     position: relative;
         display: block;
         width: 100vw;
@@ -231,9 +231,13 @@ right: 1.5vmin;
     height: 35px;
     background-color: #6c2e00;
 }
-.ttgsidframe {
+.ttgsidframe, .ttgdidFrame {
     height: 100%;
     width: 100%;
+}
+
+.ttgdidbox {
+    display: none;
 }
 #twcloaderGif {
     background-color: #6C2E00;
