@@ -6,7 +6,7 @@
   --rad2: 7vmin;
 
   --border-base: 1px;
-  --max-body: 1400px;
+--max-body: 1400px;
   --primary-color: #6c2e00;
   --secondary-color: rgb(255, 246, 230);
   --success-color: #28a745;
@@ -35,6 +35,9 @@
 }
 
 
+body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+}
 .bg-img-1 {background-image: url("/sa6ang2rha7lay9/1tas2wee1r4sang9/general/sunlight.webp");}
 a {color: unset;}
 .link {opacity: 0.8;}
@@ -194,6 +197,7 @@ a {color: unset;}
 /* ========================= */
 /* Block Alignment Utilities */
 /* ========================= */
+.abs {position: absolute;}
 .fixed {position: fixed;}
 .rel {position: relative;}
 .center {
@@ -418,6 +422,7 @@ text-align: center;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      margin-top: 1rem;
     }
 
     .form-section input,
@@ -439,6 +444,9 @@ text-align: center;
         align-items: center;
         padding: 0;
         padding-top: 1rem;
-
       }
     }
+
+@media (max-width: 512px) {
+  .abs {position: relative;}
+}

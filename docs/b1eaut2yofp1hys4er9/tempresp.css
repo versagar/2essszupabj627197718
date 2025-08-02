@@ -122,10 +122,6 @@
         top: 50%;
         left: 50%;
     }
-    
-    .abs {
-        position: absolute;
-    }
    /* .fix-c2-img {
     margin-top: 5vmin;
    } */
@@ -201,6 +197,7 @@
     .col2 img {
         width: 90%;
         height: auto;
+        position: relative;
     }
     .htext {
         font-size: 8vmin;
@@ -217,5 +214,5 @@
     .h500 {
         min-height: auto;
     }
-    
+
 }    
