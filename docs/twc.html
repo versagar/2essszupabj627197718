@@ -20,8 +20,8 @@
 function handleRouting() {
 
  const path = localStorage.getItem('physertwcpathInput');
-const secondSegment = path? path.split('/')[2]:"";
-const thirdSegment = path? path.split('/')[3]:"";
+const secondSegment = path.split('/')[2]? path.split('/')[2] :"";
+const thirdSegment = path.split('/')[3]? path.split('/')[3] :"";
 localStorage.removeItem('physertwcpathInput');
 localStorage.setItem('thirdSegmentafterconnect',thirdSegment);
 if (secondSegment) {

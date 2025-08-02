@@ -14,11 +14,9 @@
 #timeZoneData{
     z-index: 999;
 }
-.form-section form {
-  display: none;
-}
 
     </style>
+<div class="ttbody">
   <div id="testData" class="text-primary pad1"></div>    
 <div class="text4 bold text-center text-primary">Join TWC Classrooms</div>
 
@@ -78,8 +76,10 @@
     <button type="submit" class="btn bg-primary text-info pad3">Submit</button>
   </form>
 </section>
+</div>
 
 <script>
+
  var form;
 const respBox = document.getElementById("formResp");
 function openForm(purpose) {
@@ -211,22 +211,28 @@ function test() {
   }
   document.getElementById('testData').innerHTML = output;
 }
+openForm("callback");  
 
 const thirdSegment = localStorage.getItem('thirdSegmentafterconnect');
-localStorage.removeItem('thirdSegmentafterconnect');
-        if (thirdSegment) {
-            switch (thirdSegment) {
-                case 'demo':
-                    openForm("demo");
-                    break;
-                case 'registration':   
-                    openForm("registration");
-                    break;
-                default:
-                  openForm("callback"); 
-            }
-        }
-   openForm("callback");     
+
+if (thirdSegment) {
+  respBox.textContent = thirdSegment;
+
+  switch (thirdSegment) {
+    case 'demo':
+      openForm("demo");
+      break;
+    case 'registration':
+      openForm("registration");
+      break;
+    default:
+      openForm("callback");
+  }
+
+  // Remove only after use
+  localStorage.removeItem('thirdSegmentafterconnect');
+}
+
 </script>
 
 </body>
