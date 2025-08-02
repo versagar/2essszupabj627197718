@@ -40,36 +40,6 @@ var c = 0;
 var a = 0;
 var b = 0;
 
-function openForm() {
-    if (a == 1) {
-        a = 0;
-        document.getElementById("form").style.display = "none";
-        document.getElementById("formBtn").innerHTML = "Open Form"
-    } else {
-        a = 1;
-        b = 1;
-        openSagar();
-        document.getElementById("form").style.display = "block";
-        document.getElementById("guideFrame").src = "https://docs.google.com/forms/d/e/1FAIpQLSdPYLXazozE5HBf9LSb7frOYMblCh5PnoVQeiBv1dNdhJTTAA/viewform?";
-        document.getElementById("formBtn").innerHTML = "Close Form"
-    }
-}
-
-function openSagar() {
-    if (b == 1) {
-        b = 0;
-        document.getElementById("form").style.display = "none";
-        document.getElementById("sagarBtn").innerHTML = "Open Profile"
-    } else {
-        b = 1;
-        a = 1;
-        openForm();
-        document.getElementById("form").style.display = "block";
-        document.getElementById("guideFrame").src = "../../ecjigjd/saga&1214.html";
-        document.getElementById("sagarBtn").innerHTML = "Close Profile"
-    }
-}
-
 function openCpnotice() {
     if (c == 1) {
         c = 0;
