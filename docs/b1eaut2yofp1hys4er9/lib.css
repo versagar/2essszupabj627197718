@@ -6,7 +6,7 @@
   --rad2: 7vmin;
 
   --border-base: 1px;
---max-body: 1400px;
+  --max-body: 1400px;
   --primary-color: #6c2e00;
   --secondary-color: rgb(255, 246, 230);
   --success-color: #28a745;
@@ -194,7 +194,6 @@ a {color: unset;}
 /* ========================= */
 /* Block Alignment Utilities */
 /* ========================= */
-.abs {position: absolute;}
 .fixed {position: fixed;}
 .rel {position: relative;}
 .center {
