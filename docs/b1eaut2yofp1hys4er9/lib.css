@@ -428,12 +428,17 @@ text-align: center;
     .form-section input,
     .form-section button,
     .form-section textarea,
-    .form-section select {
+    .form-section select
+    .form-section label {
       padding: 0.3rem;
       font-size: 1rem;
       border-radius: 5px;
-      width: 95%;
+      width: 100%;
       max-width: 400px;
+    }
+    .form-row {
+      width: 100%;
+      display: flex;
     }
 
 
@@ -445,8 +450,16 @@ text-align: center;
         padding: 0;
         padding-top: 1rem;
       }
+
+ 
     }
 
 @media (max-width: 512px) {
   .abs {position: relative;}
+}
+
+@media (max-width: 280px){
+   .form-row {
+    flex-direction: column;
+}
 }

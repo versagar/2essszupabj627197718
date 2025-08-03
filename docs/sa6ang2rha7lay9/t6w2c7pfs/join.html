@@ -63,7 +63,12 @@
     <form id="registrationForm" class="block bg-info pad1 round2 shadow1 text-primary col2 center">
     <input type="text" name="Timestamp" id="timeStamp" readonly>
     <input type="text" name="Name" placeholder="Name" required />
-    <input type="date" name="DOB" placeholder="Date of Birth" required />
+    <div class="form-row">
+  <label for="dobInput">DOB (Student)</label>
+  <input type="date" name="DOB" id="dobInput" required />
+</div>
+
+    
     <input type="text" name="Guardian" placeholder="Guardian's Name" required />
     <input type="text" name="Relation" placeholder="Relation with Guardian" required />
     <input type="tel" name="Contact" placeholder="Contact Number" pattern="[0-9]{10}" required />
@@ -230,7 +235,6 @@ if (thirdSegment) {
       break;
   }
 
-  // Remove only after use
   localStorage.removeItem('thirdSegmentafterconnect');
 }
 
