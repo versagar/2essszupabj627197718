@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Booking</title>
+    <link rel="stylesheet" href="/b1eaut2yofp1hys4er9/lib.css">
+   <script src="/1san9cha1la7k9/efahfcfcfabe.js"></script>
+  <script src="/1san9cha1la7k9/dgfbbhhfcfcfabe.js"></script>
+  <script  src="/1san9cha1la7k9/dbhhfcfcfabe.js"></script>
+</head>
+<body class="ov-hidden">
+
+<div class="pop-overlay" id="overlayId"></div>
+<div class="pop-show" id="popId"></div>
+<section class="form-section" id="loginSection">
+    <div class="col2 pad1 bg-info pw80 center round2 ov-hidden">
+        <form id="loginForm">
+<input type="text" name="id" placeholder="Student Id">
+<input type="password" name="pass" placeholder="Password">
+<input type="button" onclick="getBatches()" value="Submit" class="btn bg-primary text-secondary bold">
+        </form>
+    </div>
+</section>
+
+<section id="scheduleSetting" class="bg-secondary pad3">
+    
+    <form id="selectedDates" class="flex-wrap hidden">
+      <!-- <p><strong>Selected Dates: </strong>Click on the selected dates to remove</p> -->
+      <button type="button" class="pad3 shadow2 round2 left pw45 text-center btn bg-primary text-light bold" id="dateSubmitBtn" value="1 July 2000">Submit Dates >></button>
+      <button type="button" class="pad3 shadow2 round2 left pw45 text-center btn bg-primary text-light bold" 
+        id="hideDetailsBtn" 
+        onclick="displayBlock('batchSummary','block', 'textContent', 'hideDetailsBtn','Hide Batch Details', 'Show Batch Details')" value="1 July 3000">Hide Batch Details</button>
+
+    </form>
+    <details class="custom-details" id="batchDetails">
+  <summary id="batchSummary" class="pad2 round3 shadow2 bg-light text-primary text2">Batch List</summary>
+  <div id="scheduleBox" class="table-box"></div>
+</details>
+    <div id="dateList" class="pad1 bg-info round2 hidden">Select the following green (available) dates, just by clicking</div>
+  </section>
+<script>
+  let nDates = 0;
+    const batchSummary = document.getElementById('batchSummary');
+    const batchDetails =  document.getElementById('batchDetails');
+    const scheduleSetting = document.getElementById('scheduleSetting');
+    const dateList = document.getElementById('dateList');
+    const loginUrl = "https://script.google.com/macros/s/AKfycbwtFzwfutc_OUQ3y_lt6oY8FiQBvd-tQnBlaKFIAHBUBgnMGohq3nB3FxiD1ntW3bxA/exec";
+
+var timezoneUTC = ' (UTC+05:30) Indian Standard Time (IST), Sri Lanka Standard Time (SLST) '
+  // ✅ Add locale options globally
+  const localeOptions = {
+    timeZone: timezoneUTC, // Set the timezone dynamically
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: true
+  };
+    document.getElementById('test').textContent = new Date().toLocaleDateString('en-US',localeOptions);
+
+async function getBatches() {
+  batchSummary.textContent = "Checking credentials.."
+        try {
+            const response = await fetch(loginUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({
+                    function: 'getBatches'
+                })
+            });
+
+             if (!response.ok) {
+            batchSummary.innerHTML = "<h3 class='text-danger'>Failed! Error Getting Details</h3>";
+        }
+        
+            
+            batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details..</h3>";
+            const data = await response.text();
+            document.getElementById('loginSection').innerHTML = `<h1 class='text-primary'>${name?name:"Error Loading Student Name"}</h1>`;
+            createWeekSchedule('scheduleBox',convertTo2D(data,4,","));
+
+        } catch (error) {
+           batchSummary.innerHTML = error + "<h3 class='text-danger'>Failed! Error Getting Details</h3>";
+           console.log(error);
+        }
+        
+    }
+
+async function getDates(batchName,lastDate,batchTime) {
+  batchSummary.textContent = "Finding Details ..";
+  document.getElementById('loginSection').style.display = 'none';
+        try {
+            const response = await fetch(loginUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({
+                    function: 'getDates',
+                    batchName: batchName
+                })
+            });
+
+            batchSummary.textContent = "Finding Details .......";
+            const batchCreators = batchName.split(" ");
+            const  batchSize = batchCreators[3].substring(3);
+            const batchStatus = batchCreators[2].slice(0,1);
+            const batchLocation = batchCreators[0];
+            const dates = await response.text();
+            batchDetails.open = false;
+            batchSummary.innerHTML =  "Batch Name: <span class='text-success'>"+ batchName + "</span> <span class='text-danger'>|</span> " +
+                                      "Batch Size: <span class='text-success'>"+ batchSize + "</span> <span class='text-danger'>|</span> " +
+                                      "Batch Time: <span class='text-success'>"+ batchTime + "</span> <span class='text-danger'>|</span> " +
+                                      "Batch Ending on: <span class='text-danger'>"+ new Date(lastDate).toLocaleDateString() + "</span> <span class='text-danger'>|</span> " +
+                                      "Batch Type: <span class='text-success'>"+ (batchStatus=="P"?"For You":"Open Batch") + "</span> <span class='text-danger'>|</span> " +
+                                      "Batch Identifier: <span class='text-success'>"+ batchLocation + "</span> <span class='text-danger'>|</span> ";
+                                      
+                                      
+            const datesData = dates.split(",");        
+returnDateList(datesData,lastDate);
+//makeDraggable(batchSummary);
+
+        } catch (error) {
+            dateList.innerHTML = error;
+        }
+    }
+
+
+function updateSubmitDateBtn(){
+document.getElementById('dateSubmitBtn').style.display = nDates > 0 ? 'block' : 'none';
+document.getElementById('dateSubmitBtn').textContent = `Submit ${nDates + (nDates>1?" Dates":" Date")} >>`
+}
+updateSubmitDateBtn();
+function selectMe(item) {
+        if(nDates>=10){
+            return popshow("You can select a maximum of 10 dates at once","popId","overlayId");
+        }
+nDates++;
+updateSubmitDateBtn();     
+        const selectedId = item.textContent.trim();
+document.getElementById('selectedDates').innerHTML += `<input class="pad3 shadow2 round2 left pw45 text-center btn bg-info text-primary border-solid border-primary" onclick="deselectMe('${selectedId}')" id="${selectedId}" name="${"scheduleDate"+nDates}" value="${item.textContent}">`;
+item.style.display = 'none';
+sortChildDivsByDate('selectedDates');
+sortChildDivsByDate('dateList');
+    }
+
+function deselectMe(id){
+    nDates--;
+    updateSubmitDateBtn();
+    const inputDate = document.getElementById(id);
+    const item = document.createElement('div');
+    item.textContent = inputDate.value;
+    item.className = "pad2 round2 mar3 pw80 text-center btn bg-success text-primary";
+    item.onclick = () => selectMe(item);
+    dateList.appendChild(item);
+    inputDate.remove();
+    sortChildDivsByDate('selectedDates');
+sortChildDivsByDate('dateList');
+   }
+
+
+function returnDateList(dateData, lastDate) {
+  const mondayDate = getMonday(new Date());
+  const lastDateObj = new Date(lastDate); 
+  for (let i = 0; i < dateData.length; i++) {
+    const list = document.createElement('div');
+    const date = new Date(mondayDate); // Clone base date
+    date.setDate(mondayDate.getDate() + i);
+
+    const formatted = date.toDateString();
+    const isActive = dateData[i] === "1" && (lastDate? isBeforeDateOnly(date, lastDateObj):true);
+
+    list.textContent = formatted;
+    list.className = `pad2 round2 mar3 pw80 text-center ${isActive ? "btn bg-success text-primary" : "bg-danger text-info"}`;
+
+    list.onclick = () => {
+      if (isActive) {
+        selectMe(list);
+      } else {
+        popshow("Not available on this date - the batch is either full or closed, please select another day or another batch", 'popId', 'overlayId');
+      }
+    };
+    document.getElementById('selectedDates').style.display = 'flex';
+    dateList.style.display = 'inherit';
+    dateList.appendChild(list);
+  }
+}
+
+
+function createWeekSchedule(id,batchData) {
+batchDetails.open = true;
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+  const scheduleTable = document.createElement("table");
+  scheduleTable.id = "batchListTable"
+  const scheduleHead = scheduleTable.createTHead().insertRow();
+  const scheduleBody = scheduleTable.createTBody();
+  const timeMap = new Map();
+
+  batchData.forEach(row => {
+    const batchName = row[0];
+    const day = row[1];
+    const timeStr = row[2];
+    const lastDate = row[3];
+
+batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details...</h3>";
+
+    if (day && timeStr && batchName) {
+      const match = timeStr.match(/\d{2}:\d{2}:\d{2}/);
+      
+      if (match) {
+        const [h, m] = match[0].split(":");
+        const batchTime = new Date(0, 0, 0, +h, +m);
+        const timeKey = batchTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        if (!timeMap.has(timeKey)) timeMap.set(timeKey, {});
+        if (!timeMap.get(timeKey)[day]) timeMap.get(timeKey)[day] = [];
+        timeMap.get(timeKey)[day].push({ batchName, lastDate });
+      }
+    }
+  });
+
+  scheduleHead.insertCell().innerHTML = "Time";
+  days.forEach(day => scheduleHead.insertCell().textContent = day);
+
+batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details....</h3>";
+
+  for (let i = 0; i <= 47; i++) {
+    const addedTime = new Date(0, 0, 0, 3, 0);
+    addedTime.setHours(addedTime.getHours() + Math.floor(i / 2));
+    addedTime.setMinutes((i % 2 === 0) ? 0 : 30);
+    const formattedTime = addedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    const scheduleRow = scheduleBody.insertRow();
+    scheduleRow.insertCell().textContent = formattedTime;
+
+    const dayMap = timeMap.get(formattedTime) || {};
+
+    days.forEach(day => {
+      const cell = scheduleRow.insertCell();
+      const batches = dayMap[day];
+      if (batches && batches.length) {
+cell.innerHTML = batches.map(batch => `
+  <div 
+    class="btn bg-primary mar2 text-secondary text-center shadow2 pad3 round3"
+    data-last-date="${batch.lastDate}"
+    data-batch-time="${formattedTime}"
+    onclick="selectBatch(this)"
+  >
+    ${batch.batchName}
+  </div>
+`).join('');
+
+      }   
+    });
+  }
+batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details.....</h3>";
+  document.getElementById(id).appendChild(scheduleTable);
+batchSummary.innerHTML = "<h3 class='text-success'>Success! Select Your Batch</h3>";  
+}
+
+async function selectBatch(item){
+  await getDates(item.innerText,item.dataset.lastDate,item.dataset.batchTime);
+}
+
+</script>
+
+</body>
+</html>

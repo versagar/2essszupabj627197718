@@ -10,16 +10,14 @@
   <script  src="/1san9cha1la7k9/dbhhfcfcfabe.js"></script>
 </head>
 <body class="bg-secondary">
-    <style>
+<style>
 #timeZoneData{
     z-index: 999;
 }
-
-    </style>
-<div class="ttbody">
-  <div id="testData" class="text-primary pad1"></div>    
-<div class="text4 bold text-center text-primary">Join TWC Classrooms</div>
-
+</style>
+<div class="ttbody" id="formApplication">  
+<div class="text4 bold text-center text-primary">TWC CONNECT</div>
+<div class="btn bg-primary bold text-secondary pad3 round3 mar3 shadow2 col2" onclick="scheduleBooking()">Schedule Classes</div>
 <section class="form-section">
     <div class="flex round3 pad3 flex-center text-center">
       <button class="btn bg-info text-primary border1 border-primary border-solid shadow2" onclick="openForm('demo')">Demo</button>
@@ -42,7 +40,7 @@
       <button class="btn bg-primary text-info pad3" type="submit" onsubmit="event.preventDefault()">Get a Callback</button>
     </form>  
   <form id="demoForm" class="block bg-info pad1 round2 shadow1 text-primary col2 center">
-    <input type="datetime" name="Timestamp" id="timeStamp" readonly>
+    <input type="text" name="Timestamp" id="timeStamp" readonly>
     <input type="text" name="Name" placeholder="Name" required />
     <input type="number" name="Age" placeholder="Age" required />
     <input type="text" name="Guardian" placeholder="Guardian's Name" required />
@@ -61,14 +59,9 @@
   </form>
 
     <form id="registrationForm" class="block bg-info pad1 round2 shadow1 text-primary col2 center">
-    <input type="datetime" name="Timestamp" id="timeStamp" readonly>
+    <input type="text" name="Timestamp" id="timeStamp" readonly>
     <input type="text" name="Name" placeholder="Name" required />
-    <div class="form-row">
-  <label for="dobInput">DOB (Student)</label>
-  <input type="date" name="DOB" id="dobInput" required />
-</div>
-
-    
+    <input type="date" name="DOB" placeholder="Date of Birth" required />
     <input type="text" name="Guardian" placeholder="Guardian's Name" required />
     <input type="text" name="Relation" placeholder="Relation with Guardian" required />
     <input type="tel" name="Contact" placeholder="Contact Number" pattern="[0-9]{10}" required />
@@ -82,9 +75,15 @@
   </form>
 </section>
 </div>
+<div class="ttbody" id="scheduleBooking"> 
 
+</div>
 <script>
-
+function scheduleBooking(){
+  loadIn('scheduleBooking','schedule.html');
+  document.getElementById('formApplication').style.display = 'none';
+  document.getElementById('scheduleBookig').style.display = 'inherit';
+}
  var form;
 const respBox = document.getElementById("formResp");
 function openForm(purpose) {
@@ -230,11 +229,14 @@ if (thirdSegment) {
     case 'registration':
       openForm("registration");
       break;
+    case 'scheduling':
+      scheduleBooking();
+      break;  
     default:
       openForm("callback");
-      break;
   }
 
+  // Remove only after use
   localStorage.removeItem('thirdSegmentafterconnect');
 }
 

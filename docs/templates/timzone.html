@@ -157,23 +157,19 @@ document.getElementsByName('Timestamp').forEach(el => el.value = getDate());
   });
 });
 function getDate()  {
-      var optionsDate = {
-  timeZone: timezoneInput.value.split("UTC")[1].split(")")[0],
+      var options = {
+  timeZone: timezoneInput.value.split("UTC")[1].split(")")[0], // Set the timezone dynamically
   year: 'numeric',
   month: 'long',
-  day: 'numeric'
-};
- var optionsTime = {
-  timeZone: timezoneInput.value.split("UTC")[1].split(")")[0],
+  day: 'numeric',
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
   hour12: true
- }
-
+};
 var toShow;    
 var date = new Date();
-toShow = date.toLocaleDateString('en-US', optionsDate)+ " " + date.toLocaleTimeString('en-US', optionsTime);
+toShow = date.toLocaleString('en-US', options)
 return toShow;
 }
 //document.getElementById('timeStamp').value=getDate();

@@ -70,15 +70,21 @@ function hideblockTwo(one, two) {
     document.getElementById(two).style.display = "none"
 }
 
-function displayBlock(id) {
-    if (sb == 1) {
-        sb = 0;
-        document.getElementById(id).style.display = "none"
-    } else {
-        sb = 1;
-        document.getElementById(id).style.display = "block"
-    }
+function displayBlock(targetId,type, targetAttribute, modifierId, textOn, textOff) {
+    const element = document.getElementById(targetId);
+    const button = document.getElementById(modifierId); // Get the button that triggered the function
+
+const currentDisplay = window.getComputedStyle(element).display;
+if (currentDisplay !== 'none') {
+    element.style.display = 'none';
+    button[targetAttribute] = textOff;
+} else {
+    element.style.display = type;
+    button[targetAttribute] = textOn;
 }
+}
+
+
 
 function displayblockTwo(one, two) {
     if (sbtwo == 1) {
@@ -390,3 +396,152 @@ function autoScroll(id, dist, dur1, dur2, stayTime) {
 
   requestAnimationFrame(animate);
 }
+
+function getIndianDateTime(date)  {
+      var options = {
+  timeZone: 'Asia/Kolkata'
+};   
+var date = new Date(date);
+// toShow =  date;
+return date.toLocaleString('en-US', options);
+}
+
+function displayItem(id, d) {
+            switch (d) {
+                case 1:
+                    document.getElementById(id).style.display = "block";
+                    break;
+                case 0:
+                    document.getElementById(id).style.display = "none";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+function popshow(text, popId, overlayId) {
+  displayItem(popId, 1);
+  displayItem(overlayId, 1);
+  const data = `<h3>${text}</h3><br/>
+    <button onclick="displayItem('${overlayId}', 0); displayItem('${popId}', 0)" class="btn btn-primary pad2">OK</button>`;
+  document.getElementById(popId).innerHTML = data;
+}
+
+function getMonday(d) {
+  d = new Date(d);
+  d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+  return d;
+}
+
+function isBeforeDateOnly(date1, date2) {
+  const d1 = new Date(date1.getFullYear(), date1.getMonth(), date1.getDate());
+  const d2 = new Date(date2.getFullYear(), date2.getMonth(), date2.getDate());
+  return d1 < d2;
+}
+
+function convertTo2D(data,n,splitter){
+const parts = data.split(splitter);
+
+const table = [];
+for (let i = 0; i < parts.length; i += n) {
+  // push one batch as an array of 4 items
+  table.push(parts.slice(i, i + n));
+}
+return table;
+}
+function sortChildDivs(containerId) {
+  const container = document.getElementById(containerId);
+  const children = Array.from(container.children);
+
+  children.sort((a, b) => {
+    const aText = a.textContent.trim().toLowerCase();
+    const bText = b.textContent.trim().toLowerCase();
+    return aText.localeCompare(bText);
+  });
+  children.forEach(child => container.appendChild(child));
+}
+
+function sortChildDivsByDate(containerId) {
+  const container = document.getElementById(containerId);
+  const children = Array.from(container.children);
+
+  children.sort((a, b) => {
+    const dateA = a.value? new Date(a.value): new Date(a.textContent);
+    const dateB = b.value? new Date(b.value): new Date(b.textContent);
+    return dateA - dateB;
+  });
+
+  children.forEach(child => container.appendChild(child));
+}
+
+function makeDraggable(element) {
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    element.style.position = 'absolute';
+    element.style.cursor = 'move';
+
+    element.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - element.offsetLeft;
+        offsetY = e.clientY - element.offsetTop;
+        document.body.style.userSelect = 'none'; // Prevents text selection while dragging
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            element.style.left = (e.clientX - offsetX) + 'px';
+            element.style.top = (e.clientY - offsetY) + 'px';
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.userSelect = 'auto';
+    });
+}
+
+function convertTimezone(dateStr, fromUTCOffset, targetTimezone) {
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) {
+    throw new Error("Invalid date input");
+  }
+
+  const parts = {
+    year: date.getFullYear(),
+    month: date.getMonth(),
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds()
+  };
+
+  const offsetHours = Math.trunc(fromUTCOffset);
+  const offsetMinutes = (fromUTCOffset - offsetHours) * 60;
+
+  const utcDate = new Date(Date.UTC(
+    parts.year,
+    parts.month,
+    parts.day,
+    parts.hour - offsetHours,
+    Math.floor(parts.minute - offsetMinutes),
+    parts.second
+  ));
+
+  // Convert to target timezone by formatting
+  const formatted = new Intl.DateTimeFormat('en-CA', {
+    timeZone: targetTimezone,
+    hour12: false
+  }).formatToParts(utcDate);
+
+  const values = {};
+  formatted.forEach(({ type, value }) => {
+    if (type !== 'literal') values[type] = value;
+  });
+
+  return new Date(
+    `${values.year}-${values.month}-${values.day}T${values.hour}:${values.minute}:${values.second}`
+  ).toLocaleString('en-US',);
+}
+
