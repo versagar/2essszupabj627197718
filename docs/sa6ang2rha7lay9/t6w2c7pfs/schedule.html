@@ -47,8 +47,8 @@
     const dateList = document.getElementById('dateList');
     const loginUrl = "https://script.google.com/macros/s/AKfycbwtFzwfutc_OUQ3y_lt6oY8FiQBvd-tQnBlaKFIAHBUBgnMGohq3nB3FxiD1ntW3bxA/exec";
 
-var timezoneUTC = ' (UTC+05:30) Indian Standard Time (IST), Sri Lanka Standard Time (SLST) '
-  // ✅ Add locale options globally
+var timezone = ' (UTC+05:30) df';
+var timeZoneUTC = timezone.split("UTC")[1].split(")")[0];
   const localeOptions = {
     timeZone: timezoneUTC, // Set the timezone dynamically
   year: 'numeric',
@@ -165,19 +165,33 @@ sortChildDivsByDate('dateList');
 
 
 function returnDateList(dateData, lastDate) {
-  const mondayDate = getMonday(new Date());
-  const lastDateObj = new Date(lastDate); 
+  const timezone = timeZoneUTC; // Make sure this is globally defined
+  const mondayIST = getMondayIST(); // Helper to get Monday in IST
+  const lastDateIST = lastDate ? new Date(lastDate) : null;
+
   for (let i = 0; i < dateData.length; i++) {
     const list = document.createElement('div');
-    const date = new Date(mondayDate); // Clone base date
-    date.setDate(mondayDate.getDate() + i);
 
-    const formatted = date.toDateString();
-    const isActive = dateData[i] === "1" && (lastDate? isBeforeDateOnly(date, lastDateObj):true);
+    // Create current date in IST
+    const istDate = new Date(mondayIST);
+    istDate.setDate(mondayIST.getDate() + i);
 
+    // Convert IST date to UTC
+    istDate.setUTCMinutes(istDate.getUTCMinutes() - 330); // IST offset
+
+    // Convert to local time using user's timezone
+    const localDate = new Date(istDate.toLocaleString('en-US', { timeZone: timezone }));
+
+    // Format for display
+    const formatted = localDate.toLocaleDateString('en-US', localeOptions);
+
+    // Check if available and within range
+    const isActive = dateData[i] === "1" &&
+      (!lastDateIST || isBeforeDateOnlyIST(istDate, lastDateIST));
+
+    // Create UI
     list.textContent = formatted;
     list.className = `pad2 round2 mar3 pw80 text-center ${isActive ? "btn bg-success text-primary" : "bg-danger text-info"}`;
-
     list.onclick = () => {
       if (isActive) {
         selectMe(list);
@@ -185,83 +199,153 @@ function returnDateList(dateData, lastDate) {
         popshow("Not available on this date - the batch is either full or closed, please select another day or another batch", 'popId', 'overlayId');
       }
     };
+
     document.getElementById('selectedDates').style.display = 'flex';
     dateList.style.display = 'inherit';
     dateList.appendChild(list);
   }
+
+  // Helper: Get current week's Monday in IST
+  function getMondayIST() {
+    const now = new Date();
+    const istNow = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+    const day = istNow.getDay();
+    const diff = (day + 6) % 7; // Convert Sunday (0) to end
+    istNow.setDate(istNow.getDate() - diff);
+    return istNow;
+  }
+
+  // Helper: Check date-only comparison (ignores time)
+  function isBeforeDateOnlyIST(d1, d2) {
+    return (
+      d1.getUTCFullYear() < d2.getUTCFullYear() ||
+      (d1.getUTCFullYear() === d2.getUTCFullYear() && d1.getUTCMonth() < d2.getUTCMonth()) ||
+      (d1.getUTCFullYear() === d2.getUTCFullYear() &&
+        d1.getUTCMonth() === d2.getUTCMonth() &&
+        d1.getUTCDate() <= d2.getUTCDate())
+    );
+  }
 }
 
 
-function createWeekSchedule(id,batchData) {
-batchDetails.open = true;
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+function createWeekSchedule(id, batchData) {
+  const timezone = timeZoneUTC;
+  batchDetails.open = true;
 
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const scheduleTable = document.createElement("table");
-  scheduleTable.id = "batchListTable"
+  scheduleTable.id = "batchListTable";
+
   const scheduleHead = scheduleTable.createTHead().insertRow();
   const scheduleBody = scheduleTable.createTBody();
   const timeMap = new Map();
 
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth();
+  const date = today.getDate();
+
+  // 3:00 AM IST today in UTC
+  const istStart = new Date(Date.UTC(year, month, date, 3, 0));
+  istStart.setUTCMinutes(istStart.getUTCMinutes() - 330); // IST offset
+
+  // Build 48 half-hour slots from 3 AM IST
+  for (let i = 0; i < 48; i++) {
+    const slotUTC = new Date(istStart.getTime() + i * 30 * 60 * 1000);
+    const localDate = new Date(slotUTC.toLocaleString("en-US", { timeZone: timezone }));
+
+    const localDayIndex = localDate.getDay(); // 0 = Sunday
+    const localDay = days[(localDayIndex + 6) % 7]; // Adjust Sunday (0) to end
+
+    const hour = localDate.getHours();
+    const minute = localDate.getMinutes();
+    const timeKey = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+
+    if (!timeMap.has(timeKey)) timeMap.set(timeKey, {});
+    if (!timeMap.get(timeKey)[localDay]) timeMap.get(timeKey)[localDay] = [];
+
+    // Store for structure only; batches will be added next
+  }
+
+  // Process each batch (assumes time is in IST and day is the IST weekday)
   batchData.forEach(row => {
     const batchName = row[0];
-    const day = row[1];
+    const istDay = row[1];
     const timeStr = row[2];
-    const lastDate = row[3];
 
-batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details...</h3>";
+    if (!batchName || !istDay || !timeStr) return;
 
-    if (day && timeStr && batchName) {
-      const match = timeStr.match(/\d{2}:\d{2}:\d{2}/);
-      
-      if (match) {
-        const [h, m] = match[0].split(":");
-        const batchTime = new Date(0, 0, 0, +h, +m);
-        const timeKey = batchTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const match = timeStr.match(/\d{2}:\d{2}:\d{2}/);
+    if (!match) return;
 
-        if (!timeMap.has(timeKey)) timeMap.set(timeKey, {});
-        if (!timeMap.get(timeKey)[day]) timeMap.get(timeKey)[day] = [];
-        timeMap.get(timeKey)[day].push({ batchName, lastDate });
-      }
-    }
+    const [h, m, s] = match[0].split(":").map(Number);
+    const istDayIndex = days.indexOf(istDay); // 0-based Monday = 0
+
+    // Create IST date for that weekday this week
+    const now = new Date();
+    const currentIST = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+    const todayIndex = currentIST.getDay(); // 0 = Sunday
+    const offset = (istDayIndex + 1 - (todayIndex === 0 ? 7 : todayIndex) + 7) % 7;
+
+    const batchISTDate = new Date(Date.UTC(year, month, date + offset, h, m, s));
+    batchISTDate.setUTCMinutes(batchISTDate.getUTCMinutes() - 330); // Convert to UTC
+
+    // Convert to local time
+    const localDate = new Date(batchISTDate.toLocaleString("en-US", { timeZone: timezone }));
+    const localDayIndex = localDate.getDay();
+    const localDay = days[(localDayIndex + 6) % 7];
+
+    const hour = localDate.getHours();
+    const minute = localDate.getMinutes();
+    const timeKey = `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+
+
+    if (!timeMap.has(timeKey)) timeMap.set(timeKey, {});
+    if (!timeMap.get(timeKey)[localDay]) timeMap.get(timeKey)[localDay] = [];
+
+    const formattedTime = localDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    timeMap.get(timeKey)[localDay].push({
+      batchName,
+      timeLabel: formattedTime
+    });
   });
 
-  scheduleHead.insertCell().innerHTML = "Time";
-  days.forEach(day => scheduleHead.insertCell().textContent = day);
+  // Build table header
+  scheduleHead.insertCell().innerText = "Time";
+  days.forEach(day => scheduleHead.insertCell().innerText = day);
 
-batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details....</h3>";
+  // Build table rows
+  for (const [timeKey, dayMap] of timeMap.entries()) {
+    const row = scheduleBody.insertRow();
+    const [hourStr, minuteStr] = timeKey.split(":");
+const timeDate = new Date();
+timeDate.setHours(+hourStr, +minuteStr);
+const amPmTime = timeDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
 
-  for (let i = 0; i <= 47; i++) {
-    const addedTime = new Date(0, 0, 0, 3, 0);
-    addedTime.setHours(addedTime.getHours() + Math.floor(i / 2));
-    addedTime.setMinutes((i % 2 === 0) ? 0 : 30);
-    const formattedTime = addedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+row.insertCell().textContent = amPmTime;
 
-    const scheduleRow = scheduleBody.insertRow();
-    scheduleRow.insertCell().textContent = formattedTime;
-
-    const dayMap = timeMap.get(formattedTime) || {};
 
     days.forEach(day => {
-      const cell = scheduleRow.insertCell();
+      const cell = row.insertCell();
       const batches = dayMap[day];
-      if (batches && batches.length) {
-cell.innerHTML = batches.map(batch => `
-  <div 
-    class="btn bg-primary mar2 text-secondary text-center shadow2 pad3 round3"
-    data-last-date="${batch.lastDate}"
-    data-batch-time="${formattedTime}"
-    onclick="selectBatch(this)"
-  >
-    ${batch.batchName}
-  </div>
-`).join('');
 
-      }   
+      if (batches && batches.length) {
+        cell.innerHTML = batches.map(batch => `
+          <div 
+            class="btn bg-primary mar2 text-secondary text-center shadow2 pad3 round3"
+            data-batch-time="${batch.timeLabel}"
+            onclick="selectBatch(this)"
+          >
+            ${batch.batchName}
+          </div>
+        `).join('');
+      }
     });
   }
-batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details.....</h3>";
+
   document.getElementById(id).appendChild(scheduleTable);
-batchSummary.innerHTML = "<h3 class='text-success'>Success! Select Your Batch</h3>";  
+  batchSummary.innerHTML = "<h3 class='text-success'>Success! Select Your Batch</h3>";
 }
 
 async function selectBatch(item){
