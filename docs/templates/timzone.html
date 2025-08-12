@@ -4,47 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select or Type Your Timezone</title>
-  <style>
-    
-    /* Basic styling for the input and dropdown */
-    .timezone-input-container {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .timezone-input {
-      width: 100%;
-      padding: 10px;
-    }
-
-    .timezone-list {
-      position: absolute;
-      width: 100%;
-      max-height: 200px;
-      overflow-y: auto;
-      border: 1px solid #ccc;
-      background-color: white;
-      z-index: 999;
-      display: none; /* Hide dropdown by default */
-    }
-
-    .timezone-list div {
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    .timezone-list div:hover {
-      background-color: #f0f0f0;
-    }
-  </style>
+    <link rel="stylesheet" href="/b1eaut2yofp1hys4er9/lib.css">
+   <script src="/1san9cha1la7k9/efahfcfcfabe.js"></script>
+  <script src="/1san9cha1la7k9/dgfbbhhfcfcfabe.js"></script>
+  <script  src="/1san9cha1la7k9/dbhhfcfcfabe.js"></script>
 </head>
 <body>
 
 <!-- Timezone Input Container -->
 <div class="timezone-input-container">
-  <input type="text" id="timezoneInput" class="timezone-input" placeholder="Type and search your timezone...">
+  <input type="text" id="timezoneInput" class="timezone-input hidden" placeholder="Type and search your timezone...">
   
   <!-- Predefined options in the dropdown -->
 <div id="timezoneList" class="timezone-list">
@@ -87,8 +56,14 @@
 </div>
 <div id="dateValue"></div>
 <script>
-// Get the input field and the dropdown list
-const timezoneInput = document.getElementById('timezoneInput');
+  var inputIdMatch="";
+const tzInputIds = ['testTimezoneInput','testTimezone2'];
+tzInputIds.forEach(id => {
+  if(document.getElementById(id))inputIdMatch = id
+  //document.getElementById('test')
+})
+const timezoneInput =  document.getElementById(inputIdMatch?inputIdMatch:'timezoneInput');
+timezoneInput.style.display = 'block';
 const timezoneList = document.getElementById('timezoneList');
 const timezoneOptions = document.querySelectorAll('.timezone-option');
 
@@ -121,6 +96,8 @@ function getUTCOffsetString() {
 timezoneInput.addEventListener('click', function() {
   timezoneList.style.display = 'block';
   timezoneInput.value = "";
+  document.getElementById('batchDetails').open = false;
+  document.getElementById('batchSummary').style.display = 'none';
 });
 
 // Filter the timezones as the user types
@@ -152,7 +129,10 @@ timezoneOptions.forEach(option => {
   option.addEventListener('click', () => {
     timezoneInput.value = option.textContent;  // Set input field to selected timezone
     timezoneList.style.display = 'none';    // Hide the dropdown after selection
-document.getElementsByName('Timestamp').forEach(el => el.value = getDate());    
+document.getElementsByName('Timestamp').forEach(el => el.value = getDate());  
+document.getElementById('utcValue').value = timezoneInput.value.split("UTC")[1].split(")")[0];
+document.getElementById('batchDetails').open = true;
+  document.getElementById('batchSummary').style.display = 'inherit';
 
   });
 });
@@ -174,6 +154,7 @@ return toShow;
 }
 //document.getElementById('timeStamp').value=getDate();
 document.getElementsByName('Timestamp').forEach(el => el.value = getDate());
+document.getElementById('utcValue').value = timezoneInput.value.split("UTC")[1].split(")")[0];
 </script>
 
 </body>
