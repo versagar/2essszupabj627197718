@@ -24,7 +24,7 @@
       <div class="pad1"></div>
       <button class="btn bg-primary text-info pad3 border1 border-info border-solid shadow2" onclick="openForm('registration')">Registration</button>
     </div>
-    <div class="block pw100">
+    <div class="block pw100 hidden">
     <h3 class="text-center">Your Timezone: Click to Change</h3>
     <div id="timeZoneData" class="center block rel">
     </div>
@@ -40,7 +40,7 @@
       <button class="btn bg-primary text-info pad3" type="submit" onsubmit="event.preventDefault()">Get a Callback</button>
     </form>  
   <form id="demoForm" class="block bg-info pad1 round2 shadow1 text-primary col2 center">
-    <input type="text" name="Timestamp" id="timeStamp" readonly>
+    <input type="text" name="Timestamp" readonly>
     <input type="text" name="Name" placeholder="Name" required />
     <input type="number" name="Age" placeholder="Age" required />
     <input type="text" name="Guardian" placeholder="Guardian's Name" required />
@@ -59,7 +59,7 @@
   </form>
 
     <form id="registrationForm" class="block bg-info pad1 round2 shadow1 text-primary col2 center">
-    <input type="text" name="Timestamp" id="timeStamp" readonly>
+    <input type="text" name="Timestamp" readonly>
     <input type="text" name="Name" placeholder="Name" required />
     <input type="date" name="DOB" placeholder="Date of Birth" required />
     <input type="text" name="Guardian" placeholder="Guardian's Name" required />
@@ -98,12 +98,15 @@ function openForm(purpose) {
 
       form.addEventListener("submit", handleSubmit);
   }
+  if(purpose==='demo' || purpose==='registration'){
+    loadTimezone();
+  }
 }
 //openForm('demo');
  async function loadTimezone(){
 await loadIn('timeZoneData', '/templates/timzone.html');
  };
-loadTimezone();
+//loadTimezone();
   async function handleSubmit(event) {
     event.preventDefault();
 

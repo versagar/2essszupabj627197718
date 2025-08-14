@@ -8,9 +8,9 @@ a {
     text-decoration: none;
 }
 
-#twch1 a {
+/* #twch1 a {
     color: transparent;
-}
+} */
 #wbody, #twcFeed {
     background-color: antiquewhite;
 }
@@ -32,11 +32,11 @@ a {
     margin-left: auto;
     margin-right: auto;
     font-size: 8vmin;
-    background-image: url(water.jpg);
+    text-shadow: 1vmin 1vmin 10px green;
+    /* background-image: url(water.jpg);
         background-clip: text;
         background-size: cover;
-        -webkit-text-stroke: 0.05vmin white;
-        color: transparent;
+        -webkit-text-stroke: 0.05vmin white; */
 }
 #twcmenubtn {
     display: block;

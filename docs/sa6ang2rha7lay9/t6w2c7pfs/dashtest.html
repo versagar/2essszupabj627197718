@@ -14,6 +14,7 @@
     #dateList {
       vertical-align: middle;
     }
+
   </style>
 <div class="flex-cb">
   <input  name="timezone-input" id="testTimezoneInput" class="bg-primary round3 shadow2 line2 text-secondary text-center bold col2 block" placeholder="Type and Search">
@@ -77,7 +78,6 @@ loadTimezone();
   const oldUtcValue = document.getElementById('utcValue').value;
   await waitForValueChange(oldUtcValue,'utcValue');
   const newUtcValue = document.getElementById('utcValue').value;
-document.getElementById('testUtc').value = newUtcValue;
  await testBatches(newUtcValue);
 });
 });
