@@ -330,7 +330,7 @@ function createWeekSchedule(id, batchData, timeZoneUTC) {
     const todayIndex = currentIST.getDay(); // 0 = Sunday
     const offset = (istDayIndex + 1 - (todayIndex === 0 ? 7 : todayIndex) + 7) % 7;
 
-    const batchISTDate = new Date(Date.UTC(year, month, date + offset+1, h, m, s));
+    const batchISTDate = new Date(Date.UTC(year, month, date + offset, h, m, s));
     batchISTDate.setUTCMinutes(batchISTDate.getUTCMinutes() - 330);
     
     const localDate = new Date(batchISTDate.toLocaleString("en-US", { timeZone: timezone }));
