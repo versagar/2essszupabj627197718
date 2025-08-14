@@ -315,7 +315,9 @@ a {
     font-size: 100%;
     display: block;
     color: white;
-    background-color: #111;
+    color: var(--blue-color);
+    background-color: var(--info-color);
+    font-weight: bold;
     text-align: center;
     box-shadow: 0vmin 0.2vmin 0vmin #C1C6AF;
 }
