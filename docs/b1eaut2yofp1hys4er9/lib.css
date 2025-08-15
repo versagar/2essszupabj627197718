@@ -9,14 +9,16 @@
 --max-body: 1400px;
 
 
---primary-color: #f96d27;
-  --secondary-color: #ffffff;
-  --success-color: #138813;
+  --primary-color: #ff9933;   /* Saffron */
+      --secondary-color: #ffffff; /* White */
+      --success-color: #138808;   /* Green */
+      --info-color: #cfdef2;      /* Optional blue for links/buttons */
+      --dark-color: #00264d;      /* Replacing gray with deep navy */
+      --light-color: #f5f5f5;     /* Light background */
+      --accent-color: #000080;    /* Navy (Ashoka Chakra reference) */
+
   --danger-color: red;
   --warning-color: #ffc107;
-  --info-color: #e5f1fd;
-  --light-color: rgb(209, 250, 209);
-  --dark-color: #343a40;
   --blue-color:   #1a73e8;
 
 
@@ -64,7 +66,7 @@ a {color: unset;}
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
-
+.ov-auto {overflow: auto;}
 .text1 {font-size: calc(1 * var(--t-unit));}
 .text2 {font-size: calc(2 * var(--t-unit));}
 .text3 {font-size: calc(3 * var(--t-unit));}

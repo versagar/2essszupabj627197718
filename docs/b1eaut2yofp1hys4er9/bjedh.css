@@ -314,7 +314,6 @@ a {
     width: 100%;
     font-size: 100%;
     display: block;
-    color: white;
     color: var(--blue-color);
     background-color: var(--info-color);
     font-weight: bold;

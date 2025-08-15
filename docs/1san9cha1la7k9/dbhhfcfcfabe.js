@@ -183,22 +183,33 @@ function loadIn(elementId, url) {
                     el.style.opacity = '1';
                     el.style.transform = 'scale(1)';
 
+                    // Run <script> tags safely
                     const scripts = el.querySelectorAll("script");
+
                     scripts.forEach(oldScript => {
                         const newScript = document.createElement("script");
+
+                        // Prevent re-adding scripts with src that already exist
+                        if (oldScript.src && document.querySelector(`script[src="${oldScript.src}"]`)) {
+                            return; // skip duplicate external scripts
+                        }
+
                         if (oldScript.src) {
                             newScript.src = oldScript.src;
+                            newScript.async = oldScript.async || false;
                         } else {
                             newScript.textContent = oldScript.textContent;
                         }
+
                         [...oldScript.attributes].forEach(attr =>
                             newScript.setAttribute(attr.name, attr.value)
                         );
+
                         document.body.appendChild(newScript);
-                        document.body.removeChild(newScript);
+                        // Do not remove newScript – let it stay in DOM for debugging or caching
                     });
 
-                    resolve(); // ✅ indicate that it's done
+                    resolve();
                 }, 500);
             });
         })
