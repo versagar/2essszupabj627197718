@@ -48,7 +48,7 @@
   <summary id="batchSummary" class="pad2 block round3 shadow2 bg-light text-primary text2">Batch List</summary>
   <div id="scheduleBox" class="table-box"></div>
 </details>
-    <div id="dateList" class="pad1 bg-info round2 hidden">Select the following green (available) dates, just by clicking</div>
+    <div id="dateList" class="pad1 bg-info round2 hidden"></div>
   </section>
 
   <script>
@@ -61,7 +61,7 @@
   const batchDetails = document.getElementById('batchDetails');
   const scheduleSetting = document.getElementById('scheduleSetting');
   const dateList = document.getElementById('dateList');
-  const loginUrl = "url"
+  const loginUrl = "https://script.google.com/macros/s/AKfycbwtFzwfutc_OUQ3y_lt6oY8FiQBvd-tQnBlaKFIAHBUBgnMGohq3nB3FxiD1ntW3bxA/exec"
 
 
 async function loadTimezone() {
@@ -206,6 +206,8 @@ function returnDateList(dateData, lastDate, timeZoneUTC) {
   const timezone = timeZoneUTC; // Make sure this is globally defined
   const mondayIST = getMondayIST(); // Helper to get Monday in IST
   const lastDateIST = lastDate ? new Date(lastDate) : null;
+
+dateList.innerHTML =  `<div class="pad2 bold block round2 mar3 pw80 text-center mar2 lmar shadow2">Select the following green (available) dates, just by clicking</div>`;
 
   for (let i = 0; i < dateData.length; i++) {
     const list = document.createElement('div');
