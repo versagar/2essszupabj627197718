@@ -14,13 +14,25 @@
     #dateList {
       vertical-align: middle;
     }
+    #timezoneListSh{
+      max-height: 400px;
+      position: absolute;
+    }
+    .tz-selector-sh{
+      z-index: 1000;
+    }
+   
 
   </style>
 <div class="flex-cb hidden" id="currentDateTime">
-  <input  name="timezone-input" id="testTimezoneInput" class="bg-primary round3 shadow2 line2 text-secondary text-center bold col2 block" placeholder="Type and Search">
-<input name="Timestamp" class="bg-secondary round3 shadow2 line2 text-success text-center bold col2 block">
-<input id="utcValue" class="line1-5 hidden">
+  <div class="tz-selector-sh ov-unset col2 left">
+<input  name="timezone-input" id="testTimezoneInput" class="bg-primary round3 shadow2 line2 text-secondary text-center block pw100" placeholder="Type and Search">
+  <div id="timezoneListSh" class="abs hidden bg-info ov-auto"></div>
+  </div>
+<input name="Timestamp" class="bg-secondary round3 shadow2 line2 text-success text-center bold col2 right" id="displayTimeSh">
+
 </div>
+<input id="utcValue" class="line1-5 hidden">
 <div id="test"></div>
 <div class="pop-overlay" id="overlayId"></div>
 <div class="pop-show" id="popId"></div>
@@ -61,11 +73,11 @@
   const batchDetails = document.getElementById('batchDetails');
   const scheduleSetting = document.getElementById('scheduleSetting');
   const dateList = document.getElementById('dateList');
-  const loginUrl = "URL"
+  const loginUrl = "https://twc.physer.workers.dev";
 
 
-async function loadTimezone() {
-  await loadIn('test', "/templates/timzone.html");
+function loadTimezone() {
+  createTimezoneSelector('testTimezoneInput','timezoneListSh','displayTimeSh','utcValue');
 }
 
 ['focus', 'input', 'change'].forEach(eventType => {
