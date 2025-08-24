@@ -57,7 +57,7 @@
 <div id="dateValue"></div>
 <script>
   var inputIdMatch="";
-const tzInputIds = ['testTimezoneInput','testTimezone2'];
+if(tzInputIds){tzInputIds = ['testTimezoneInput','testTimezone2'];} else {var tzInputIds = ['testTimezoneInput','testTimezone2'];} 
 tzInputIds.forEach(id => {
   if(document.getElementById(id)) inputIdMatch = id
   //document.getElementById('test')

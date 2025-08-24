@@ -556,3 +556,170 @@ function convertTimezone(dateStr, fromUTCOffset, targetTimezone) {
   ).toLocaleString('en-US',);
 }
 
+
+  /**
+   * Attaches timezone selection functionality to existing HTML elements.
+   * It also dynamically injects the required CSS styles for the dropdown options.
+   *
+   * @param {string} timezoneInputId - The ID of the input field for typing/displaying the timezone.
+   * @param {string} timezoneListId - The ID of the container for the timezone options dropdown.
+   * @param {string} timestampDisplayId - The ID of the input field to display the formatted timestamp.
+   * @param {string} utcValueId - The ID of the input field to store the raw UTC offset value.
+   */
+  function createTimezoneSelector(timezoneInputId, timezoneListId, timestampDisplayId, utcValueId) {
+      // Inject required CSS for a clean, dependency-free solution.
+      const styleId = 'timezone-selector-styles';
+      if (!document.getElementById(styleId)) {
+          const style = document.createElement('style');
+          style.id = styleId;
+          style.textContent = `
+              .timezone-option {
+                  padding: 10px;
+                  cursor: pointer;
+                  font-size: 14px;
+              }
+              .timezone-option:hover { 
+                filter: opacity(1.0)
+              }
+
+          `;
+          document.head.appendChild(style);
+      }
+      
+      const timezoneInput = document.getElementById(timezoneInputId);
+      const timezoneList = document.getElementById(timezoneListId);
+
+      if (!timezoneInput || !timezoneList) {
+          console.error('Timezone input or list container not found.');
+          return;
+      }
+
+      // Array of timezone data
+      const timezones = [
+'(UTC−12:00) Baker Island Time', '(UTC−11:00) Niue Time', '(UTC−10:00) Hawaii-Aleutian Standard Time',
+          '(UTC−09:30) Marquesas Islands Time', '(UTC−09:00) Alaska Standard Time', '(UTC−08:00) Pacific Standard Time (PST), PDT (Daylight)',
+          '(UTC−07:00) Mountain Standard Time (MST), MDT (Daylight)', '(UTC−06:00) Central Standard Time (CST), CDT (Daylight)',
+          '(UTC−05:00) Eastern Standard Time (EST), EDT (Daylight)', '(UTC−04:00) Atlantic Standard Time (AST), ADT (Daylight)',
+          '(UTC−03:30) Newfoundland Standard Time', '(UTC−03:00) Argentina Time (ART), Brazil Time (BRT)',
+          '(UTC−02:00) South Georgia and the South Sandwich Islands Time', '(UTC−01:00) Cape Verde Time (CVT), Azores Time (AZOT)',
+          '(UTC+00:00) Greenwich Mean Time (GMT), Western European Time (WET)',
+          '(UTC+01:00) Central European Time (CET), West Africa Time (WAT)', '(UTC+02:00) Eastern European Time (EET), Central Africa Time (CAT)',
+          '(UTC+03:00) Moscow Standard Time (MSK), Arabian Standard Time (AST)', '(UTC+03:30) Iran Standard Time',
+          '(UTC+04:00) Gulf Standard Time (GST), Azerbaijan Time (AZT)', '(UTC+04:30) Afghanistan Time (AFT)',
+          '(UTC+05:00) Pakistan Standard Time (PKT), Uzbekistan Time (UZT)', '(UTC+05:30) Indian Standard Time (IST), Sri Lanka Standard Time (SLST)',
+          '(UTC+05:45) Nepal Time (NPT)', '(UTC+06:00) Bangladesh Standard Time (BST), Bhutan Time (BTT)',
+          '(UTC+06:30) Cocos Islands Time (CCT), Myanmar Time (MMT)', '(UTC+07:00) Indochina Time (ICT), Krasnoyarsk Time (KRAT)',
+          '(UTC+08:00) China Standard Time (CST), Singapore Standard Time (SGT)', '(UTC+08:45) Australian Central Western Standard Time',
+          '(UTC+09:00) Japan Standard Time (JST), Korea Standard Time (KST)', '(UTC+09:30) Australian Central Standard Time (ACST)',
+          '(UTC+10:00) Australian Eastern Standard Time (AEST), Papua New Guinea Time (PGT)', '(UTC+10:30) Lord Howe Island Time (LHT)',
+          '(UTC+11:00) Solomon Islands Time (SBT), Vanuatu Time (VUT)', '(UTC+11:30) Norfolk Island Time',
+          '(UTC+12:00) Fiji Time (FJT), New Zealand Standard Time (NZST)', '(UTC+12:45) Chatham Islands Time (CHAST)',
+          '(UTC+13:00) Tonga Time (TOT), Phoenix Islands Time (PHOT)', '(UTC+14:00) Line Islands Time (LINT)',
+          '(UTC-01:00) Cape Verde Time', '(UTC-02:00) Brazil Time Zone 1', '(UTC-03:00) Brazil Time Zone 2',
+          '(UTC-04:00) Atlantic Standard Time', '(UTC-05:00) Eastern Standard Time', '(UTC-06:00) Central Standard Time',
+          '(UTC-07:00) Mountain Standard Time', '(UTC-08:00) Pacific Standard Time', '(UTC-09:00) Alaska Standard Time',
+          '(UTC-10:00) Hawaii-Aleutian Standard Time', '(UTC-11:00) Samoa Standard Time', '(UTC-12:00) Baker Island Time',
+          '(UTC+01:00) Central European Time', '(UTC+02:00) Eastern European Time', '(UTC+03:00) Moscow Standard Time',
+          '(UTC+03:30) Iran Standard Time', '(UTC+04:00) Gulf Standard Time', '(UTC+04:30) Afghanistan Time',
+          '(UTC+05:00) Pakistan Standard Time', '(UTC+05:30) Indian Standard Time', '(UTC+05:45) Nepal Time',
+          '(UTC+06:00) Bangladesh Standard Time', '(UTC+06:30) Myanmar Standard Time', '(UTC+07:00) Indochina Time',
+          '(UTC+08:00) China Standard Time', '(UTC+08:45) Australian Central Western Standard Time',
+          '(UTC+09:00) Japan Standard Time', '(UTC+09:30) Australian Central Standard Time',
+          '(UTC+10:00) Australian Eastern Standard Time', '(UTC+10:30) Lord Howe Island Time',
+          '(UTC+11:00) Solomon Islands Time', '(UTC+11:30) Norfolk Island Time',
+          '(UTC+12:00) New Zealand Standard Time', '(UTC+12:45) Chatham Islands Time',
+          '(UTC+13:00) Tonga Time', '(UTC+14:00) Line Islands Time'
+      ];
+
+      // Populate the dropdown with timezone options
+      timezoneList.innerHTML = '';
+      timezones.forEach(tz => {
+          const option = document.createElement('option');
+          option.className = 'timezone-option';
+          option.textContent = tz;
+          timezoneList.appendChild(option);
+      });
+
+      // Function to get the current UTC offset string
+      function getUTCOffsetString() {
+          const offsetMinutes = new Date().getTimezoneOffset();
+          const totalMinutes = -offsetMinutes;
+          const sign = totalMinutes >= 0 ? '+' : '−';
+          const hours = String(Math.floor(Math.abs(totalMinutes) / 60)).padStart(2, '0');
+          const minutes = String(Math.abs(totalMinutes) % 60).padStart(2, '0');
+          return `UTC${sign}${hours}:${minutes}`;
+      }
+
+      const updateInputs = () => {
+          const timestampEl = document.getElementById(timestampDisplayId);
+          const utcEl = document.getElementById(utcValueId);
+          const timezoneText = timezoneInput.value;
+          const utcOffset = timezoneText.includes('UTC') ? timezoneText.split("UTC")[1].split(")")[0].trim() : '';
+
+          if (timestampEl) {
+              timestampEl.value = getDateInTimezone(utcOffset);
+          }
+          if (utcEl) {
+              utcEl.value = utcOffset;
+          }
+      };
+
+      function getDateInTimezone(utcOffset) {
+          if (!utcOffset) return '';
+          const options = {
+              timeZone: utcOffset,
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              hour12: true
+          };
+          const date = new Date();
+          return date.toLocaleString('en-US', options);
+      }
+
+      // Set initial value based on the user's local timezone
+      const userUTC = getUTCOffsetString();
+      let matched = false;
+      timezones.forEach(tz => {
+          if (tz.includes(userUTC)) {
+              timezoneInput.value = tz;
+              matched = true;
+          }
+      });
+      if (!matched) {
+          timezoneInput.value = userUTC;
+      }
+      
+      updateInputs();
+
+      // Event listeners
+      timezoneInput.addEventListener('click', () => {
+        timezoneInput.value = "";
+          timezoneList.style.display = 'block';
+          
+        });
+      timezoneInput.addEventListener('input', () => {
+          const searchValue = timezoneInput.value.toLowerCase();
+          const options = timezoneList.querySelectorAll('.timezone-option');
+          options.forEach(option => {
+              const optionText = option.textContent.toLowerCase();
+              option.style.display = optionText.includes(searchValue) ? 'block' : 'none';
+          });
+      });
+      document.addEventListener('click', (event) => {
+          if (!timezoneInput.contains(event.target) && !timezoneList.contains(event.target)) {
+              timezoneList.style.display = 'none';
+          }
+      });
+      timezoneList.querySelectorAll('.timezone-option').forEach(option => {
+          option.addEventListener('click', () => {
+              timezoneInput.value = option.textContent;
+              timezoneList.style.display = 'none';
+              updateInputs();
+          });
+      });
+  }
+  

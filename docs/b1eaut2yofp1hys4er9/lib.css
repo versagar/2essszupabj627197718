@@ -20,7 +20,7 @@
   --danger-color: red;
   --warning-color: #ffc107;
   --blue-color:   #1a73e8;
-
+--baseback-antique: rgb(255, 249, 246);
 
 
 
@@ -67,6 +67,7 @@ a {color: unset;}
   color: var(--secondary-color);
 }
 .ov-auto {overflow: auto;}
+.ov-unset {overflow: unset;}
 .text1 {font-size: calc(1 * var(--t-unit));}
 .text2 {font-size: calc(2 * var(--t-unit));}
 .text3 {font-size: calc(3 * var(--t-unit));}

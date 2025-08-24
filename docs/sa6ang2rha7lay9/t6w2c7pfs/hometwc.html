@@ -215,16 +215,6 @@
         }
     </style>
 </head>
-<!--  <div id="flagPopup" class="popup-flag">
-  
-    <h3>Welcome!</h3>
-    <p>Let's boost learning with fun</p>
-  </div>
-
-  <header>
-    <h1>TWC Classrooms</h1>
-    <p>Smart Learning. Real Skills. Powered by Physer: The Wise Craze</p>
--->
 
 <body>
     <div id="twcFeed" class="feed ov-auto">
@@ -414,10 +404,10 @@ const popup = document.getElementById('flagPopup');
 popup.classList.add('show');
 setTimeout(() => popup.classList.remove('show'), 1000);
 
-const form = document.getElementById("callbackForm");
-form.addEventListener("submit", async function(event) {
+const callbackForm= document.getElementById("callbackForm");
+callbackForm.addEventListener("submit", async function(event) {
     event.preventDefault();
-    const formData = new FormData(form);
+    const formData = new FormData(callbackForm);
     const payload = {
         function: "getCallBack",
         formData: {
