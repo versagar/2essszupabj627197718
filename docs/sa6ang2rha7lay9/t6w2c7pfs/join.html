@@ -45,7 +45,7 @@
 }
 
 </style>
-<div class="ttbody" id="formApplication">  
+<div class="ov-auto block ph100" id="formApplication">  
 <div class="text4 bold text-center text-primary">TWC CONNECT</div>
 <div class="btn bg-primary bold text-secondary text-center pad3 round3 mar3 shadow2 col2" onclick="scheduleBooking()">Schedule Classes</div>
 <section class="form-section">
@@ -103,16 +103,21 @@
     <input type="text" name="hp_field" style="display:none;" tabindex="-1" autocomplete="off" />
     <button type="submit" class="btn bg-primary text-info pad3">Submit</button>
   </form>
+  <div class="pad1 mar1 block">
+    <!-- Blank Space -->
+  </div>
 </section>
-</div>
-<div class="ttbody" id="scheduleBooking"> 
 
 </div>
+<div class="ov-auto block ph100 hidden" id="scheduleBooking"> 
+
+</div>
+
 <script>
 function scheduleBooking(){
   loadIn('scheduleBooking','/sa6ang2rha7lay9/t6w2c7pfs/schedule.html');
   document.getElementById('formApplication').style.display = 'none';
-  document.getElementById('scheduleBookig').style.display = 'block';
+  document.getElementById('scheduleBooking').style.display = 'block';
 }
  var form;
 const respBox = document.getElementById("formResp");

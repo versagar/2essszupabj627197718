@@ -74,6 +74,7 @@
   const scheduleSetting = document.getElementById('scheduleSetting');
   const dateList = document.getElementById('dateList');
   const loginUrl = "https://twc.physer.workers.dev";
+  var studentId = '';
 
 
 function loadTimezone() {
@@ -102,30 +103,48 @@ async function waitForValueChange(oldValue,id) {
   }
 
 async function getBatches() {
-  batchSummary.textContent = "Checking credentials.."
+  batchSummary.textContent = "Checking credentials..";
+  const loginCred = new FormData(document.getElementById('loginForm'));
+  document.getElementById('loginForm').reset();
+  studentId = loginCred.get('id');
+  const payload = await (async () => {
+  const key = await HASH_SHA256(new Date().toISOString() + ':' + crypto.getRandomValues(new Uint32Array(1))[0]);
+
+  return {
+    function: 'getBatches',
+    key: key,
+    formData: {
+      id: loginCred.get('id'),
+      hash: await HASH_SHA256(
+        (await HASH_SHA256(loginCred.get('pass'))) + key
+      )
+    }
+  };
+})();
+
         try {
             const response = await fetch(loginUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: new URLSearchParams({
-                    function: 'getBatches'
-                })
+                body: JSON.stringify(payload)
             });
 
+            loginCred = null;
              if (!response.ok) {
             batchSummary.innerHTML = "<h3 class='text-danger'>Failed! Error Getting Details</h3>";
         }
         
             
             batchSummary.innerHTML = "<h3 class='text-success'>Success! Loading Batch Details..</h3>";
-            const data = await response.text();
+            const data = await response.json();
             document.getElementById('currentDateTime').style.display = 'flex';
             loadTimezone();
             testData = data;
-            document.getElementById('loginSection').innerHTML = `<h1 class='text-primary'>${name?name:"Error Loading Student Name"}</h1>`;
-            createWeekSchedule('scheduleBox',convertTo2D(data,4,","));
+            sessionStorage.setItem(await HASH_SHA256(studentId), await HASH_SHA256(data.loginCode))
+            document.getElementById('loginSection').innerHTML = `<h1 class='text-primary'>${data.nameguard?data.nameguard:"Error Loading Student Name"}</h1>`;
+            createWeekSchedule('scheduleBox',convertTo2D(data.batches,4,","));
 
         } catch (error) {
            batchSummary.innerHTML = error + "<h3 class='text-danger'>Failed! Error Getting Details</h3>";
@@ -140,11 +159,15 @@ async function getDates(batchName, lastDate, batchTime, timeZoneUTC) {
       const response = await fetch(loginUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/json'
         },
-        body: new URLSearchParams({
+        body: JSON.stringify({
           function: 'getDates',
-          batchName: batchName
+          formData: {
+            id: studentId,
+            batchName: batchName,
+            loginCode: sessionStorage.getItem(await HASH_SHA256(studentId))
+          }
         })
       });
 
@@ -153,7 +176,7 @@ async function getDates(batchName, lastDate, batchTime, timeZoneUTC) {
       const batchSize = batchCreators[3].substring(3);
       const batchStatus = batchCreators[2].slice(0,1);
       const batchLocation = batchCreators[0];
-      const dates = await response.text();
+      const dates = await response.json();
       batchDetails.open = false;
       batchSummary.innerHTML =  " <div> Batch Name: <span class='text-success'>"+ batchName + "</span> <span class='text-danger'>|</span> " +
         "Batch Size: <span class='text-success'>"+ batchSize + "</span> <span class='text-danger'>|</span> " +

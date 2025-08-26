@@ -723,3 +723,11 @@ function convertTimezone(dateStr, fromUTCOffset, targetTimezone) {
       });
   }
   
+async function HASH_SHA256(input) {
+  const encoder = new TextEncoder(); // UTF-8 encoder
+  const data = encoder.encode(input);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data); // returns a Promise
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => ('0' + b.toString(16)).slice(-2)).join('');
+  return hashHex;
+}
