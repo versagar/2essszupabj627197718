@@ -30,7 +30,6 @@ a {
 #header {
     display: flex;
     align-items: center;
-    background-color: #6C2E00;
     width: 100%;
     height: 12vmin;
     border-bottom: 0.1vmin solid #c1c6af;
@@ -329,11 +328,6 @@ a {
     height: 96%;
     overflow-y: scroll;
     max-width: 1200px;
-}
-#info {
-    display: block;
-    width: 90%;
-    margin: auto;
 }
 #frameOverview {
    width: 80%;

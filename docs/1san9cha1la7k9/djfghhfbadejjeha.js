@@ -46,37 +46,37 @@ function tgpOpen(con) {
     
 function rphysics(pid) {
 
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/bfdjdefcgchfadrps.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/bfdjdefcgchfadrps.html" width="100%" height="100%"></object>';
 }
 
 function audible(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/eiejcbchfigjjjadb.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/eiejcbchfigjjjadb.html" width="100%" height="100%"></object>';
 }
 
 function dforum(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/ecbiccfbhehdfm.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/ecbiccfbhehdfm.html" width="100%" height="100%"></object>';
 }
 
 function guide(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html" width="100%" height="100%"></object>';
 }
 
-function index(pid) {  document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/deebbfajjhme.html" width="100%" height="100%"></object>';}
+function index(pid) {  document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/deebbfajjhme.html" width="100%" height="100%"></object>';}
 
 function iphysics(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/dcejdefcgchfadipc.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/dcejdefcgchfadipc.html" width="100%" height="100%"></object>';
 }
 
 function opnities(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/cbajcdbdehchbcdots.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/cbajcdbdehchbcdots.html" width="100%" height="100%"></object>';
 }
 
 function vphysics(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/hhjdefcgchfadvps.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/hhjdefcgchfadvps.html" width="100%" height="100%"></object>';
 }
 
 function contact(pid) {
-    document.getElementById(pid).innerHTML='<object type="text/html" data="sa6ang2rha7lay9/pa6n2na7sang9/edjbbdjihjeiecnt.html" width="100%" height="100%"></object>';
+    document.getElementById(pid).innerHTML='<object type="text/html" data="/sa6ang2rha7lay9/pa6n2na7sang9/edjbbdjihjeiecnt.html" width="100%" height="100%"></object>';
 }
 
 function rcontent(pid) {
@@ -85,4 +85,4 @@ function rcontent(pid) {
 
 
 //guide('rframe');
-loadObject('rframe','sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html');
+loadObject('rframe','/sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html');
