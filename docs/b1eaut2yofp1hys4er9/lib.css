@@ -93,6 +93,22 @@ a {color: unset;}
 .bg-dark { background-color: var(--dark-color); }
 .bg-blue { background-color: var(--blue-color);}
 
+.bg-grad-ps { background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); }
+.bg-grad-pi { background: linear-gradient(90deg, var(--primary-color), var(--info-color)); }
+.bg-grad-pl { background: linear-gradient(90deg, var(--primary-color), var(--light-color)); }
+
+.bg-grad-sp { background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)); }
+.bg-grad-si { background: linear-gradient(90deg, var(--secondary-color), var(--info-color)); }
+.bg-grad-sl { background: linear-gradient(90deg, var(--secondary-color), var(--light-color)); }
+
+.bg-grad-ip { background: linear-gradient(90deg, var(--info-color), var(--primary-color)); }
+.bg-grad-is { background: linear-gradient(90deg, var(--info-color), var(--secondary-color)); }
+.bg-grad-il { background: linear-gradient(90deg, var(--info-color), var(--light-color)); }
+
+.bg-grad-lp { background: linear-gradient(90deg, var(--light-color), var(--primary-color)); }
+.bg-grad-ls { background: linear-gradient(90deg, var(--light-color), var(--secondary-color)); }
+.bg-grad-li { background: linear-gradient(90deg, var(--light-color), var(--info-color)); }
+
 .flex { display: flex; }
 .flex-wrap { display: flex; flex-wrap: wrap;}
 .flex-center { display: flex; justify-content: center; align-items: center; }
@@ -373,8 +389,8 @@ text-align: center;
     header {
       background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
       color: var(--text-light);
-      padding: 2rem 1rem;
-      text-align: center;
+      /* padding: 2rem 1rem;
+      text-align: center; */
     }
 
     header h1 {
@@ -385,6 +401,7 @@ text-align: center;
     header p {
       margin: 0.5rem 0;
       font-size: 1.2rem;
+      font-weight: bold;
     }
 
     .container {

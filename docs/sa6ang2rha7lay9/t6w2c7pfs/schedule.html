@@ -104,7 +104,7 @@ async function waitForValueChange(oldValue,id) {
 
 async function getBatches() {
   batchSummary.textContent = "Checking credentials..";
-  const loginCred = new FormData(document.getElementById('loginForm'));
+  var loginCred = new FormData(document.getElementById('loginForm'));
   document.getElementById('loginForm').reset();
   studentId = loginCred.get('id');
   const payload = await (async () => {

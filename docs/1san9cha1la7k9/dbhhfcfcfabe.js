@@ -13,8 +13,8 @@ getBeauty("kpp");
 // getBeauty("../../dtp");
 // getBeauty("../../mbp");
 // getBeauty("../../kpp");
-getBeauty("tempresp");
-getBeauty('lib');
+// getBeauty("tempresp");
+// getBeauty('lib');
 //document.getElementById("updates").innerHTML = '<object type="text/html" data="../../ady12ata14n9/updateindex.html" width="100%" height="400vh"></object>';
 function openNav() {
     document.getElementById("mySidenav").style.width = "20%";
@@ -731,3 +731,40 @@ async function HASH_SHA256(input) {
   const hashHex = hashArray.map(b => ('0' + b.toString(16)).slice(-2)).join('');
   return hashHex;
 }
+
+
+  async function handleSubmitFormTWC(form, func, extra, responseContainerId) {
+const respBox = document.getElementById(responseContainerId);
+const formData = new FormData(form);
+
+    const payload = {
+      function: func,
+formData: Object.fromEntries(formData.entries()),
+userDetails: {
+        ua: navigator.userAgent,
+        time: new Date().toISOString()},
+extra: extra
+      };
+
+    respBox.textContent = "Submitting...";
+    const submitBtn = form.querySelector("button[type='submit']");
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch("https://twc.physer.workers.dev", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+      respBox.textContent = result;
+      form.reset();
+      return result;
+    } catch (err) {
+      respBox.textContent = "Error submitting form.";
+      return "Error submitting form.";
+    }
+
+    submitBtn.disabled = false;
+  };
