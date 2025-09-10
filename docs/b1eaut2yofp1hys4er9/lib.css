@@ -349,7 +349,7 @@ text-align: center;
 
 .height-full { height: 100vh; }
 .height-auto { height: auto; }
-
+.ratio1609 { aspect-ratio: calc(16 / 9);}
 
 /* ========================= */
 /* 7. Animations */
