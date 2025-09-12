@@ -81,6 +81,8 @@ a {color: unset;}
 .text-info { color: var(--info-color); }
 .text-light { color: var(--light-color); }
 .text-dark { color: var(--dark-color); }
+.text-accent { color: var(--accent-color);}
+.text-blue { color: var(--blue-color);}
 
 /* Background Colors */
 .bg-primary { background-color: var(--primary-color);}
@@ -235,6 +237,8 @@ a {color: unset;}
 /* Block Alignment Utilities */
 /* ========================= */
 .abs {position: absolute;}
+.absolute {position: absolute;}    
+/* abs is responsive, not this */
 .fixed {position: fixed;}
 .rel {position: relative;}
 .center {
@@ -351,6 +355,12 @@ text-align: center;
 .height-auto { height: auto; }
 .ratio1609 { aspect-ratio: calc(16 / 9);}
 
+
+.z-1 {z-index: -1;}
+.z0 {z-index: 0;}
+.z1 {z-index: 1;}
+.z10 {z-index: 10;}
+.z100 {z-index: 100;}
 /* ========================= */
 /* 7. Animations */
 /* ========================= */
@@ -376,6 +386,17 @@ text-align: center;
   
 }
 
+/* Defines the animation called 'blink' */
+@keyframes blink01 {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Applies the animation to the .blinking-new class */
+.blink01-1500-infinite {
+  animation: blink01 1.5s infinite; /* Uses the blink animation, running for 1.5 seconds, and repeating forever */
+}
 
     /* :root {
       --primary: #1a73e8;
@@ -482,8 +503,12 @@ text-align: center;
         padding: 0;
         padding-top: 1rem;
       }
+
     }
 
 @media (max-width: 512px) {
   .abs {position: relative;}
+   :root{
+        --t-unit: 2vmin;
+      }
 }

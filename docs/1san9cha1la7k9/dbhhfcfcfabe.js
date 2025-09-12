@@ -768,3 +768,21 @@ extra: extra
 
     submitBtn.disabled = false;
   };
+
+/**
+ * Toggles the display of a specified HTML element using a CSS selector.
+ * @param {string} selector - The CSS selector for the element to toggle (e.g., '#myId', '.myClass', 'div.container').
+ * @param {string} displayType - The CSS display property to show the element as (e.g., 'flex', 'block', 'grid').
+ */
+function toggleElement(selector, displayType) {
+  const element = document.querySelector(selector);
+  if (element) {
+    const currentDisplay = window.getComputedStyle(element).display;
+    
+    if (currentDisplay !== 'none') {
+      element.style.display = 'none';
+    } else {
+      element.style.display = displayType;
+    }
+  }
+}
