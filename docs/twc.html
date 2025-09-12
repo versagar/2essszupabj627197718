@@ -14,51 +14,11 @@
   <script src="/1san9cha1la7k9/efahfcfcfabe.js"></script>
   <script src="/1san9cha1la7k9/dgfbbhhfcfcfabe.js"></script>
   <script  src="/1san9cha1la7k9/dbhhfcfcfabe.js"></script>
+  <script src="/twc/twc.js"></script>
   <link rel="stylesheet" href="/sa6ang2rha7lay9/t6w2c7pfs/twcc.css">
   <link rel="stylesheet" href="/b1eaut2yofp1hys4er9/lib.css">
   <link rel="stylesheet" href="/b1eaut2yofp1hys4er9/tempresp.css">
 </head>
-<script>
-function handleRouting() {
-  const path = localStorage.getItem('physertwcpathInput');
-  let secondSegment = "";
-  let thirdSegment = "";
-
-  if (path && path.length > 3) {
-    const segments = path.split('/');
-    secondSegment = segments[2] || "";
-    thirdSegment = segments[3] || "";
-  }
-
-  localStorage.removeItem('physertwcpathInput');
-  localStorage.setItem('thirdSegmentafterconnect', thirdSegment);
-
-  if (secondSegment) {
-    switch (secondSegment) {
-      case 'courses':
-        loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/courses.html');
-        break;
-      case 'connect':
-        loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/join.html');
-        break;
-      default:
-        loadObject('wbody', '/file-error.html');
-        break;
-    }
-  } else {
-    loadIn('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/hometwc.html');
-  }
-
-  // Optional delayed initialization:
-  // setTimeout(() => {
-  //   if (typeof initHometwc === "function") {
-  //     initHometwc();
-  //   }
-  // }, 600);
-}
-
-
-</script>
 <body onload="handleRouting()" class="ov-hidden height-auto">
 
   <header id="header">
@@ -67,7 +27,7 @@ function handleRouting() {
     </div>
 
 
-    <p id="twch1"><a href="/twc.html" class="bold text-secondary">TWC
+    <p id="twch1"><a href="/twc" class="bold text-secondary">TWC
         Classrooms</a></p>
     <div id="twcmenubtn" onclick="openMenu('twcmenu','tmBtn','ecjigjd/ecabejdcddgiah.png','ecjigjd/updraw.png'); autoScroll('twcmenu', 2000,1000,100,0)">
       <img src="ecjigjd\ecabejdcddgiah.png" id="tmBtn" alt=""></img>

@@ -40,7 +40,7 @@
     </table>
   </a>
   
-    <div class="mblock">
+    <div class="mblock right">
     <a href="javascript:void(0)" onclick="audible('myFeed')">A</a>
 	  <a href="javascript:void(0)" onclick="dforum('myFeed')">D</a>
 	  <a href="javascript:void(0)" onclick="opnities('myFeed')">E</a>
@@ -51,7 +51,25 @@
     </div>
 
 
-  	   <div id="mySidenav" class="sidenav ov-hidden" >
+
+<div class="right flex pw50 twc-btn">
+  <div class="flex pw100 flex-row">
+     <a href="/twc" class="btn round3 shadow2 pad3 mar3 text-center">
+    <p class="text2 nopm">TWC</p>
+    <p class="text2 nopm">Classrooms</p>
+  </a>
+
+  <a href="/twc/connect" class="btn round3 shadow2 pad3 mar3 text-center">
+    <p class="text2 nopm">Connect</p>
+    <p class="text2 nopm">Us</p>
+  </a>
+  </div>
+ 
+</div>
+    <button class="btn btn-primary right block btn round3 shadow2 pad3" onclick="toggleElement('.mblock','flex');toggleElement('.twc-btn','flex');">&LeftTeeArrow;</button>
+
+
+  	   <!-- <div id="mySidenav" class="sidenav ov-hidden" >
     <a class="closebtn" href="javascript:void(0)" onclick="closeNav()" > &times;</a>
     <a class="ml" href="javascript:void(0)"  onclick="vphysics('myFeed')">Visual</a>
     <a class="ml" href="javascript:void(0)"  onclick="audible('myFeed')">Audible</a>
@@ -60,7 +78,7 @@
     <a class="ml" href="javascript:void(0)"  onclick="iphysics('myFeed')">Illustrations</a>
     <a class="ml" href="javascript:void(0)"  onclick="dforum('myFeed')">Doubts</a>
     <a class="ml" href="javascript:void(0)"  onclick="opnities('myFeed')">Events</a>
-  </div>
+  </div> -->
     </header>
     <div id="floaters">
     <a class="top-btns" id="openOv" href="javascript:void(0)" onclick="openOv()">⇲</a>
@@ -120,11 +138,7 @@
   </div>
   </div> 
 
-  <script>
-    loadScript('OO0O00O010O0OO0O00');
-    const path = window.location.pathname;
-      const secondPart = path.split('/')[2];
-      secondPart? loadObject('info','/events/'+secondPart+'/page.html'): loadObject('myFeed','/sa6ang2rha7lay9/pa6n2na7sang9/cbajcdbdehchbcdots.html');
-    </script>
+  
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -98,7 +98,7 @@ a {
 }
 
 .mblock {
-    display: flex;
+    display: none;
     margin-left: auto;
     flex-direction: row-reverse;
    
