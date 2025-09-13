@@ -10,10 +10,10 @@ function getLink() {
         link = 'https://docs.google.com/document/d/1EB5hqH19p2tfDUXfy8nnxYgO8BxzXjM_FwZsEObjvNw/pub';
     } 
     if (hint==='b') {
-        link = 'sa6ang2rha7lay9/pa6n2na7sang9/deebbfajjhme.html'
+        link = '/sa6ang2rha7lay9/pa6n2na7sang9/deebbfajjhme.html'
     }
     if (hint==='c') {
-        link = 'sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html'
+        link = '/sa6ang2rha7lay9/pa6n2na7sang9/dhaichcbjjgde.html'
     }
     if(hint==="6rlqsjrq8rs7p7p7r"){link="https://docs.google.com/document/d/1sWnIZmqYkWbz22w_UmrDq3s0ueGNhj1U75nLH7Ek1R0/pub?embedded=true";}
     if(hint==="5ross8m7r7s7s"){link="https://docs.google.com/document/d/1cNRPZukSb_C7o3m3mDmXbk1MVmBBdLd1yY_opGtwslM/pub?embedded=true";}

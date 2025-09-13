@@ -167,13 +167,14 @@ function loadObject(elementId, url) {
 function loadIn(elementId, url) {
     const el = document.getElementById(elementId);
 
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    if(el){
+el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     el.style.opacity = '0';
     el.style.transform = 'scale(0.8)';
 
     return fetch(url)
         .then(response => {
-            if (!response.ok) throw new Error('Page not found');
+            if (!response.ok) throw new Error('Page not found via loadIn');
             return response.text();
         })
         .then(html => {
@@ -219,6 +220,13 @@ function loadIn(elementId, url) {
                 loadObject(elementId, url);
             }
         });
+
+
+
+
+    }
+    
+console.log(elementId + " Id does not exist");
 }
 
 
@@ -248,7 +256,7 @@ function inptwcData(tid, rid) {
     document.getElementById(rid).innerText = source.innerText;
 }
 var twctidLast = 'wbody';
-var twctfLast = 'sa6ang2rha7lay9/t6w2c7pfs/home';
+var twctfLast = '/sa6ang2rha7lay9/t6w2c7pfs/home';
 //var twcttStat = 0;
 //var twctUndo = 0;
 //function viewBackbtn() {console.log('twcttStat:', twcttStat); if (twcttStat === 1) {showBlock('twctBack');} else {hideBlock('twctBack');}}
@@ -256,10 +264,10 @@ var twctfLast = 'sa6ang2rha7lay9/t6w2c7pfs/home';
 
 //hideBlock('twctBack');
 function omTwc(fName, aid) {
-    pgtwc('wbody', 'sa6ang2rha7lay9/t6w2c7pfs/' + fName);
-    openMenu('twcmenu', 'tmBtn', "ecjigjd/ecabejdcddgiah.png", "ecjigjd/updraw.png");
+    pgtwc('wbody', '/sa6ang2rha7lay9/t6w2c7pfs/' + fName);
+    openMenu('twcmenu', 'tmBtn', "/ecjigjd/ecabejdcddgiah.png", "/ecjigjd/updraw.png");
     inptwcData(aid, 'twcpHead');
-    twctfLast = 'sa6ang2rha7lay9/t6w2c7pfs/' + fName;
+    twctfLast = '/sa6ang2rha7lay9/t6w2c7pfs/' + fName;
     twctidLast = aid;
 }
 
@@ -278,30 +286,30 @@ function twcttOpen(ttstt, gsid, gdid) {
 }
 
 function openMenu(w, opener, imgOpener, imgCloser) {
-    var snd = new Audio("ecjigjd/ekdjgjchdjjacgfbElca.wav");
+    var snd = new Audio("/ecjigjd/ekdjgjchdjjacgfbElca.wav");
     var x = document.getElementById(w);
     var o = document.getElementById(opener);
     snd.play();
     if (x.style.display == "block") {
         x.style.display = "none";
-        o.src = imgOpener; // "ecjigjd/ecabejdcddgiah.png";
+        o.src = imgOpener; // "/ecjigjd/ecabejdcddgiah.png";
     } else {
         x.style.display = "block";
-        o.src = imgCloser; // "ecjigjd/updraw.png";
+        o.src = imgCloser; // "/ecjigjd/updraw.png";
     }
 }
 
 function opentMenu(w, opener, tOpener, tCloser) {
-    var snd = new Audio("ecjigjd/ekdjgjchdjjacgfbElca.wav");
+    var snd = new Audio("/ecjigjd/ekdjgjchdjjacgfbElca.wav");
     var x = document.getElementById(w);
     var o = document.getElementById(opener);
     snd.play();
     if (x.style.display == "block") {
         x.style.display = "none";
-        o.innerHTML = tOpener; // "ecjigjd/ecabejdcddgiah.png";
+        o.innerHTML = tOpener; // "/ecjigjd/ecabejdcddgiah.png";
     } else {
         x.style.display = "block";
-        o.innerHTML = tCloser; // "ecjigjd/updraw.png";
+        o.innerHTML = tCloser; // "/ecjigjd/updraw.png";
     }
 }
 function shortenTitle(title) {
